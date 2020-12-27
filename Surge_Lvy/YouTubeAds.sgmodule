@@ -1,0 +1,12 @@
+#!name=去除 YouTube 视频内的 5 秒广告
+#!desc=去除 YouTube 视频内的 5 秒广告, 千万不要更新 YouTube. YouTube Version: 15.44.2
+#!GitHub:https://github.com/chiupam/Proxy/blob/lvy/Surge/YouTubeAds.sgmodule
+#!raw:https://raw.githubusercontent.com/chiupam/Proxy/lvy/Surge/YouTubeAds.sgmodule
+[Rule]
+URL-REGEX,^https:\/\/.+\.googlevideo\.com\/.+&oad,REJECT
+
+[URL Rewrite]
+ctier=[A-Z] citer=A 302
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com

@@ -1,0 +1,20 @@
+#!name=任务构造
+#!desc=日常使用的时候, 请不要关闭此模块.
+#!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=180, script-path=javescript
+#!GitHub:https://github.com/chiupam/Proxy/blob/lvy/Surge/Task.sgmodule
+#!raw:https://raw.githubusercontent.com/chiupam/Proxy/lvy/Surge/Task.sgmodule
+
+[Script]
+# > 滴滴出行
+滴滴出行——每日签到 = type=cron, cronexp="5 0 8 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行——晚八点 = type=cron, cronexp="0 0 20 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+# > Bilibili
+Bilibili = type=cron, cronexp="10 0 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js
+银瓜子换硬币 = type=cron, cronexp="20 0 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.silver2coin.js
+# > 小米运动
+小米运动 = type=cron,cronexp="0 50 22 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js
+# > 支付宝
+支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=AliPay.js
+# > 互助码
+互助码 = type=cron,cronexp="0 1 6 1,10,20 * *", wake-system=1, timeout=180, script-path=ShareCode_Chiupam98.js
+

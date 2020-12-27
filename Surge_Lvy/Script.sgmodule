@@ -1,0 +1,27 @@
+#!name=脚本
+#!desc=日常使用的时候, 请不要关闭此模块, 该模块整理一些日常会用到的脚本, 以及去 App 广告的脚本.
+#!tag = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript
+#!tag = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript
+#!GitHub:https://github.com/chiupam/Proxy/blob/lvy/Surge/Script.sgmodule
+#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/lvy/Surge/Script.sgmodule
+
+[URL Rewrite]
+^https://boxjs.net http://boxjs.net 302
+^http://ww1.boxjs.net http://boxjs.net 302
+
+[Script]
+# Sub-Store (sub.store)
+Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,requires-body=1,max-size=131072,timeout=120,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/sub-store.min.js,script-update-interval=0
+# BoxJs TF (boxjs.net)
+BoxJs = type=http-request, pattern=^https?://boxjs.net, script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+# Switch Bilibili Region (api.bilibili.com)
+Switch Bilibili Region = type=http-response,pattern=https:\/\/api\.bilibili\.com\/pgc\/(view\/app\/season\?access_key|review\/user\?), requires-body=1, max-size=0, control-api=1, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
+# 微博开屏广告 (api.weibo.cn, mapi.weibo.com, *.uve.weibo.com)
+微博去开屏广告 = type=http-response, pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list|photo/info), requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+微博去开屏广告 = type=http-response, pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua), requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
+# 微信公众号底部广告 (mp.weixin.qq.com)
+微信去公众号底部广告 = type=http-request, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
+
+[MITM]
+hostname = %APPEND% sub.store, boxjs.net, api.bilibili.com, biz.caiyunapp.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com
+

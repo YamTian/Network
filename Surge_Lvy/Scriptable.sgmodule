@@ -1,0 +1,15 @@
+#!name=Scriptable Software
+#!desc=This is a Surge module used to collect JaveScripts on Scriptable App.
+//name = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
+//name = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
+//GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Scriptable.sgmodule
+//Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Scriptable.sgmodule
+
+[Script]
+# > 中国联通获取Cookie (act.10010.com, m.client.10010.com)
+中国联通获取Cookie = type=http-request, pattern=^https?:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm, requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, script-update-interval=0
+中国联通获取Cookie = type=http-request, pattern=^https?:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign, requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, script-update-interval=0
+中国联通获取Cookie = type=http-request, pattern=^https?:\/\/m.client.10010.com\/dailylottery\/static\/(textdl\/userLogin|active\/findActivityInfo), requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% act.10010.com, m.client.10010.com

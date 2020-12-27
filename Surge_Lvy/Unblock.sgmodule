@@ -1,0 +1,19 @@
+#!name=破解 App 超级会员特权
+#!desc=如果破解成功, 请不要更新 App, 该模块最忌讳就是更新那些已经破解成功的 App 了.
+#!GitHub:https://github.com/chiupam/Proxy/blob/lvy/Surge/Unblock.sgmodule
+#!raw:https://raw.githubusercontent.com/chiupam/Proxy/lvy/Surge/Unblock.sgmodule
+
+[Script]
+# 彩云天气 SVIP (biz.caiyunapp.com)
+彩云天气 SVIP = type=http-response, pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user), requires-body=1, max-size=0, script-path=ColorfulClouds_SVIP.js
+# WPS SVIP (account.wps.cn)
+WPS SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path=WPS_SVIP.js
+# Mubu SVIP (api2.mubu.com)
+Mubu SVIP = type=http-response, pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user, requires-body=1, max-size=-1, script-path=Mubu_SVIP.js
+# 百度云盘 SVIP (pan.baidu.com)
+百度云盘 SVIP = type=http-response, pattern=https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/BaiduCloud.js
+# B 站开启 1080p 画质 (api.bilibili.com)
+Bilibili 1080p = type=http-response, pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)), requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js
+
+[MITM]
+hostname = %APPEND% biz.caiyunapp.com, account.wps.cn, api2.mubu.com, pan.baidu.com, api.bilibili.com
