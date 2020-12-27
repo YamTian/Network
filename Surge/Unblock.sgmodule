@@ -1,0 +1,13 @@
+#!name=Unblock Module
+#!desc=This is a Surge module used to collect JaveScripts on hacking, and it will use local resources.
+#!tag = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript
+#!tag = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript
+#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Unblock.sgmodule
+#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Unblock.sgmodule
+
+[Script]
+# > 彩云天气 SVIP (biz.caiyunapp.com)
+彩云天气 SVIP = type=http-response, pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user), requires-body=1, max-size=0, script-path=ColorfulClouds_SVIP.js
+
+[MITM]
+hostname = %APPEND% biz.caiyunapp.com
