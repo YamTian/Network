@@ -1,6 +1,6 @@
 /*
 [Script]
-X-Mind SVIP = type=http-response, pattern=https:\/\/www\.xmind\.cn\/\_res\/devices, requires-body=1, max-size=1, script-path=X-Mind_SVIP.js
+X-Mind SVIP = type=http-response, pattern=https:\/\/www\.xmind\.cn\/\_res\/devices, requires-body=1, max-size=1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/X-Mind_SVIP.js
 
 [MITM]
 hostname = www.xmind.cn
