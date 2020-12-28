@@ -1,5 +1,9 @@
 /*
+[Script]
 彩云天气 SVIP = type=http-response, pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user), requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ColorfulClouds_SVIP.js
+
+[Mitm]
+hostname = biz.caiyunapp.com
 */
 
 const SCRIPT_NAME = '彩云天气';
