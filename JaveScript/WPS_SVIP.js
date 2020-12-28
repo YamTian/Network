@@ -14,12 +14,12 @@ obj = {
   exp: 0,
   level: 3,
   privilege: [
-    { spid: "data_recover", times: 0, expire_time: 4102415999 },
-    { spid: "ocr", times: 0, expire_time: 4102415999 },
-    { spid: "pdf2doc", times: 0, expire_time: 4102415999 },
-    { spid: "pdf_merge", times: 0, expire_time: 4102415999 },
-    { spid: "pdf_sign", times: 0, expire_time: 4102415999 },
-    { spid: "pdf_split", times: 0, expire_time: 4102415999 }
+    { spid: "data_recover", times: 0, expire_time: 1672502399 },
+    { spid: "ocr", times: 0, expire_time: 1672502399 },
+    { spid: "pdf2doc", times: 0, expire_time: 1672502399 },
+    { spid: "pdf_merge", times: 0, expire_time: 1672502399 },
+    { spid: "pdf_sign", times: 0, expire_time: 1672502399 },
+    { spid: "pdf_split", times: 0, expire_time: 1672502399 }
   ],
   result: "ok",
   total_buy: 0,
@@ -29,15 +29,15 @@ obj = {
     name: "超级会员",
     has_ad: 0,
     memberid: 40,
-    expire_time: 4102415999,
+    expire_time: 1672502399,
     enabled: [
-      { memberid: 40, name: "超级会员", expire_time: 4102415999 },
-      { memberid: 20, name: "WPS会员", expire_time: 4102415999 },
-      { memberid: 12, name: "稻壳会员", expire_time: 4102415999 }
+      { memberid: 40, name: "超级会员", expire_time: 1672502399 },
+      { memberid: 20, name: "WPS会员", expire_time: 1672502399 },
+      { memberid: 12, name: "稻壳会员", expire_time: 1672502399 }
     ]
   },
   wealth: 0,
-  expire_time: 4102415999
+  expire_time: 1672502399
 };
 
 obj.userid = id;
