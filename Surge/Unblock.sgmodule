@@ -8,7 +8,16 @@
 彩云天气 SVIP = type=http-response, pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user), requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ColorfulClouds_SVIP.js
 
 # > 全能扫描王 Pro (ap*.intsig.net)
-全能扫描王 = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/CamScanner_Pro.js
+全能扫描王 Pro = type=http-response, pattern=^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/CamScanner_Pro.js
+
+# > 幕布 SVIP (mubu.com)
+Mubu SVIP = type=http-response, pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Mubu_SVIP.js
+
+# > WPS SVIP (account.wps.cn)
+WPS_SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/WPS_SVIP.js
+
+# > 美易 Pro (api.picsart.c*, api.meiease.c*)
+PicsArt_Pro = type=http-response, pattern=https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/PicsArt_Pro.js
 
 [MITM]
-hostname = %APPEND% biz.caiyunapp.com, ap*.intsig.net
+hostname = %APPEND% biz.caiyunapp.com, ap*.intsig.net, mubu.com, account.wps.cn, api.picsart.c*, api.meiease.c*
