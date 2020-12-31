@@ -1,3 +1,8 @@
+/*
+[Script]
+支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
+*/
+
 const $ = new Env()
 const sl = "alipay://platformapi/startapp?appId=60000002"
 const zy = "alipays://platformapi/startapp?appId=66666674"
