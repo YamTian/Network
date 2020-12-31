@@ -1,3 +1,8 @@
+/*
+[Script]
+互助码——Vivi = type=cron,cronexp="30 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode_Vivi.js
+*/
+
 const $ = new Env('Vivi ShareCode')
 
 // 种豆得豆
