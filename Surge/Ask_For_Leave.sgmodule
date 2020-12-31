@@ -1,0 +1,5 @@
+#!name=Ask For Leave
+#!desc= When you need to modify the leave information, open this module.
+
+[Script]
+修改假条 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave\/AllLeaveManage\?LoginStatus\=,requires-body=1,max-size=-1,script-path=Leave.js
