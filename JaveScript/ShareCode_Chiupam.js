@@ -13,7 +13,7 @@ $.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/73b9c21c192948c6b9202
 $.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODc2NTEzNTAwMDAwMDAyNzQ1OTEzOQ==/'
 // 京东赚赚
 $.zzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/S5KkcRh5K9VeDJR3wk6ULdA/'
-// carzyjou
+// carzyjoy
 $.joyUrl = 'https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/v6SnwcSXWk8K7x228LZX7Kt9zd5YaBeE/'
 
 $.result = []
