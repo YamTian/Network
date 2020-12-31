@@ -3,6 +3,6 @@
 
 [Script]
 修改假条--第一界面 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave\/AllLeaveManage\?LoginStatus\=,requires-body=1,max-size=-1,script-path=Leave_1.js
-修改假条--第二界面 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave\/AllLeaveManage\?LoginStatus\=,requires-body=1,max-size=-1,script-path=Leave_2.js
+修改假条--第二界面 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave\/AllLeaveManage\?LoginStatus\=.*\Id\=.*,requires-body=1,max-size=-1,script-path=Leave_2.js
 [Mitm]
 hostname = %APPEND% xg.kmmu.edu.cn
