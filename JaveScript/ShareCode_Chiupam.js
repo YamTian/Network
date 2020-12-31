@@ -1,3 +1,8 @@
+/*
+[Script]
+互助码——Chiupam = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode_Chiupam.js
+*/
+
 const $ = new Env('Chiupam ShareCode')
 
 // 种豆得豆
