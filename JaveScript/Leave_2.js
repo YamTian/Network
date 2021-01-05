@@ -1,11 +1,3 @@
-/*
-[Script]
-修改假条 2 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave\/AllLeaveManage\_Edit\?LoginStatus\=,requires-body=1,max-size=-1,script-path=Leave_2.js
-
-[Mitm]
-hostname = %APPEND% xg.kmmu.edu.cn
-*/
-
 var obj = JSON.parse($response.body);
  obj= {
     // 以下为需要修改的假条信息
