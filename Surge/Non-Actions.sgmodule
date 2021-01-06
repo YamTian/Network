@@ -1,8 +1,8 @@
 #!name=JD Bean Tasks (Non-Actions)
 #!desc=This is a Surge module used to collect JaveScripts on JD which is not uploaded to the script in Tencent Cloud Functions.
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Non-Actions.sgmodule
-#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Non-Actions.sgmodule
+
+
 [Script]
 # > 获取京东Cookie
 获取京东Cookie = type=http-request, pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
