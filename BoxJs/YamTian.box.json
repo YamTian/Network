@@ -7,7 +7,7 @@
     "apps": [
         {
             "id": "Leave",
-            "name": "修改假条信息",
+            "name": "学工假条",
             "keys": ["Month", "Day", "LeaveType", "OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "WithNumNo"],
             "descs_html": [
                 "<h4 align=\"center\">带 * 项为必填项</a></h4>"
