@@ -1,3 +1,12 @@
+const outAddress = $persistentStore.read('OutAddress') || '**市**区'; 
+const leaveThing = $persistentStore.read('LeaveThing') || '外出'; 
+const studentTel = $persistentStore.read('StudentTel') || '13813800580'; 
+const parentName = $persistentStore.read('ParentName') || '李四'; 
+const parentTel = $persistentStore.read('ParentTel') || '13813800590'; 
+const month = $persistentStore.read('Month') || '01'; 
+const day = $persistentStore.read('Day') || '01'; 
+
+/*
 // 请修改以下数据
 var Month = "01"; // 月
 var Day = "11"; // 日
@@ -6,10 +15,11 @@ var LeaveThing = "外出"; // 请假事由
 var StudentTel = "13813800580"; // 学生手机
 var ParentName = "李四"; // 家长姓名
 var ParentTel = "13813800590"; // 家长手机
+*/
 
 // 以下数据不可修改
 var Year = "2021";
-var Today = Year + "-" + Month + "-" + Day;
+var Today = Year + "-" + month + "-" + day;
 var Url = $request.url;
 var Body = JSON.parse($response.body);
 
@@ -19,7 +29,7 @@ if (Url.indexOf('Edit') == -1) {
       {
         "LeaveType": "事假", // 请假类型
         "WithNumNo": "0", // 同行人数
-        "OutAddress": OutAddress,  // 外出地点
+        "OutAddress": outAddress,  // 外出地点
         "FDYThing": "同意", // 同意请假
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
@@ -37,19 +47,19 @@ else {
   Body= {
     // 请假内容(必填)
     "LeaveType": "事假", // 请假类型
-    "LeaveThing": LeaveThing, // 请假事由
-    "OutAddress": OutAddress, // 外出地点
+    "LeaveThing": leaveThing, // 请假事由
+    "OutAddress": outAddress, // 外出地点
     // 外出联系人信息(可不填)
     "OutName": "", // 姓名
     "OutMoveTel": "", // 移动电话
     "OutTel": "", // 固定电话
     "Relation": "", // 与本人关系
     // 本人信息(必填)
-    "StuMoveTel": StudentTel, // 联系电话
+    "StuMoveTel": studentTel, // 联系电话
     "StuOtherTel": "", // 其他联系方式
     // 家长信息(必填)
-    "ParentContacts": ParentName, // 家长联系人
-    "ParentTel": ParentTel, // 家长联系方式
+    "ParentContacts": parentName, // 家长联系人
+    "ParentTel": parentTel, // 家长联系方式
     // 往返交通工具(必须修改)
     "LeaveBeginDate": Today, // 去-日期
     "Inputdate": Today, // 去-日期
