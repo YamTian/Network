@@ -8,7 +8,7 @@
         {
             "id": "Leave",
             "name": "修改假条信息",
-            "keys": ["OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "Month", "Day"],
+            "keys": ["OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "WithNumNo", "Month", "Day"],
             "settings": [{
               "id": "OutAddress",
               "name": "外出地点",
@@ -45,6 +45,13 @@
               "placeholder": "(点击以展开说明)",
               "desc": "您家长的手机号码"
             }, {
+                "id": "WithNumNo",
+                "name": "同行人数",
+                "val": "",
+                "type": "text",
+                "placeholder": "(点击以展开说明)",
+                "desc": "陪同人数,结伴同行可填1"
+              }, {
                 "id": "Month",
                 "name": "月份",
                 "val": "01",
