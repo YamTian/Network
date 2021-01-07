@@ -8,38 +8,59 @@
         {
             "id": "Leave",
             "name": "修改假条信息",
-            "keys": ["OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "WithNumNo", "Month", "Day"],
+            "keys": ["Month", "Day", "LeaveType", "OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "WithNumNo"],
             "settings": [{
+              "id": "Month",
+              "name": "*当前月份",
+              "val": "01",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "当前月份,例如01"
+            }, {
+              "id": "Day",
+              "name": "*当前日期",
+              "val": "01",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "当前日期,例如01"
+            }, {
+              "id": "LeaveType",
+              "name": "请假类型",
+              "val": "",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "仅可填写以下三项中的一项,事假/病假/返家,不填则默认值为事假"
+            }, {
               "id": "OutAddress",
-              "name": "外出地点",
+              "name": "*外出地点",
               "val": "",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "您请假外出的地点"
             }, {
               "id": "LeaveThing",
-              "name": "请假事由",
+              "name": "*请假事由",
               "val": "外出吃饭",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "您请假的事由"
             }, {
               "id": "StudentTel",
-              "name": "学生手机号码",
+              "name": "*学生手机号码",
               "val": "",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "您个人的手机号码"
             }, {
               "id": "ParentName",
-              "name": "家长姓名",
+              "name": "*家长姓名",
               "val": "",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "您家长的姓名"
             }, {
               "id": "ParentTel",
-              "name": "家长手机号码",
+              "name": "*家长手机号码",
               "val": "",
               "type": "text",
               "placeholder": "(点击以展开说明)",
@@ -50,21 +71,7 @@
                 "val": "",
                 "type": "text",
                 "placeholder": "(点击以展开说明)",
-                "desc": "陪同人数,结伴同行可填1"
-              }, {
-                "id": "Month",
-                "name": "当前月份",
-                "val": "01",
-                "type": "text",
-                "placeholder": "(点击以展开说明)",
-                "desc": "当前月份,例如01"
-              }, {
-                "id": "Day",
-                "name": "当前日期",
-                "val": "01",
-                "type": "text",
-                "placeholder": "(点击以展开说明)",
-                "desc": "当前日期,例如01"
+                "desc": "陪同人数,结伴同行可填1,不填则默认值为0"
               }],
             "author": "@YamTian",
             "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",
