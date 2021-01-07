@@ -6,18 +6,6 @@ const parentTel = $persistentStore.read('ParentTel') || '13813800590';
 const month = $persistentStore.read('Month') || '01'; 
 const day = $persistentStore.read('Day') || '01'; 
 
-/*
-// 请修改以下数据
-var Month = "01"; // 月
-var Day = "11"; // 日
-var OutAddress = "北京市朝阳区"; // 外出地点
-var LeaveThing = "外出"; // 请假事由
-var StudentTel = "13813800580"; // 学生手机
-var ParentName = "李四"; // 家长姓名
-var ParentTel = "13813800590"; // 家长手机
-*/
-
-// 以下数据不可修改
 var Year = "2021";
 var Today = Year + "-" + month + "-" + day;
 var Url = $request.url;
