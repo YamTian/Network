@@ -1,3 +1,4 @@
+const leaveType = $persistentStore.read('LeaveType') || '事假'; 
 const outAddress = $persistentStore.read('OutAddress') || '北京市朝阳区'; 
 const leaveThing = $persistentStore.read('LeaveThing') || '外出购物'; 
 const studentTel = $persistentStore.read('StudentTel') || '13813800580'; 
@@ -16,7 +17,7 @@ if (Url.indexOf('Edit') == -1) {
   Body= {
     "AllLeaveManages": [
       {
-        "LeaveType": "事假", // 请假类型
+        "LeaveType": leaveType, // 请假类型
         "WithNumNo": withNumNo, // 同行人数
         "OutAddress": outAddress,  // 外出地点
         "FDYThing": "同意", // 同意请假
@@ -35,8 +36,8 @@ if (Url.indexOf('Edit') == -1) {
 else {
   Body= {
     // 请假内容(必填)
-    "LeaveType": "事假", // 请假类型
-    "LeaveThing": LeaveThing, // 请假事由
+    "LeaveType": leaveType, // 请假类型
+    "LeaveThing": leaveThing, // 请假事由
     "OutAddress": outAddress, // 外出地点
     // 外出联系人信息(可不填)
     "OutName": "", // 姓名
