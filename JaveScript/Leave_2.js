@@ -11,7 +11,6 @@ var Today = Year + "-" + Month + "-" + Day;
 
 var obj = JSON.parse($response.body);
  obj= {
-    // 以下为需要修改的假条信息
     // 请假内容
     "LeaveType": "事假", // 请假类型
     "LeaveThing": LeaveThing, // 请假事由
