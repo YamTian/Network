@@ -18,7 +18,7 @@ if (Url.indexOf('Edit') == -1) {
       {
         "LeaveType": "事假", // 请假类型
         "WithNumNo": withNumNo, // 同行人数
-        "OutAddress": outAdress,  // 外出地点
+        "OutAddress": outAddress,  // 外出地点
         "FDYThing": "同意", // 同意请假
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
