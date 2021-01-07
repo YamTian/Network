@@ -1,9 +1,6 @@
 #!name=ZhiHu Ads
 #!desc=This is a Surge module used to collect JaveScripts on Remove ZhiHu Ads. ZhiHu Version: 6.60.0(2780)
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/ZhiHuAds.sgmodule
-#!raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/ZhiHuAds.sgmodule
-
-# > RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list, REJECT
+#!https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu_remove_ads.list
 
 [Rule]
 # > 知乎广告拦截
