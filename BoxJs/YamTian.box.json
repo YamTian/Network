@@ -6,7 +6,7 @@
     "repo": "https://github.com/YamTian/Network/tree/master",
     "apps": [
         {
-            "id": "BiliRegion",
+            "id": "Leave",
             "name": "修改假条信息",
             "keys": ["OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "Month", "Day"],
             "settings": [{
