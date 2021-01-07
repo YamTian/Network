@@ -2,67 +2,87 @@
     "id": "yamtian.sub",
     "name": "YamTian 应用订阅",
     "author": "@YamTian",
-    "icon": "https://avatars2.githubusercontent.com/u/21050064?s=460&u=40a74913dd0a3d00670d05148c3a08c787470021&v=4",
-    "repo": "https://github.com/Peng-YM/QuanX",
+    "icon": "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/YamTian.jpg",
+    "repo": "https://github.com/YamTian/Network/tree/master",
     "apps": [
       {
-        "id": "Caiyun",
-        "name": "彩云天气",
+        "id": "Leave",
+        "name": "易班请假",
         "keys": [
-          "@caiyun.token.caiyun",
-          "@caiyun.token.tencent",
-          "@caiyun.display_location",
-          "@caiyun.location.latitude",
-          "@caiyun.location.longitude",
-          "@caiyun.address"
+          "@Leave.time.Month",
+          "@Leave.time.day",
+          "@Leave.OutAddress",
+          "@Leave.LeaveThing",
+          "@Leave.StudentTel",
+          "@Leave.ParentTel",
+          "@Leave.ParentName"
         ],
         "settings": [
           {
-            "id": "@caiyun.token.caiyun",
-            "name": "彩云天气API Token",
+            "id": "@Leave.time.Month",
+            "name": "当前月份",
             "val": null,
             "type": "text",
             "autoGrow": false,
             "rows": 2,
-            "desc": "彩云天气的Token，可以自行申请或者前往频道获取"
+            "desc": "当前月份"
           },
           {
-            "id": "@caiyun.token.tencent",
-            "name": "腾讯地图API Token",
-            "val": "AHEBZ-ASTWX-CIW4P-7TV7T-AWKLS-7CFWP",
+            "id": "@Leave.time.day",
+            "name": "当前日期",
+            "val": null,
             "type": "text",
             "rows": 1,
-            "desc": ""
+            "desc": "当前日期"
           },
           {
-            "id": "@caiyun.display_location",
-            "name": "是否在日志中显示经纬度",
-            "val": false,
-            "type": "boolean",
-            "desc": ""
-          },
-          {
-            "id": "@caiyun.location.latitude",
-            "name": "纬度",
+            "id": "@Leave.OutAddress",
+            "name": "外出地点",
             "val": null,
             "type": "text",
-            "desc": "纬度，可以关闭MITM获取位置，手动设置"
+            "rows": 1,
+            "desc": "外出地点"
           },
           {
-            "id": "@caiyun.location.longitude",
-            "name": "经度",
+            "id": "@Leave.LeaveThing",
+            "name": "请假事由",
             "val": null,
             "type": "text",
-            "desc": "经度，可以关闭MITM获取位置，手动设置"
+            "rows": 1,
+            "desc": "请假事由"
+          },
+          {
+            "id": "@Leave.StudentTel",
+            "name": "学生手机号码",
+            "val": null,
+            "type": "text",
+            "rows": 1,
+            "desc": "学生手机号码"
+          },
+          {
+            "id": "@Leave.ParentName",
+            "name": "家长姓名",
+            "val": null,
+            "type": "text",
+            "rows": 1,
+            "desc": "家长姓名"
+          },
+          {
+            "id": "@Leave.ParentTel",
+            "name": "家长手机号码",
+            "val": null,
+            "type": "text",
+            "rows": 1,
+            "desc": "家长手机号码"
           }
         ],
-        "author": "@Peng-YM",
-        "repo": "https://github.com/Peng-YM/QuanX",
+        "author": "@YamTian",
+        "repo": "https://github.com/YamTian/Network/tree/master",
         "icons": [
-          "https://raw.githubusercontent.com/Orz-3/mini/master/caiyun.png",
-          "https://raw.githubusercontent.com/Orz-3/task/master/caiyun.png"
+          "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/YiBan.jpeg",
+          "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/YiBan.jpeg"
         ],
-        "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js"
+        "script": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js"
       }
     ]
   }
