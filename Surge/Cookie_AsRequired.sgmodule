@@ -1,8 +1,6 @@
 #!name=Get Cookie in Need
 #!desc=This is a Surge module used to collect JaveScripts on Get Cookie As You Need.
 #!tag = type=http-request, pattern=https, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Cookie_AsRequired.sgmodule
-#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Cookie_AsRequired.sgmodule
 
 [Script]
 # > 百度贴吧 (tieba.baidu.com)

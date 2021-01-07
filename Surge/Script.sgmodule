@@ -2,8 +2,6 @@
 #!desc=This is a Surge module used to collect JaveScripts on daily use.
 #!tag = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript
 #!tag = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Script.sgmodule
-#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Script.sgmodule
 
 [Script]
 # > Sub-Store (sub.store)

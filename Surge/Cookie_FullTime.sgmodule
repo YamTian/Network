@@ -1,8 +1,6 @@
 #!name=Get Cookie All Time
 #!desc=This is a Surge module used to collect JaveScripts on Get Cookie All the Time.
 #!tag = type=http-request, pattern=regex, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/Cookie_FullTime.sgmodule
-#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/Cookie_FullTime.sgmodule
 
 [Script]
 # > 掌上飞车(mwegame.qq.com)

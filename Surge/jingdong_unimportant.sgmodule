@@ -1,8 +1,6 @@
 #!name=JD No Bean Tasks (Individual)
 #!desc=This is a Surge module used to collect JaveScripts on JD inability to obtain beans.
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/individual/Surge/jingdong_unimportant.sgmodule
-#!Raw:https://raw.githubusercontent.com/chiupam/Proxy/individual/Surge/jingdong_unimportant.sgmodule
 
 [Script]
 # >>> 东东萌宠 {07:00 13:00 19:00} 
