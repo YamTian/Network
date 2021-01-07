@@ -4,7 +4,7 @@ var OutAddress = "北京市朝阳区"; // 外出地点
 var LeaveThing = "外出"; // 请假事由
 var StudentTel = "13813800580"; // 学生联系电话
 var ParentName = "张三"; // 家长联系人姓名
-var ParentTel = "13813800590" // 家长联系方式
+var ParentTel = "13813800590"; // 家长联系方式
 
 var Year = "2021";
 var Today = Year + "-" + Month + "-" + Day;
