@@ -2,7 +2,7 @@
 #!desc=When you need to modify the leave information, open this module, and go to the editor to modify the leave date.
 
 [Script]
-易班假条 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave,requires-body=1,max-size=-1,script-path=Leave.js
+易班假条 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js
 
 [Mitm]
 hostname = %APPEND% xg.kmmu.edu.cn
