@@ -1,12 +1,12 @@
 const leaveType = $persistentStore.read('LeaveType') || '事假'; 
-const outAddress = $persistentStore.read('OutAddress') || '北京市朝阳区'; 
-const leaveThing = $persistentStore.read('LeaveThing') || '外出购物'; 
-const studentTel = $persistentStore.read('StudentTel') || '13813800580'; 
-const parentName = $persistentStore.read('ParentName') || '李四'; 
-const parentTel = $persistentStore.read('ParentTel') || '13813800590'; 
+const outAddress = $persistentStore.read('OutAddress') || ''; 
+const leaveThing = $persistentStore.read('LeaveThing') || ''; 
+const studentTel = $persistentStore.read('StudentTel') || ''; 
+const parentName = $persistentStore.read('ParentName') || ''; 
+const parentTel = $persistentStore.read('ParentTel') || ''; 
 const withNumNo = $persistentStore.read('WithNumNo') || '0'; 
-const month = $persistentStore.read('Month') || '01'; 
-const day = $persistentStore.read('Day') || '01'; 
+const month = $persistentStore.read('Month') || ''; 
+const day = $persistentStore.read('Day') || ''; 
 
 var Year = "2021";
 var Today = Year + "-" + month + "-" + day;
