@@ -1,11 +1,3 @@
-/*
-[Script]
-易班假条 = type=http-response,pattern=^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave,requires-body=1,max-size=-1,script-path=Leave.js
-
-[Mitm]
-hostname = %APPEND% xg.kmmu.edu.cn
-*/
-
 // 请修改以下数据
 var Month = "01"; // 月
 var Day = "11"; // 日
