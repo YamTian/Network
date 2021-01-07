@@ -6,6 +6,6 @@ PicsArt_Pro = type=http-response, pattern=https:\/\/api\.(picsart|meiease)\.c(n|
 hostname = api.picsart.c*, api.meiease.c*
 */
 
-let obj = JSON.parse($response.body);
+var obj = JSON.parse($response.body);
 obj.subscription.granted = "true";
 $done({body: JSON.stringify(obj)});
