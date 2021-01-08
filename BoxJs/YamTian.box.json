@@ -160,7 +160,7 @@
     },
     {
       "id": "ShareCode",
-      "name": "京东互助吗",
+      "name": "京东互助码",
       "keys": [
         "FruitCode", "PetCode", "BeanCode", "ZuanZuan"
       ],
