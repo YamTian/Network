@@ -12,13 +12,13 @@ if (newMonth <= 10) {
 } else {
   newMonth = newMonth
 }
-var Year = "2021"; // 2021年
 
+var Year = "2021"; // 2021年
 var BeginDate = Year + "-" + newMonth + "-" + beginDay; // 组合请假起始时间
 var EndDate = Year + "-" + newMonth + "-" + endDay; // 组合请假结束时间
 var LeaveNumNo = (endDay - beginDay + 0.50).toFixed(2); // 请假时长的计算
 
-var Url = $request.url;
+var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
 
 if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
