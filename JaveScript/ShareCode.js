@@ -3,7 +3,7 @@
 互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode.js
 */
 
-const $ = new Env('Chiupam ShareCode')
+const $ = new Env('ShareCode')
 const fruitCode = $persistentStore.read('FruitCode') || '';
 const petCode = $persistentStore.read('PetCode') || '';
 const beanCode = $persistentStore.read('BeanCode') || '';
