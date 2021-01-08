@@ -8,7 +8,7 @@
         {
             "id": "Leave",
             "name": "学工假条",
-            "keys": ["Month", "Day", "LeaveType", "OutAddress", "LeaveThing", "StudentTel", "ParentName", "ParentTel", "WithNumNo"],
+            "keys": ["Month", "Day", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"],
             "descs_html": [
                 "<h4 align=\"center\">带 * 项为必填项</a></h4>"
             ],
@@ -34,19 +34,19 @@
               "placeholder": "(点击以展开说明)",
               "desc": "三选一,事假/病假/返家,默认值为事假"
             }, {
-              "id": "OutAddress",
-              "name": "* 外出地点",
-              "val": "",
-              "type": "text",
-              "placeholder": "(点击以展开说明)",
-              "desc": "您请假外出的地点"
-            }, {
               "id": "LeaveThing",
               "name": "* 请假事由",
               "val": "外出吃饭",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "您请假的事由"
+            }, {
+              "id": "OutAddress",
+              "name": "* 外出地点",
+              "val": "",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "您请假外出的地点"
             }, {
               "id": "StudentTel",
               "name": "* 学生手机号码",
@@ -62,6 +62,13 @@
               "placeholder": "(点击以展开说明)",
               "desc": "您家长的姓名"
             }, {
+              "id": "Relation",
+              "name": "* 学生与家长间的法律关系",
+              "val": "",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "例如父子,母女,姐姐,哥哥等"
+            }, {
               "id": "ParentTel",
               "name": "* 家长手机号码",
               "val": "",
@@ -75,6 +82,13 @@
                 "type": "text",
                 "placeholder": "(点击以展开说明)",
                 "desc": "陪同人数,结伴同行可填1,默认值为0"
+              }, {
+                "id": "Vehicle",
+                "name": "往返交通工具",
+                "val": "",
+                "type": "text",
+                "placeholder": "(点击以展开说明)",
+                "desc": "往返交通工具,默认值为汽车"
               }],
             "author": "@YamTian",
             "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",

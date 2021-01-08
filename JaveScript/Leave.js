@@ -1,12 +1,14 @@
-const leaveType = $persistentStore.read('LeaveType') || '事假'; 
-const outAddress = $persistentStore.read('OutAddress') || ''; 
-const leaveThing = $persistentStore.read('LeaveThing') || ''; 
-const studentTel = $persistentStore.read('StudentTel') || ''; 
-const parentName = $persistentStore.read('ParentName') || ''; 
-const parentTel = $persistentStore.read('ParentTel') || ''; 
-const withNumNo = $persistentStore.read('WithNumNo') || '0'; 
 const month = $persistentStore.read('Month') || ''; 
 const day = $persistentStore.read('Day') || ''; 
+const leaveType = $persistentStore.read('LeaveType') || '事假'; 
+const leaveThing = $persistentStore.read('LeaveThing') || ''; 
+const outAddress = $persistentStore.read('OutAddress') || ''; 
+const studentTel = $persistentStore.read('StudentTel') || ''; 
+const parentName = $persistentStore.read('ParentName') || ''; 
+const relation = $persistentStore.read('Relation') || ''; 
+const parentTel = $persistentStore.read('ParentTel') || ''; 
+const withNumNo = $persistentStore.read('WithNumNo') || '0'; 
+const vehicle = $persistentStore.read('Vehicle') || '汽车'; 
 
 var Year = "2021";
 var Today = Year + "-" + month + "-" + day;
@@ -40,10 +42,10 @@ else {
     "LeaveThing": leaveThing, // 请假事由
     "OutAddress": outAddress, // 外出地点
     // 外出联系人信息(可不填)
-    "OutName": "", // 姓名
-    "OutMoveTel": "", // 移动电话
+    "OutName": parentName, // 姓名
+    "OutMoveTel": parentTel, // 移动电话
     "OutTel": "", // 固定电话
-    "Relation": "", // 与本人关系
+    "Relation": relation, // 与本人关系
     // 本人信息(必填)
     "StuMoveTel": studentTel, // 联系电话
     "StuOtherTel": "", // 其他联系方式
@@ -79,8 +81,8 @@ else {
     "GoTime": "10", // 去-整时
     "LeaveEndTime": "22", // 返-整时
     "BackTime": "22", // 返-整时
-    "GoVehicle": "汽车", // 去-交通工具
-    "BackVehicle": "汽车", // 返-交通工具
+    "GoVehicle": vehicle, // 去-交通工具
+    "BackVehicle": vehicle, // 返-交通工具
   };
 }
 $done({body: JSON.stringify(Body)});
