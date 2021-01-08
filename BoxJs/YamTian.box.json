@@ -154,12 +154,67 @@
       "author": "@YamTian",
       "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",
       "icons": [
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/YiBan.jpeg", 
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/YiBan.jpeg"
+      ]
+    },
+    {
+      "id": "ShareCode",
+      "name": "京东互助吗",
+      "keys": [
+        "FruitCode", "PetCode", "BeanCode", "ZuanZuan"
+      ],
+      "descs_html": [
+        "<h4 align=\"center\">京东游戏互助码</a></h4>"
+      ],
+      "settings": [
+        {
+        "id": "FruitCode",
+        "name": "东东农场",
+        "val": "73b9c21c192948c6b9202303439510d2",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写东东农场的互助码"
+        },
+        {
+        "id": "PetCode",
+        "name": "东东萌宠",
+        "val": "MTAxODc2NTEzNTAwMDAwMDAyNzQ1OTEzOQ==",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写东东萌宠的互助码"
+        },
+        {
+        "id": "BeanCode",
+        "name": "种豆得豆",
+        "val": "sptv55gzcksfquzoq5k2ubuj4i",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写种豆得豆的互助码"
+        },
+        {
+        "id": "ZuanZuan",
+        "name": "京东赚赚",
+        "val": "S5KkcRh5K9VeDJR3wk6ULdA",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写京东赚赚的互助码"
+        },
+        {
+        "id": "CarzyJoy",
+        "name": "疯狂的Joy",
+        "val": "v6SnwcSXWk8K7x228LZX7Kt9zd5YaBeE",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写疯狂的Joy的互助码"
+        }
+      ],
+      "author": "@YamTian",
+      "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode.js",
+      "icons": [
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/YiBan.jpeg", 
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/YiBan.jpeg"
       ]
-      
-
-      
     }
   ]
 }
