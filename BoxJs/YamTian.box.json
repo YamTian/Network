@@ -10,7 +10,7 @@
             "name": "学工假条",
             "keys": ["Month", "Day", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"],
             "descs_html": [
-                "<h4 align=\"center\">带 * 项为必填项或必选项</a></h4>"
+                "<h4 align=\"center\">带 * 项为必填项</a></h4>"
             ],
             "settings": [{
               "id": "Month",
