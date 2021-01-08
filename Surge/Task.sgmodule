@@ -21,5 +21,5 @@
 # > 支付宝
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
 # > 互助码
-互助码——Chiupam = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode_Chiupam.js
+互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode.js
 互助码——Vivi = type=cron,cronexp="30 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode_Vivi.js
