@@ -8,24 +8,24 @@
         {
             "id": "Leave",
             "name": "学工假条",
-            "keys": ["Month", "Day", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"],
+            "keys": ["BeginDay", "EndDay", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"],
             "descs_html": [
                 "<h4 align=\"center\">带 * 项为必填项</a></h4>"
             ],
             "settings": [{
-              "id": "Month",
-              "name": "* 当前月份",
+              "id": "BeginDay",
+              "name": "* 请假起始日期",
               "val": "01",
               "type": "text",
               "placeholder": "(点击以展开说明)",
-              "desc": "当前月份,例如01"
+              "desc": "请假起始日期,例如01"
             }, {
-              "id": "Day",
-              "name": "* 当前日期",
+              "id": "EndDay",
+              "name": "* 请假结束日期",
               "val": "01",
               "type": "text",
               "placeholder": "(点击以展开说明)",
-              "desc": "当前日期,例如01"
+              "desc": "请假结束日期,例如01"
             }, {
               "id": "LeaveType",
               "name": "请假类型",
