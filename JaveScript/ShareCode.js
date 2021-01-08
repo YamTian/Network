@@ -143,12 +143,12 @@ function createJoy() {
       try {
          const obj = JSON.parse(data)
         if (obj.code == 200) {
-          $.result.push("carzyjoy：添加成功")
+          $.result.push("疯狂的JOY：添加成功")
         }else
 		if(obj.code == 400) {
-          $.result.push("carzyjoy：已存在")
+          $.result.push("疯狂的JOY：已存在")
         }else{
-          $.result.push("carzyjoy：添加异常")
+          $.result.push("疯狂的JOY：添加异常")
         }
       } catch (e) {
         $.logErr(e, resp)
