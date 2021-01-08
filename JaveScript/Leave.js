@@ -27,7 +27,7 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
         "LeaveBeginTime": "10", // 去-整时
         "LeaveEndDate": EndDate, // 返-日期
         "LeaveEndTime": "22", // 返-整时
-        "LeaveNumNo": LeaveNumNo, // 用请假时长/24的值(手动填写)
+        "LeaveNumNo": LeaveNumNo,
       }
     ],
     "IsLeave": 1 // 是否在请假状态
@@ -39,7 +39,7 @@ else { // 响应体 Url 包含 Edit
     "LeaveType": $persistentStore.read('LeaveType') || '事假', // 请假类型
     "LeaveThing": $persistentStore.read('LeaveThing') || '', // 请假事由
     "OutAddress": $persistentStore.read('OutAddress') || '', // 外出地点
-    // 外出联系人信息(可不填)
+    // 外出联系人信息
     "OutName": $persistentStore.read('ParentName') || '', // 姓名
     "OutMoveTel": $persistentStore.read('ParentTel') || '', // 移动电话
     "OutTel": "", // 固定电话
@@ -64,7 +64,7 @@ else { // 响应体 Url 包含 Edit
     "DisLeaveDate": null,
     "WithNumNo": $persistentStore.read('WithNumNo') || '0', // 同行人数
     "FDYStatus": "2",
-    "LeaveNumNo": LeaveNumNo, // 用请假时长/24的值(自动生成)
+    "LeaveNumNo": LeaveNumNo,
     "GoOut": "1", // 是否外出离校
     "FDYThing": "同意",
     "SpStatus": null,
