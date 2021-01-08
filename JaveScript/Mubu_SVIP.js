@@ -1,6 +1,6 @@
 /*
 [Script]
-Mubu SVIP = type=http-response, pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Mubu_SVIP.js
+幕布 SVIP = type=http-response, pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Mubu_SVIP.js
 
 [MITM]
 hostname = mubu.com
