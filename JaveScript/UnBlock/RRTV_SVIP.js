@@ -1,6 +1,6 @@
 /*
 [Script]
-RRTV SVIP = type=http-response, pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail), requires-body=1, max-size=1, script-path=RRTV_SVIP.js
+人人视频 SVIP = type=http-response, pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail), requires-body=1, max-size=1, script-path=RRTV_SVIP.js
 
 [MITM]
 hostname = api.rr.tv
