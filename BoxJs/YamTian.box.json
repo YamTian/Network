@@ -162,7 +162,7 @@
       "id": "ShareCode",
       "name": "京东互助码",
       "keys": [
-        "FruitCode", "PetCode", "BeanCode", "ZuanZuan"
+        "FruitCode", "PetCode", "BeanCode", "ZuanZuan", "CarzyJoy"
       ],
       "descs_html": [
         "<h4 align=\"center\">京东游戏互助码</a></h4>"
