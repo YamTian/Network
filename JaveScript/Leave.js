@@ -56,6 +56,9 @@ else { // 响应体 Url 包含 Edit
     "GoDate": BeginDate, // 去-日期
     "LeaveEndDate": EndDate, // 返-日期
     "BackDate": EndDate, // 返-日期
+    // 往返交通工具
+    "GoVehicle": $persistentStore.read('Vehicle') || '汽车', // 去-交通工具
+    "BackVehicle": $persistentStore.read('Vehicle') || '汽车', // 返-交通工具
       
     // 以下数据不可修改
     "DisLeaveDate": null,
@@ -79,8 +82,6 @@ else { // 响应体 Url 包含 Edit
     "GoTime": "10", // 去-整时
     "LeaveEndTime": "22", // 返-整时
     "BackTime": "22", // 返-整时
-    "GoVehicle": $persistentStore.read('Vehicle') || '汽车', // 去-交通工具
-    "BackVehicle": $persistentStore.read('Vehicle') || '汽车', // 返-交通工具
   };
 }
 $done({body: JSON.stringify(Body)});
