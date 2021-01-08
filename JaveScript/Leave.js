@@ -1,36 +1,14 @@
-// 从 BoxJs 里面获取请假起始日期和结束日期
-const beginDay = $persistentStore.read('BeginDay') || ''; // 请假起始日期
-const endDay = $persistentStore.read('EndDay') || ''; // 请假结束日期
-
-// 获取当前月份
-var myDate = new Date();
-var newMonth = myDate.getMonth() + 1; // 用myDate.getMonth()获取的1月份输出是0
-
-// 月份补零
-if (newMonth <= 10) {
-  newMonth = "0" + newMonth;
-} else {
-  newMonth = newMonth;
-}
-
-// 起始日期补零
-if (beginDay.length == 1) {
-  newbeginDay = "0" + beginDay;
-} else {
-  newbeginDay = beginDay;
-}
-
-// 结束日期补零
-if (endDay.length == 1) {
-  newendDay = "0" + endDay;
-} else {
-  newendDay = endDay;
-}
-
-var Year = "2021"; // 2021年
-var BeginDate = Year + "-" + newMonth + "-" + newbeginDay; // 组合请假起始时间
-var EndDate = Year + "-" + newMonth + "-" + newendDay; // 组合请假结束时间
-var LeaveNumNo = (endDay - beginDay + 0.50).toFixed(2); // 请假时长的计算
+const beginDay = $persistentStore.read('BeginDay') || ''; // 从 BoxJs 里面获取请假起始日期
+const endDay = $persistentStore.read('EndDay') || ''; // 从 BoxJs 里面获取请假结束日期
+var newDate = new Date(); // 获取当前日期
+var Month = newDate.getMonth() + 1; // 用myDate.getMonth()获取的1月份输出是0
+var newMonth = ('0' + Month).slice(-2); // 月份补零
+var newbeginDay = ('0' + beginDay).slice(-2); // 请假起始日期补零
+var newendDay = ('0' + endDay).slice(-2); // 请假结束日期补零
+var Year = "2021"; // 当前年份:2021年
+var BeginDate = Year + "-" + newMonth + "-" + newbeginDay; // 组合请假起始日期成为新的请假起始日期
+var EndDate = Year + "-" + newMonth + "-" + newendDay; // 组合请假结束日期成为新的请假结束日期
+var LeaveNumNo = (endDay-beginDay+0.50).toFixed(2); // 计算请假时长并保留两位小数
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
