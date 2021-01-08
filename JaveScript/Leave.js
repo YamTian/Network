@@ -25,11 +25,11 @@ if (Url.indexOf('Edit') == -1) {
         "FDYThing": "同意", // 同意请假
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
-        "LeaveBeginDate": Today, // 起始日期
-        "LeaveBeginTime": "10", // 起始时间(小时)
-        "LeaveEndDate": Today, // 结束日期
-        "LeaveEndTime": "22", // 结束时间(小时)
-        "LeaveNumNo": 0.50, // 用请假时长/24的值
+        "LeaveBeginDate": Today, // 去-日期
+        "LeaveBeginTime": "10", // 去-整时
+        "LeaveEndDate": Today, // 返-日期
+        "LeaveEndTime": "22", // 返-整时
+        "LeaveNumNo": 0.50, // 用请假时长/24的值(手动填写)
       }
     ],
     "IsLeave": 1 // 是否在请假状态
@@ -37,7 +37,7 @@ if (Url.indexOf('Edit') == -1) {
 }
 else {
   Body= {
-    // 请假内容(必填)
+    // 请假内容
     "LeaveType": leaveType, // 请假类型
     "LeaveThing": leaveThing, // 请假事由
     "OutAddress": outAddress, // 外出地点
@@ -46,37 +46,37 @@ else {
     "OutMoveTel": parentTel, // 移动电话
     "OutTel": "", // 固定电话
     "Relation": relation, // 与本人关系
-    // 本人信息(必填)
+    // 本人信息
     "StuMoveTel": studentTel, // 联系电话
     "StuOtherTel": "", // 其他联系方式
-    // 家长信息(必填)
+    // 家长信息
     "ParentContacts": parentName, // 家长联系人
     "ParentTel": parentTel, // 家长联系方式
-    // 往返交通工具(必须修改)
+    // 往返时间
     "LeaveBeginDate": Today, // 去-日期
     "Inputdate": Today, // 去-日期
     "GoDate": Today, // 去-日期
     "LeaveEndDate": Today, // 返-日期
     "BackDate": Today, // 返-日期
       
-    // 以下数据不要随意修改
+    // 以下数据不可修改
     "DisLeaveDate": null,
-    "WithNumNo": withNumNo,
+    "WithNumNo": withNumNo, // 同行人数
     "FDYStatus": "2",
-    "LeaveNumNo": 1.00,
-    "GoOut": "1",
+    "LeaveNumNo": 1.00, // 用请假时长/24的值(自动生成)
+    "GoOut": "1", // 是否外出离校
     "FDYThing": "同意",
     "SpStatus": null,
     "Status": "5",
     "GoOutConfirm": null,
-    "StuName": null,
-    "studentId": "202020020",
+    "StuName": null, // 学生姓名
+    "studentId": "202020020", // 学生学号
     "XYThing": null,
     "OverStatus": 1,
-    "ID": 1,
+    "ID": 1, // 随便4位数以获取别人的请假信息
     "DisLeaveMen": null,
 
-    // 以下数据可按个人需求修改
+    // 以下数据不必修改
     "LeaveBeginTime": "10", // 去-整时
     "GoTime": "10", // 去-整时
     "LeaveEndTime": "22", // 返-整时
