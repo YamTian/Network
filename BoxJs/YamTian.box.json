@@ -88,7 +88,7 @@
                 "val": "汽车",
                 "type": "text",
                 "placeholder": "(点击以展开说明)",
-                "desc": "汽车/火车/飞机/自行车/其他,默认值为汽车"
+                "desc": "五选一,汽车/火车/飞机/自行车/其他,默认值为汽车"
               }],
             "author": "@YamTian",
             "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",
