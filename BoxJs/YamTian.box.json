@@ -29,7 +29,7 @@
             }, {
               "id": "LeaveType",
               "name": "请假类型",
-              "val": "",
+              "val": "事假",
               "type": "text",
               "placeholder": "(点击以展开说明)",
               "desc": "三选一,事假/病假/返家,默认值为事假"
@@ -78,14 +78,14 @@
             }, {
                 "id": "WithNumNo",
                 "name": "同行人数",
-                "val": "",
+                "val": "0",
                 "type": "text",
                 "placeholder": "(点击以展开说明)",
                 "desc": "陪同人数,结伴同行可填1,默认值为0"
               }, {
                 "id": "Vehicle",
                 "name": "往返交通工具",
-                "val": "",
+                "val": "汽车",
                 "type": "text",
                 "placeholder": "(点击以展开说明)",
                 "desc": "汽车/火车/飞机/自行车/其他,默认值为汽车"
