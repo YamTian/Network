@@ -11,7 +11,7 @@ const zuanZuan = $persistentStore.read('ZuanZuan') || '';
 const carzyJoy = $persistentStore.read('CarzyJoy') || '';
 
 // 东东农场
-$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/' + fruitCode + '/'
+$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/' + fruitCode + '/'
 
 // 东东萌宠
 $.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/' + petCode + '/'
