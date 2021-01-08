@@ -15,45 +15,39 @@
             "settings": [{
               "id": "BeginDay",
               "name": "* 请假起始日期",
-              "val": "01",
+              "val": "1",
               "type": "text",
               "placeholder": "(点击以展开说明)",
-              "desc": "请假起始日期,1-9号请在前面加0,例如01"
+              "desc": "请假起始日期,例如1号可以填写1或者01"
             }, {
               "id": "EndDay",
               "name": "* 请假结束日期",
-              "val": "01",
+              "val": "1",
               "type": "text",
               "placeholder": "(点击以展开说明)",
-              "desc": "请假结束日期,1-9号请在前面加0,例如01"
+              "desc": "请假结束日期,例如1号可以填写1或者01"
             }, {
               "id": "LeaveType",
               "name": "请假类型",
               "val": "事假",
               "type": "radios",
               "desc": "默认选项为事假",
-              "items": [
-                {
+              "items": [{
                   "key": "事假",
                   "label": "事假"
-                },
-                {
+                }, {
                   "key": "病假",
                   "label": "病假"
-                },
-                {
-                  "key": "实习",
-                  "label": "实习"
-                },
-                {
+                }, {
                   "key": "返家",
                   "label": "返家"
-                },
-                {
+                }, {
+                  "key": "实习",
+                  "label": "实习"
+                }, {
                   "key": "培训",
                   "label": "培训"
-                }
-              ]
+                }]
             }, {
               "id": "LeaveThing",
               "name": "* 请假事由",
@@ -102,16 +96,13 @@
                 "val": "0",
                 "type": "radios",
                 "desc": "默认选项为无人同行",
-                "items": [
-                  {
+                "items": [{
                     "key": "0",
                     "label": "无人同行"
-                  },
-                  {
+                  }, {
                     "key": "1",
                     "label": "一人同行"
-                  }
-                ]
+                  }]
               }, {
                 "id": "Vehicle",
                 "name": "往返交通工具",
@@ -122,24 +113,19 @@
                   {
                     "key": "汽车",
                     "label": "汽车"
-                  },
-                  {
+                  }, {
                     "key": "火车",
                     "label": "火车"
-                  },
-                  {
+                  }, {
                     "key": "飞机",
                     "label": "飞机"
-                  },
-                  {
+                  }, {
                     "key": "自行车",
                     "label": "自行车"
-                  },
-                  {
+                  }, {
                     "key": "其他",
                     "label": "其他"
-                  }
-                ]
+                  }]
               }],
             "author": "@YamTian",
             "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",

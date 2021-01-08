@@ -8,14 +8,28 @@ var newMonth = myDate.getMonth() + 1; // 用myDate.getMonth()获取的1月份输
 
 // 月份补零
 if (newMonth <= 10) {
-  newMonth = "0" + newMonth
+  newMonth = "0" + newMonth;
 } else {
-  newMonth = newMonth
+  newMonth = newMonth;
+}
+
+// 起始日期补零
+if (beginDay.length == 1) {
+  newbeginDay = "0" + beginDay;
+} else {
+  newbeginDay = beginDay;
+}
+
+// 结束日期补零
+if (endDay.length == 1) {
+  newendDay = "0" + endDay;
+} else {
+  newendDay = endDay;
 }
 
 var Year = "2021"; // 2021年
-var BeginDate = Year + "-" + newMonth + "-" + beginDay; // 组合请假起始时间
-var EndDate = Year + "-" + newMonth + "-" + endDay; // 组合请假结束时间
+var BeginDate = Year + "-" + newMonth + "-" + newbeginDay; // 组合请假起始时间
+var EndDate = Year + "-" + newMonth + "-" + newendDay; // 组合请假结束时间
 var LeaveNumNo = (endDay - beginDay + 0.50).toFixed(2); // 请假时长的计算
 
 var Url = $request.url; // 定义响应体 Url
