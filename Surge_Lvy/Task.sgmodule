@@ -1,8 +1,7 @@
 #!name=任务构造
 #!desc=日常使用的时候, 请不要关闭此模块.
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=180, script-path=javescript
-#!GitHub:https://github.com/chiupam/Proxy/blob/lvy/Surge/Task.sgmodule
-#!raw:https://raw.githubusercontent.com/chiupam/Proxy/lvy/Surge/Task.sgmodule
+
 
 [Script]
 # > 滴滴出行
