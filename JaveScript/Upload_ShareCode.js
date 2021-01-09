@@ -3,7 +3,8 @@
 上传互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode.js
 */
 
-const $ = new Env('Upload JD ShareCode')
+const $ = new Env(userName)
+const userName = $persistentStore.read('UserName') || '';
 const fruitCode = $persistentStore.read('FruitCode') || '';
 const petCode = $persistentStore.read('PetCode') || '';
 const beanCode = $persistentStore.read('BeanCode') || '';
