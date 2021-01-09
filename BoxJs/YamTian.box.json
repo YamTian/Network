@@ -12,12 +12,12 @@
         "BeginDay", "EndDay", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"
       ],
       "descs_html": [
-        "<h4 align=\"center\">带 * 项为必填项</a></h4>"
+        "<h4 align=\"center\">请按说明修改信息</a></h4>"
       ],
       "settings": [
         {
         "id": "BeginDay",
-        "name": "* 请假起始日期",
+        "name": "请假起始日期",
         "val": "1",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -25,7 +25,7 @@
         }, 
         {
           "id": "EndDay",
-          "name": "* 请假结束日期",
+          "name": "请假结束日期",
           "val": "1",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -58,7 +58,7 @@
         }, 
         {
           "id": "LeaveThing",
-          "name": "* 请假事由",
+          "name": "请假事由",
           "val": "外出吃饭",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -66,7 +66,7 @@
         }, 
         {
           "id": "OutAddress",
-          "name": "* 外出地点",
+          "name": "外出地点",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -74,7 +74,7 @@
         }, 
         {
           "id": "StudentTel",
-          "name": "* 学生手机号码",
+          "name": "学生手机号码",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -82,7 +82,7 @@
         }, 
         {
           "id": "ParentName",
-          "name": "* 家长姓名",
+          "name": "家长姓名",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -90,7 +90,7 @@
         }, 
         {
           "id": "Relation",
-          "name": "* 与家长的法律关系",
+          "name": "与家长的法律关系",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -98,7 +98,7 @@
         }, 
         {
           "id": "ParentTel",
-          "name": "* 家长手机号码",
+          "name": "家长手机号码",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
