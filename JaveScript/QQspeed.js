@@ -2,7 +2,6 @@
 Regex: ^https:\/\/mwegame\.qq\.com\/ams\/sign\/doSign\/month
 Host: mwegame.qq.com
 chavyleung github: https://raw.githubusercontent.com/chavyleung/scripts/master/zsfc/zsfc.js
-RAW: https://raw.githubusercontent.com/chiupam/Proxy/individual/Scripts/QQspeed.js
 */
 var appName = ''
 var speed = init()
