@@ -162,12 +162,20 @@
       "id": "ShareCode",
       "name": "京东互助码",
       "keys": [
-        "FruitCode", "PetCode", "BeanCode", "ZuanZuan", "CarzyJoy"
+        "UserName", "FruitCode", "PetCode", "BeanCode", "ZuanZuan", "CarzyJoy"
       ],
       "descs_html": [
         "<h4 align=\"center\">京东游戏互助码</a></h4>"
       ],
       "settings": [
+        {
+        "id": "UserName",
+        "name": "京东昵称",
+        "val": "",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "填写您京东帐号的昵称"
+        },
         {
         "id": "FruitCode",
         "name": "东东农场",
