@@ -17,4 +17,4 @@ Bilibili = type=cron, cronexp="10 0 8 * * *", wake-system=1, timeout=180, script
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=AliPay.js
 # > 互助码
 互助码 = type=cron,cronexp="0 1 6 1,10,20 * *", wake-system=1, timeout=180, script-path=ShareCode_Chiupam98.js
-
+获取并上传京东互助码 = type=cron,cronexp="0 0,6 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js
