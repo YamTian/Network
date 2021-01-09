@@ -1,4 +1,6 @@
 /*
+注: 输出弹窗有问题, 不支持 Quantumult X
+
 [Script]
 获取并上传互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js
 */
