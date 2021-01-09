@@ -7,4 +7,4 @@ http-response ^https?:\/\/account\.wps\.cn\/api\/users script-path=https://raw.g
 http-response ^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Mubu_SVIP.js, requires-body=true, timeout=10, tag=幕布 SVIP
 
 [MITM]
-hostname = ap*.intsig.net, account.wps.cn, mubu.com                         
+hostname = ap*.intsig.net, account.wps.cn, mubu.com
