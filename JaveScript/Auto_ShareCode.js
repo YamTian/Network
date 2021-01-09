@@ -1,3 +1,8 @@
+/*
+[Script]
+获取并上传互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js
+*/
+
 const $ = new Env("");
 const JD_API_HOST = "https://api.m.jd.com/client.action";
 let cookiesArr = [], cookie = '', message;
