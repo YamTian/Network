@@ -164,7 +164,7 @@ function uploadCarzyJoy() {
 function showMsg() {
   return new Promise((resolve) => {
     // $.msg($.name, "", $.result.join('\n'));
-    $.msg("京东帐号:" + userName , "", $.result.join('\n'));
+    $.msg("京东帐号：" + userName , "", $.result.join('\n'));
     resolve();
   });
 }
