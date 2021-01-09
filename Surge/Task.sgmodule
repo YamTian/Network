@@ -21,5 +21,6 @@
 # > 支付宝
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
 # > 互助码
+获取京东互助码 = type=cron,cronexp="0 0 0 29 2 2080", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_get_share_code.js
 上传京东互助码 = type=cron,cronexp="0 0,6 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode.js
 切换会话 = type=cron,cronexp="0 3,9 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js
