@@ -11,38 +11,38 @@ const zuanZuan = $persistentStore.read('ZuanZuan') || '';
 const carzyJoy = $persistentStore.read('CarzyJoy') || '';
 
 // 东东农场
-$.ncUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/' + fruitCode + '/'
+$.JDFruittUrl = 'http://api.turinglabs.net/api/v1/jd/farm/create/' + fruitCode + '/'
 
 // 东东萌宠
-$.mcUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/' + petCode + '/'
+$.JDPetUrl = 'http://api.turinglabs.net/api/v1/jd/pet/create/' + petCode + '/'
 
 // 种豆得豆
-$.zdUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/' + beanCode + '/'
+$.JDBeanUrl = 'http://api.turinglabs.net/api/v1/jd/bean/create/' + beanCode + '/'
 
 // 京东赚赚
-$.zzUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/' + zuanZuan + '/'
+$.ZuanZauanUrl = 'https://code.chiang.fun/api/v1/jd/jdzz/create/' + zuanZuan + '/'
 
 // carzyjoy
-$.joyUrl = 'https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/' + carzyJoy +'/'
+$.CarzyJoyUrl = 'https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/' + carzyJoy +'/'
 
 $.result = []
 
 // 分析
 !(async () => {
-  await createZd()
-  await createNc()
-  await createMc()
-  await createZZ()
-  await createJoy()
+  await uploadJDBean()
+  await uploadJDFruit()
+  await uploadJDPet()
+  await uploadJDZZ()
+  await uploadCarzyJoy()
   await showMsg()
 })()
   .catch((e) => $.logErr(e))
   .finally(() => $.done())
 
 // 种豆得豆
-function createZd() {
+function uploadJDBean() {
   return new Promise((resolve) => {
-    const url = { url: $.zdUrl }
+    const url = { url: $.JDBeanUrl }
     $.get(url, (_err, resp, data) => {
       try {
         const obj = JSON.parse(data)
@@ -64,9 +64,9 @@ function createZd() {
 }
 
 // 东东农场
-function createNc() {
+function uploadJDFruit() {
   return new Promise((resolve) => {
-    const url = { url: $.ncUrl }
+    const url = { url: $.JDFruittUrl }
     $.get(url, (_err, resp, data) => {
       try {
          const obj = JSON.parse(data)
@@ -88,9 +88,9 @@ function createNc() {
 }
 
 // 东东萌宠
-function createMc() {
+function uploadJDPet() {
   return new Promise((resolve) => {
-    const url = { url: $.mcUrl }
+    const url = { url: $.JDPetUrl }
     $.get(url, (_err, resp, data) => {
       try {
          const obj = JSON.parse(data)
@@ -112,9 +112,9 @@ function createMc() {
 }
 
 // 京东赚赚
-function createZZ() {
+function uploadJDZZ() {
   return new Promise((resolve) => {
-    const url = { url: $.zzUrl }
+    const url = { url: $.ZuanZauanUrl }
     $.get(url, (_err, resp, data) => {
       try {
          const obj = JSON.parse(data)
@@ -136,9 +136,9 @@ function createZZ() {
 }
 
 // carzyjoy
-function createJoy() {
+function uploadCarzyJoy() {
   return new Promise((resolve) => {
-    const url = { url: $.joyUrl }
+    const url = { url: $.CarzyJoyUrl }
     $.get(url, (_err, resp, data) => {
       try {
          const obj = JSON.parse(data)
