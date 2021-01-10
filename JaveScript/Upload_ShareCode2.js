@@ -5,6 +5,7 @@
 */
 
 const $ = Env('互助码提交')
+
 const BeanCode1 = $.getdata('BeanCode1');
 const FruitCode1 = $.getdata('FruitCode1');
 const PetCode1 = $.getdata('PetCode1');
@@ -75,7 +76,7 @@ function all() {
             if (i == 4)
             UploadZuanCode(); // 京东赚赚
 	        if (i == 5 )
-            UploadJoyCode(); //京东CrazyJoy任务  
+            UploadJoyCode(); // 疯狂的JOY
             else  if (i == 6 ) {
                 console.log('\r\n种豆得豆:');
                 console.log($.BeanCodeBody);
@@ -85,7 +86,7 @@ function all() {
                 console.log($.PetCodeBody);
                 console.log('\r\n京东赚赚:');
                 console.log($.ZuanCodeBody);
-                console.log('\r\nj疯狂的JOY:');
+                console.log('\r\n疯狂的JOY:');
                 console.log($.JoyCodeBody);
             }else if (i == 7){  
                 if ( K < BeanCodeArr.length - 1) {
@@ -117,15 +118,16 @@ function UploadBeanCode() {
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data // 修改
-            if (resp.statusCode == 200) {
-                Information = '添加成功'
-            } else if (resp.statusCode == 400) {
-                Information = '已存在'
-            } else {
-                Information = '未知错误'
-            }
-            Notice += `种豆得豆:` + Information + `\n`
+                const obj = JSON.parse(data)
+                $.BeanCodeBody = data // 修改
+                if (obj.code == 200) {
+                    Information = '添加成功'
+                } else if (obj.code == 400) {
+                    Information = '已存在'
+                } else {
+                    Information = '未知错误'
+                }
+                Notice += `种豆得豆：` + Information + `\n`
             } catch (e) {
                 $.logErr(e, resp)
             } finally {
@@ -144,15 +146,16 @@ function UploadFruitCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.FruitCodeBody = data // 修改
-            if (resp.statusCode == 200) {
-                Information = '添加成功'
-            } else if (resp.statusCode == 400) {
-                Information = '已存在'
-            } else {
-                Information = '未知错误'
-            }
-            Notice += `东东农场:` + Information + `\n` // 修改
+                const obj = JSON.parse(data)
+                $.FruitCodeBody = data // 修改
+                if (obj.code == 200) {
+                    Information = '添加成功'
+                } else if (obj.code == 400) {
+                    Information = '已存在'
+                } else {
+                    Information = '未知错误'
+                }
+                Notice += `东东农场：` + Information + `\n` // 修改
             } catch (e) {
                 $.logErr(e, resp)
             } finally {
@@ -171,15 +174,16 @@ function UploadPetCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.PetCodeBody = data // 修改
-            if (resp.statusCode == 200) {
-                Information = '添加成功'
-            } else if (resp.statusCode == 400) {
-                Information = '已存在'
-            } else {
-                Information = '未知错误'
-            }
-            Notice += `东东萌宠:` + Information + `\n` // 修改
+                const obj = JSON.parse(data)
+                $.PetCodeBody = data // 修改
+                if (obj.code == 200) {
+                    Information = '添加成功'
+                } else if (obj.code == 400) {
+                    Information = '已存在'
+                } else {
+                    Information = '未知错误'
+                }
+                Notice += `东东萌宠：` + Information + `\n` // 修改
             } catch (e) {
                 $.logErr(e, resp)
             } finally {
@@ -198,15 +202,16 @@ function UploadZuanCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.ZuanCodeBody = data // 修改
-            if (resp.statusCode == 200) {
-                Information = '添加成功'
-            } else if (resp.statusCode == 400) {
-                Information = '已存在'
-            } else {
-                Information = '未知错误'
-            }
-            Notice += `京东赚赚:` + Information + `\n` // 修改
+                const obj = JSON.parse(data)
+                $.ZuanCodeBody = data // 修改
+                if (obj.code == 200) {
+                    Information = '添加成功'
+                } else if (obj.code == 400) {
+                    Information = '已存在'
+                } else {
+                    Information = '未知错误'
+                }
+                Notice += `京东赚赚：` + Information + `\n` // 修改
             } catch (e) {
                 $.logErr(e, resp)
             } finally {
@@ -225,15 +230,16 @@ function UploadJoyCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.JoyCodeBody = data // 修改
-            if (resp.statusCode == 200) {
-                Information = '添加成功'
-            } else if (resp.statusCode == 400) {
-                Information = '已存在'
-            } else {
-                Information = '未知错误'
-            }
-            Notice += `疯狂的JOY:` + Information + `\n` // 修改
+                const obj = JSON.parse(data)
+                $.JoyCodeBody = data // 修改
+                if (obj.code == 200) {
+                    Information = '添加成功'
+                } else if (obj.code == 400) {
+                    Information = '已存在'
+                } else {
+                    Information = '未知错误'
+                }
+                Notice += `疯狂的JOY：` + Information + `\n` // 修改
             } catch (e) {
                 $.logErr(e, resp)
             } finally {
