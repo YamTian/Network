@@ -272,7 +272,7 @@
         "jdUnsubscribeNotify"
       ],
       "descs_html": [
-        "<h4 align=\"center\">京东脚本静默运行, 开启则静默运行, 运行结果不弹窗</a></h4>"
+        "<h4 align=\"center\">京东脚本静默运行, 开启后运行结果不弹窗</a></h4>"
       ],
       "settings": [
         {
@@ -856,7 +856,7 @@
           "name": "User-Agent",
           "val": "",
           "type": "text",
-          "desc": "不懂U ser-Agent 请不要随意填写内容"
+          "desc": "不懂 User-Agent 的请不要随意填写内容"
         }
       ],
       "author": "@lxk0301",
