@@ -4,6 +4,8 @@
 
 #!互助码统计 = type=cron,cronexp="0 30 7 1,10,20 * *", wake-system=1, timeout=180, script-path=ShareCode_Count.js
 
+#!切换京东互助码 = type=cron,cronexp="3,9 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://cdn.jsdelivr.net/gh/chavyleung/scripts@master/box/switcher/box.switcher.js
+
 [Script]
 # > 百度贴吧
 百度贴吧 = type=cron, cronexp="30 1 */12 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js
@@ -22,6 +24,5 @@
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
 # > 京东互助码
 获取京东互助码 = type=cron,cronexp="0 0 0 29 2 *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js
-上传京东互助码 = type=cron,cronexp="0,6 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode.js
-上传京东互助码(双账号版) = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js
-切换京东互助码 = type=cron,cronexp="3,9 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://cdn.jsdelivr.net/gh/chavyleung/scripts@master/box/switcher/box.switcher.js
+上传京东互助码 = type=cron,cronexp="0,4 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js
+
