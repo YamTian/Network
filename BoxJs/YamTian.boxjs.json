@@ -566,7 +566,7 @@
       "repo": "https://github.com/lxk0301/jd_scripts",
       "scripts":[
         {
-          "name" : "东东宠萌",
+          "name" : "东东萌宠",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js"
         }
       ],
