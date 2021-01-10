@@ -170,83 +170,83 @@
       "settings": [
         {
         "id": "BeanCode1",
-        "name": "账号一种豆得豆",
-        "val": "sptv55gzcksfquzoq5k2ubuj4i",
+        "name": "账号一 种豆得豆",
+        "val": "",
         "type": "text",
         "placeholder": "(点击以展开说明)",
-        "desc": "此处填写账号一的种豆得豆的互助码"
+        "desc": "此处填写账号一的种豆得豆互助码"
         },
         {
         "id": "FruitCode1",
-        "name": "账号一东东农场",
-        "val": "73b9c21c192948c6b9202303439510d2",
+        "name": "账号一 东东农场",
+        "val": "",
         "type": "text",
         "placeholder": "(点击以展开说明)",
-        "desc": "此处填写账号一的东东农场的互助码"
+        "desc": "此处填写账号一的东东农场互助码"
         },
         {
         "id": "PetCode1",
-        "name": "账号一东东萌宠",
-        "val": "MTAxODc2NTEzNTAwMDAwMDAyNzQ1OTEzOQ==",
+        "name": "账号一 东东萌宠",
+        "val": "",
         "type": "text",
         "placeholder": "(点击以展开说明)",
-        "desc": "此处填写账号一的东东萌宠的互助码"
+        "desc": "此处填写账号一的东东萌宠互助码"
         },
         {
         "id": "ZuanCode1",
-        "name": "账号一京东赚赚",
-        "val": "S5KkcRh5K9VeDJR3wk6ULdA",
+        "name": "账号一 京东赚赚",
+        "val": "",
         "type": "text",
         "placeholder": "(点击以展开说明)",
-        "desc": "此处填写账号一的京东赚赚的互助码"
+        "desc": "此处填写账号一的京东赚赚互助码"
         },
         {
         "id": "CarzyJoy1",
-        "name": "账号一疯狂的JOY",
-        "val": "v6SnwcSXWk8K7x228LZX7Kt9zd5YaBeE",
+        "name": "账号一 疯狂的JOY",
+        "val": "",
         "type": "text",
         "placeholder": "(点击以展开说明)",
-        "desc": "此处填写账号一的疯狂的JOY的互助码"
+        "desc": "此处填写账号一的疯狂的JOY互助码"
         },
         {
           "id": "BeanCode2",
-          "name": "账号二种豆得豆",
-          "val": "iu237u55hwjiobiy5l2ouqbrmuay6e3tf5t45xq",
+          "name": "账号二 种豆得豆",
+          "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "此处填写账号二的种豆得豆的互助码"
+          "desc": "此处填写账号二的种豆得豆互助码"
           },
           {
           "id": "FruitCode2",
-          "name": "账号二东东农场",
-          "val": "73b9c21c192948c6b9202303439510d2",
+          "name": "账号二 东东农场",
+          "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "此处填写账号二的东东农场的互助码"
+          "desc": "此处填写账号二的东东农场互助码"
           },
           {
           "id": "PetCode2",
-          "name": "账号二东东萌宠",
-          "val": "MTE1NDQ5OTIwMDAwMDAwMzY1OTM3NzM=",
+          "name": "账号二 东东萌宠",
+          "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "此处填写账号二的东东萌宠的互助码"
+          "desc": "此处填写账号二的东东萌宠互助码"
           },
           {
           "id": "ZuanCode2",
-          "name": "账号二京东赚赚",
-          "val": "S5KkcI0ZmnCe9Xm638bZA",
+          "name": "账号二 京东赚赚",
+          "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "此处填写账号二的京东赚赚的互助码"
+          "desc": "此处填写账号二的京东赚赚互助码"
           },
           {
           "id": "CarzyJoy2",
-          "name": "账号二疯狂的JOY",
-          "val": "V862tzA2FtDZxcFGq0lzUw==",
+          "name": "账号二 疯狂的JOY",
+          "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "此处填写账号二的疯狂的JOY的互助码"
+          "desc": "此处填写账号二的疯狂的JOY互助码"
           }
       ],
       "author": "@YamTian",
