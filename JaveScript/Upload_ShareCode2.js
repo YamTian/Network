@@ -1,6 +1,6 @@
 /*
 [Script]
-上传京东互助码(双账号版) = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js
+上传京东互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js
 
 */
 
