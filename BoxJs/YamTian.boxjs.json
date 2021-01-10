@@ -253,6 +253,10 @@
       "repo": "https://github.com/YamTian/Network/tree/master",
       "scripts":[
         {
+          "name" : "获取京东互助码",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_get_share_code.js"
+        },
+        {
           "name" : "上传京东互助码",
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js"
         }
