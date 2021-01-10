@@ -34,7 +34,7 @@ let Notice ='';
 let Amount;
 const Delay = 1 // 单次任务延迟,默认1秒
 
-for (let index = 1; index <= 3; index++) {
+for (let index = 1; index <= 2; index++) {
     if ($.getdata('BeanCode' + index) === undefined || $.getdata('BeanCode' + index) === '') {
         break
     }
@@ -105,7 +105,7 @@ function all() {
 
 // 用户名
 function info() {
-    Notice +=`\n========== 【第${K+1}个账号】 ==========\n`
+    Notice +=`\n【第${K+1}个账号】\n`
 }
 
 // 上传种豆得豆互助码
@@ -117,7 +117,7 @@ function UploadBeanCode() {
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data
+            $.BeanCodeBody = data // 修改
             if (resp.statusCode == 200) {
                 Information = '添加成功'
             } else if (resp.statusCode == 400) {
@@ -144,7 +144,7 @@ function UploadFruitCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data
+            $.FruitCodeBody = data // 修改
             if (resp.statusCode == 200) {
                 Information = '添加成功'
             } else if (resp.statusCode == 400) {
@@ -171,7 +171,7 @@ function UploadPetCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data
+            $.PetCodeBody = data // 修改
             if (resp.statusCode == 200) {
                 Information = '添加成功'
             } else if (resp.statusCode == 400) {
@@ -198,7 +198,7 @@ function UploadZuanCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data
+            $.ZuanCodeBody = data // 修改
             if (resp.statusCode == 200) {
                 Information = '添加成功'
             } else if (resp.statusCode == 400) {
@@ -225,7 +225,7 @@ function UploadJoyCode() { // 修改
 	    }
         $.get(url,(_err, resp, data)=> {  
             try {
-            $.BeanCodeBody = data
+            $.JoyCodeBody = data // 修改
             if (resp.statusCode == 200) {
                 Information = '添加成功'
             } else if (resp.statusCode == 400) {
@@ -249,8 +249,6 @@ function showmsg() {
     resolve()
   })
 }
-
-
 
 
 // prettier-ignore
