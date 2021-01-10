@@ -258,7 +258,7 @@
     },
     {
       "id": "Notify",
-      "name": "京东脚本静默运行",
+      "name": "静默运行",
       "key": [
         "jdFruitNotify",
         "jdPetNotify",
@@ -270,6 +270,9 @@
         "jdSuperMarketRewardNotify",
         "jdSpeedNotify",
         "jdUnsubscribeNotify"
+      ],
+      "descs_html": [
+        "<h4 align=\"center\">京东脚本静默运行, 开启则静默运行, 运行结果不弹窗</a></h4>"
       ],
       "settings": [
         {
