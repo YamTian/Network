@@ -257,6 +257,100 @@
       ]
     },
     {
+      "id": "Notify",
+      "name": "京东脚本静默运行",
+      "key": [
+        "jdFruitNotify",
+        "jdPetNotify",
+        "jdPlantBeanNotify",
+        "jdJoyNotify",
+        "jdJoyStealNotify",
+        "jdSuperMarketNotify",
+        "jdJoyRewardNotify",
+        "jdSuperMarketRewardNotify",
+        "jdSpeedNotify",
+        "jdUnsubscribeNotify"
+      ],
+      "settings": [
+        {
+          "id": "jdFruitNotify",
+          "name": "东东农场",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行东东农场脚本时不发出系统通知"
+        },
+        {
+          "id": "jdPetNotify",
+          "name": "东东萌宠",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行东东萌宠脚本时不发出系统通知"
+        },
+        {
+          "id": "jdPlantBeanNotify",
+          "name": "种豆得豆",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行种豆得豆脚本时不发出系统通知"
+        },
+        {
+          "id": "jdJoyNotify",
+          "name": "宠汪汪",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行宠汪汪脚本时不发出系统通知"
+        },
+        {
+          "id": "jdJoyStealNotify",
+          "name": "宠汪汪偷粮",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行宠汪汪偷粮脚本时不发出系统通知"
+        },
+        {
+          "id": "jdSuperMarketNotify",
+          "name": "东东超市",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行东东超市脚本时不发出系统通知"
+        },
+        {
+          "id": "jdJoyRewardNotify",
+          "name": "宠汪汪兑换京豆",
+          "val": true,
+          "type": "boolean",
+          "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
+        },
+        {
+          "id": "jdSuperMarketRewardNotify",
+          "name": "东东超市兑换京豆",
+          "val": true,
+          "type": "boolean",
+          "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
+        },
+        {
+          "id": "jdSpeedNotify",
+          "name": "天天加速",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行天天加速脚本时不发出系统通知"
+        },
+        {
+          "id": "jdUnsubscribeNotify",
+          "name": "取关京东店铺和商品",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行取关京东店铺和商品脚本时不发出系统通知"
+        }
+      ],
+      "author": "@YamTian",
+      "repo": "https://github.com/YamTian/Network/tree/master",
+      "icons": [
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg", 
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg"
+      ]
+    },
+    {
       "id": "jd_fruit",
       "name": "东东农场",
       "keys": [
@@ -272,13 +366,6 @@
         "jd2_fruit4"
       ],
       "settings": [
-        {
-          "id": "jdFruitNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行东东农场脚本时不发出系统通知"
-        },
         {
           "id": "jd_fruit_name",
           "name": "京东账号一昵称",
@@ -376,13 +463,6 @@
         "jd2_pet5"
       ],
       "settings": [
-        {
-          "id": "jdPetNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行东东萌宠脚本时不发出系统通知"
-        },
         {
           "id": "jd_pet_name",
           "name": "京东账号昵称",
@@ -491,13 +571,6 @@
       ],
       "settings": [
         {
-          "id": "jdPlantBeanNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行种豆得豆脚本时不发出系统弹窗通知"
-        },
-        {
           "id": "jd_plant_bean_name",
           "name": "京东账号一昵称",
           "val": "",
@@ -568,20 +641,6 @@
       "keys": [],
       "settings": [
         {
-          "id": "jdJoyNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行宠汪汪脚本时不发出系统弹窗通知"
-        },
-        {
-          "id": "jdJoyStealNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行宠汪汪偷粮脚本时不发出系统弹窗通知"
-        },
-        {
           "id": "jdJoyHelpFeed",
           "name": "是否给好友喂食",
           "val": true,
@@ -630,17 +689,50 @@
       ]
     },
     {
+      "id": "jd_SuperMarket",
+      "name": "东东超市",
+      "keys": [],
+      "settings": [
+        {
+          "id": "jdSuperMarketUpgrade",
+          "name": "自动升级(商品/货架)",
+          "val": false,
+          "type": "boolean",
+          "desc": "自动升级, 顺序:解锁升级商品、升级货架"
+        },
+        {
+          "id": "jdBusinessCircleJump",
+          "name": "自动更换商圈",
+          "val": true,
+          "type": "boolean",
+          "desc": "小于对方300热力值自动更换商圈队伍"
+        },
+        {
+          "id": "jdSuperMarketLottery",
+          "name": "抽奖",
+          "val": true,
+          "type": "boolean",
+          "desc": "运行脚本消耗金币进行抽奖"
+        }
+      ],
+      "author": "@lxk0301",
+      "repo": "https://github.com/lxk0301/jd_scripts",
+      "scripts":[
+        {
+          "name" : "东东超市",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/jxc_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/jxc.png"
+      ]
+    },
+    {
       "id": "jd_Joy_Reward",
       "name": "宠汪汪积分兑换京豆",
       "keys": [],
       "settings": [
-        {
-          "id": "jdJoyRewardNotify",
-          "name": "静默运行",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
-        },
         {
           "id": "joyRewardName",
           "name": "是否兑换京豆",
@@ -676,24 +768,32 @@
       ]
     },
     {
-      "id": "jd_Speed",
-      "name": "天天加速",
-      "keys": [],
+      "id": "jd_SuperMarket_Reawrd",
+      "name": "东东超市兑换奖品",
+      "keys": [
+        "coinToBeans"
+      ],
+      "desc": "默认兑换京豆, 兑换20京豆输入20, 兑换柠檬果香洗手液, 输入柠檬果香洗手液, 其他详细的奖品名称去东东超市活动页面查看",
       "settings": [
         {
-          "id": "jdSpeedNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行天天加速脚本时不发出系统弹窗通知"
+          "id": "coinToBeans",
+          "name": "兑换奖品",
+          "val": "20",
+          "type": "text",
+          "desc": "输入兑换奖品名称, 不兑换输入0"
         }
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_speed.js",
+      "scripts": [
+        {
+          "name" : "东东超市兑换奖品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
+        }
+      ],
       "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdjs_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdjs.png"
+        "https://raw.githubusercontent.com/58xinian/icon/master/jxc_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/jxc.png"
       ]
     },
     {
@@ -704,13 +804,6 @@
         "jdUnsubscribeStopShop"
       ],
       "settings": [
-        {
-          "id": "jdUnsubscribeNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行取关京东店铺和商品脚本时不发出系统弹窗通知"
-        },
         {
           "id": "jdUnsubscribePageSize",
           "name": "取消已关注商品的数量",
@@ -746,89 +839,6 @@
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
-      ]
-    },
-    {
-      "id": "jd_SuperMarket",
-      "name": "京小超",
-      "keys": [],
-      "settings": [
-        {
-          "id": "jdSuperMarketNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行京小超脚本时不发出系统弹窗通知"
-        },
-        {
-          "id": "jdSuperMarketUpgrade",
-          "name": "自动升级(商品/货架)",
-          "val": false,
-          "type": "boolean",
-          "desc": "自动升级, 顺序:解锁升级商品、升级货架"
-        },
-        {
-          "id": "jdBusinessCircleJump",
-          "name": "自动更换商圈",
-          "val": true,
-          "type": "boolean",
-          "desc": "小于对方300热力值自动更换商圈队伍"
-        },
-        {
-          "id": "jdSuperMarketLottery",
-          "name": "抽奖",
-          "val": true,
-          "type": "boolean",
-          "desc": "运行脚本消耗金币进行抽奖"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/jd_scripts",
-      "scripts":[
-        {
-          "name" : "京小超",
-          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc.png"
-      ]
-    },
-    {
-      "id": "jd_SuperMarket_Reawrd",
-      "name": "京小超兑换奖品",
-      "keys": [
-        "coinToBeans"
-      ],
-      "desc": "默认兑换京豆, 兑换20京豆输入20, 兑换柠檬果香洗手液, 输入柠檬果香洗手液, 其他详细的奖品名称去京小超活动页面查看",
-      "settings": [
-        {
-          "id": "jdSuperMarketRewardNotify",
-          "name": "静默运行",
-          "val": true,
-          "type": "boolean",
-          "desc": "开启后成功兑换到奖品不发出系统弹窗通知"
-        },
-        {
-          "id": "coinToBeans",
-          "name": "兑换奖品",
-          "val": "20",
-          "type": "text",
-          "desc": "输入兑换奖品名称, 不兑换输入0"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/jd_scripts",
-      "scripts": [
-        {
-          "name" : "京小超兑换奖品",
-          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc.png"
       ]
     },
     {
