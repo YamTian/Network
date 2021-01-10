@@ -666,24 +666,24 @@
       "settings": [
         {
           "id": "jdJoyHelpFeed",
-          "name": "是否给好友喂食",
+          "name": "给好友喂食",
           "val": true,
           "type": "boolean",
-          "desc": "给好友喂食可得积分, 但会消耗自己狗粮"
+          "desc": "开启则给好友喂食可得积分, 但会消耗自己狗粮"
         },
         {
           "id": "jdJoyStealCoin",
-          "name": "是否偷好友积分与狗粮",
+          "name": "偷好友积分与狗粮",
           "val": true,
           "type": "boolean",
-          "desc": "偷好友积分与狗粮"
+          "desc": "开启则偷好友积分与狗粮"
         },
         {
           "id": "joyFeedCount",
           "name": "每次喂养数量",
           "val": "20",
           "type": "radios",
-          "desc": "每次喂养狗粮克数",
+          "desc": "每次喂养狗粮克数, 狗粮不足自动降低克数",
           "items": [
             {
               "key": "10",
@@ -691,7 +691,7 @@
             },
             {
               "key": "20",
-              "label": "消耗20g"
+              "label": "消耗20g(建议)"
             },
             {
               "key": "40",
@@ -705,10 +705,10 @@
         },
         {
           "id": "joyRewardName",
-          "name": "是否兑换京豆",
+          "name": "兑换京豆",
           "val": "1",
           "type": "radios",
-          "desc": "默认开启兑换, 如不想兑换可选择不兑换",
+          "desc": "默认开启兑换20京豆, 如不想兑换可选择不兑换",
           "items": [
             {
               "key": "0",
@@ -716,15 +716,15 @@
             },
             {
               "key": "1",
-              "label": "兑换20京豆"
+              "label": "兑换20京豆(100%成功)"
             },
             {
               "key": "500",
-              "label": "兑换500京豆"
+              "label": "兑换500京豆(成功率较低)"
             },
             {
               "key": "1000",
-              "label": "兑换1000京豆"
+              "label": "兑换1000京豆(成功率极低)"
             }
           ]
         }
@@ -741,7 +741,7 @@
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js"
         },
         {
-          "name" : "宏汪汪兑换奖品",
+          "name" : "宠汪汪兑换奖品",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
         }
       ],
@@ -760,7 +760,7 @@
           "name": "自动升级(商品/货架)",
           "val": false,
           "type": "boolean",
-          "desc": "自动升级, 顺序:解锁升级商品、升级货架"
+          "desc": "自动升级, 顺序:解锁和升级商品、升级货架"
         },
         {
           "id": "jdBusinessCircleJump",
@@ -774,14 +774,28 @@
           "name": "每日抽奖",
           "val": true,
           "type": "boolean",
-          "desc": "消耗金币进行抽奖"
+          "desc": "开启则消耗金币进行抽奖"
         },
         {
           "id": "coinToBeans",
-          "name": "兑换奖品",
+          "name": "兑换京豆",
           "val": "20",
-          "type": "text",
-          "desc": "输入兑换奖品名称, 不兑换输入0, 兑换20京豆则输入20, 兑换柠檬果香洗手液则输入柠檬果香洗手液, 其他详细的奖品名称去东东超市活动页面查看"
+          "type": "radios",
+          "desc": "默认开启兑换20京豆, 如不想兑换可选择不兑换",
+          "items": [
+            {
+              "key": "0",
+              "label": "不兑换京豆"
+            },
+            {
+              "key": "20",
+              "label": "兑换20京豆(成功率中等)"
+            },
+            {
+              "key": "1000",
+              "label": "兑换1000京豆(成功率极低)"
+            }
+          ]
         }
       ],
       "author": "@lxk0301",
@@ -792,7 +806,7 @@
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
         },
         {
-          "name" : "东东超市兑换奖品",
+          "name" : "东东超市兑换京豆",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
         }
       ],
