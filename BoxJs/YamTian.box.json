@@ -165,7 +165,7 @@
         "FruitCode", "PetCode", "BeanCode", "ZuanZuan", "CarzyJoy"
       ],
       "descs_html": [
-        "<h4 align=\"center\">京东游戏互助码</a></h4>"
+        "<h4 align=\"center\">上传京东游戏互助码</a></h4>"
       ],
       "settings": [
         {
@@ -211,6 +211,104 @@
       ],
       "author": "@YamTian",
       "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode.js",
+      "icons": [
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png", 
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png"
+      ]
+    },
+    {
+      "id": "ShareCode2",
+      "name": "京东互助码2",
+      "keys": [
+        "BeanCode1", "FruitCode1", "PetCode1", "ZuanCode1", "CarzyJoy1", "BeanCode2", "FruitCode2", "PetCode2", "ZuanCode2", "CarzyJoy2"
+      ],
+      "descs_html": [
+        "<h4 align=\"center\">上传京东游戏互助码(双账号版)</a></h4>"
+      ],
+      "settings": [
+        {
+        "id": "BeanCode1",
+        "name": "种豆得豆",
+        "val": "sptv55gzcksfquzoq5k2ubuj4i",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "此处填写账号一的种豆得豆的互助码"
+        },
+        {
+        "id": "FruitCode1",
+        "name": "东东农场",
+        "val": "73b9c21c192948c6b9202303439510d2",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "此处填写账号一的东东农场的互助码"
+        },
+        {
+        "id": "PetCode1",
+        "name": "东东萌宠",
+        "val": "MTAxODc2NTEzNTAwMDAwMDAyNzQ1OTEzOQ==",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "此处填写账号一的东东萌宠的互助码"
+        },
+        {
+        "id": "ZuanCode1",
+        "name": "京东赚赚",
+        "val": "S5KkcRh5K9VeDJR3wk6ULdA",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "此处填写账号一的京东赚赚的互助码"
+        },
+        {
+        "id": "CarzyJoy1",
+        "name": "疯狂的JOY",
+        "val": "v6SnwcSXWk8K7x228LZX7Kt9zd5YaBeE",
+        "type": "text",
+        "placeholder": "(点击以展开说明)",
+        "desc": "此处填写账号一的疯狂的JOY的互助码"
+        },
+        {
+          "id": "BeanCode2",
+          "name": "种豆得豆",
+          "val": "iu237u55hwjiobiy5l2ouqbrmuay6e3tf5t45xq",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "此处填写账号二的种豆得豆的互助码"
+          },
+          {
+          "id": "FruitCode2",
+          "name": "东东农场",
+          "val": "73b9c21c192948c6b9202303439510d2",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "此处填写账号二的东东农场的互助码"
+          },
+          {
+          "id": "PetCode2",
+          "name": "东东萌宠",
+          "val": "MTE1NDQ5OTIwMDAwMDAwMzY1OTM3NzM=",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "此处填写账号二的东东萌宠的互助码"
+          },
+          {
+          "id": "ZuanCode2",
+          "name": "京东赚赚",
+          "val": "S5KkcI0ZmnCe9Xm638bZA",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "此处填写账号二的京东赚赚的互助码"
+          },
+          {
+          "id": "CarzyJoy2",
+          "name": "疯狂的JOY",
+          "val": "V862tzA2FtDZxcFGq0lzUw==",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "此处填写账号二的疯狂的JOY的互助码"
+          }
+      ],
+      "author": "@YamTian",
+      "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js",
       "icons": [
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png", 
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png"
