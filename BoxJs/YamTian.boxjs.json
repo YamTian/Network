@@ -319,14 +319,14 @@
         },
         {
           "id": "jdJoyRewardNotify",
-          "name": "宠汪汪兑换京豆",
+          "name": "宠汪汪兑换京豆(建议关闭)",
           "val": false,
           "type": "boolean",
           "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
         },
         {
           "id": "jdSuperMarketRewardNotify",
-          "name": "东东超市兑换京豆",
+          "name": "东东超市兑换京豆(建议关闭)",
           "val": false,
           "type": "boolean",
           "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
