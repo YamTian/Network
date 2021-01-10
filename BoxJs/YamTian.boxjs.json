@@ -753,9 +753,7 @@
     {
       "id": "jd_SuperMarket",
       "name": "东东超市",
-      "keys": [
-          "coinToBeans"
-      ],
+      "keys": [],
       "settings": [
         {
           "id": "jdSuperMarketUpgrade",
@@ -773,10 +771,10 @@
         },
         {
           "id": "jdSuperMarketLottery",
-          "name": "抽奖",
+          "name": "每日抽奖",
           "val": true,
           "type": "boolean",
-          "desc": "运行脚本消耗金币进行抽奖"
+          "desc": "消耗金币进行抽奖"
         },
         {
           "id": "coinToBeans",
@@ -793,79 +791,6 @@
           "name" : "东东超市",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
         },
-        {
-          "name" : "东东超市兑换奖品",
-          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jxc.png"
-      ]
-    },
-    {
-      "id": "jd_Joy_Reward",
-      "name": "宠汪汪积分兑换京豆",
-      "keys": [],
-      "settings": [
-        {
-          "id": "joyRewardName",
-          "name": "是否兑换京豆",
-          "val": "1",
-          "type": "radios",
-          "desc": "默认开启兑换, 如不想兑换可选择不兑换",
-          "items": [
-            {
-              "key": "0",
-              "label": "不兑换奖品"
-            },
-            {
-              "key": "1",
-              "label": "兑换20京豆"
-            },
-            {
-              "key": "500",
-              "label": "兑换500京豆"
-            },
-            {
-              "key": "1000",
-              "label": "兑换1000京豆"
-            }
-          ]
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/jd_scripts",
-      "scripts":[
-        {
-          "name" : "宏汪汪兑换奖品",
-          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
-      ]
-    },
-    {
-      "id": "jd_SuperMarket_Reawrd",
-      "name": "东东超市兑换奖品",
-      "keys": [
-        "coinToBeans"
-      ],
-      "desc": "默认兑换京豆, 兑换20京豆输入20, 兑换柠檬果香洗手液, 输入柠檬果香洗手液, 其他详细的奖品名称去东东超市活动页面查看",
-      "settings": [
-        {
-          "id": "coinToBeans",
-          "name": "兑换奖品",
-          "val": "20",
-          "type": "text",
-          "desc": "输入兑换奖品名称, 不兑换输入0"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://github.com/lxk0301/jd_scripts",
-      "scripts": [
         {
           "name" : "东东超市兑换奖品",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
