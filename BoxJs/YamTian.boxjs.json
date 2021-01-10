@@ -702,18 +702,47 @@
               "label": "消耗80g"
             }
           ]
+        },
+        {
+          "id": "joyRewardName",
+          "name": "是否兑换京豆",
+          "val": "1",
+          "type": "radios",
+          "desc": "默认开启兑换, 如不想兑换可选择不兑换",
+          "items": [
+            {
+              "key": "0",
+              "label": "不兑换奖品"
+            },
+            {
+              "key": "1",
+              "label": "兑换20京豆"
+            },
+            {
+              "key": "500",
+              "label": "兑换500京豆"
+            },
+            {
+              "key": "1000",
+              "label": "兑换1000京豆"
+            }
+          ]
         }
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
       "scripts":[
         {
-          "name" : "宠汪汪",
+          "name" : "宠汪汪(日常任务)",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js"
         },
         {
           "name" : "宠汪汪(仅喂食)",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js"
+        },
+        {
+          "name" : "宏汪汪兑换奖品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
         }
       ],
       "icons": [
@@ -724,7 +753,9 @@
     {
       "id": "jd_SuperMarket",
       "name": "东东超市",
-      "keys": [],
+      "keys": [
+          "coinToBeans"
+      ],
       "settings": [
         {
           "id": "jdSuperMarketUpgrade",
@@ -746,6 +777,13 @@
           "val": true,
           "type": "boolean",
           "desc": "运行脚本消耗金币进行抽奖"
+        },
+        {
+          "id": "coinToBeans",
+          "name": "兑换奖品",
+          "val": "20",
+          "type": "text",
+          "desc": "输入兑换奖品名称, 不兑换输入0, 兑换20京豆则输入20, 兑换柠檬果香洗手液则输入柠檬果香洗手液, 其他详细的奖品名称去东东超市活动页面查看"
         }
       ],
       "author": "@lxk0301",
@@ -754,6 +792,10 @@
         {
           "name" : "东东超市",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
+        },
+        {
+          "name" : "东东超市兑换奖品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
         }
       ],
       "icons": [
