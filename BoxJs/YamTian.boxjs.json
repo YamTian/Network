@@ -152,7 +152,7 @@
         }
       ],
       "author": "@YamTian",
-      "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js",
+      "repo": "https://github.com/YamTian/Network/tree/master",
       "icons": [
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/YiBan.jpeg", 
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/YiBan.jpeg"
@@ -250,7 +250,13 @@
           }
       ],
       "author": "@YamTian",
-      "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js",
+      "repo": "https://github.com/YamTian/Network/tree/master",
+      "scripts":[
+        {
+          "name" : "上传京东互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png", 
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png"
@@ -442,7 +448,12 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js",
+      "scripts":[
+        {
+          "name" : "东东农场",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png"
@@ -553,7 +564,12 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js",
+      "scripts":[
+        {
+          "name" : "东东宠萌",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png"
@@ -632,7 +648,12 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js",
+      "scripts":[
+        {
+          "name" : "种豆得豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png"
@@ -685,7 +706,16 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js",
+      "scripts":[
+        {
+          "name" : "宠汪汪",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js"
+        },
+        {
+          "name" : "宠汪汪(仅喂食)",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
@@ -764,7 +794,12 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js",
+      "scripts":[
+        {
+          "name" : "宏汪汪兑换奖品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdcww.png"
@@ -810,14 +845,14 @@
         {
           "id": "jdUnsubscribePageSize",
           "name": "取消已关注商品的数量",
-          "val": 100,
+          "val": 50,
           "type": "number",
           "desc": "运行一次脚本取消多少个已关注的商品"
         },
         {
           "id": "jdUnsubscribeShopPageSize",
           "name": "取消已关注店铺的数量",
-          "val": 100,
+          "val": 50,
           "type": "number",
           "desc": "运行一次脚本取消多少个已关注的店铺"
         },
@@ -838,7 +873,12 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "script": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js",
+      "scripts":[
+        {
+          "name" : "取关京东店铺和商品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
