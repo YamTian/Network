@@ -31,7 +31,7 @@
 宠汪汪——宵夜 = type=cron, cronexp="0 7 21 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js
 
 # >>> 抽奖机 {00:02 00:08}
-抽奖机 = type=cron, cronexp="0 2,8 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+抽奖机 = type=cron, cronexp="30 2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
