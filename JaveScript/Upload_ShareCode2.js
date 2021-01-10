@@ -88,10 +88,10 @@ function all() {
                 console.log('\r\nj疯狂的JOY:');
                 console.log($.JoyCodeBody);
             }else if (i == 7){  
-                if ( K < Delay_shareCodeArr.length - 1) {
+                if ( K < BeanCodeArr.length - 1) {
                     K += 1;
                     all();
-                } else if (K == Delay_shareCodeArr.length - 1) {
+                } else if (K == BeanCodeArr.length - 1) {
                     showmsg(); // 通知
                     $.done();
                 }
