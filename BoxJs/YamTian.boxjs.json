@@ -259,6 +259,10 @@
         {
           "name" : "上传京东互助码",
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js"
+        } ,
+        {
+          "name" : "大杀器--获取并上传京东互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js"
         }
       ],
       "icons": [
