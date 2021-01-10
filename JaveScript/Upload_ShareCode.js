@@ -3,7 +3,8 @@
 上传互助码 = type=cron,cronexp="0 0 6 1,10,20 * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode.js
 */
 
-const $ = new Env('Upload JD ShareCode')
+const $ = new Env('上传京东互助码')
+const userName = $persistentStore.read('UserName') || '';
 const fruitCode = $persistentStore.read('FruitCode') || '';
 const petCode = $persistentStore.read('PetCode') || '';
 const beanCode = $persistentStore.read('BeanCode') || '';
@@ -162,7 +163,8 @@ function uploadCarzyJoy() {
 // 输出弹窗
 function showMsg() {
   return new Promise((resolve) => {
-    $.msg($.name, "", $.result.join('\n'));
+    // $.msg($.name, "", $.result.join('\n'));
+    $.msg($.name, "京东帐号：" + userName, $.result.join('\n'));
     resolve();
   });
 }
