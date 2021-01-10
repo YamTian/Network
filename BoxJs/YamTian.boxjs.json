@@ -79,7 +79,7 @@
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "您个人的手机号码"
-        }, 
+        },
         {
           "id": "ParentName",
           "name": "家长姓名",
@@ -162,81 +162,15 @@
       "id": "ShareCode",
       "name": "京东互助码",
       "keys": [
-        "UserName", "FruitCode", "PetCode", "BeanCode", "ZuanZuan", "CarzyJoy"
-      ],
-      "descs_html": [
-        "<h4 align=\"center\">上传京东游戏互助码</a></h4>"
-      ],
-      "settings": [
-        {
-        "id": "UserName",
-        "name": "京东昵称",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写您京东帐号的昵称"
-        },
-        {
-        "id": "FruitCode",
-        "name": "东东农场",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写东东农场的互助码"
-        },
-        {
-        "id": "PetCode",
-        "name": "东东萌宠",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写东东萌宠的互助码"
-        },
-        {
-        "id": "BeanCode",
-        "name": "种豆得豆",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写种豆得豆的互助码"
-        },
-        {
-        "id": "ZuanZuan",
-        "name": "京东赚赚",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写京东赚赚的互助码"
-        },
-        {
-        "id": "CarzyJoy",
-        "name": "疯狂的JOY",
-        "val": "",
-        "type": "text",
-        "placeholder": "(点击以展开说明)",
-        "desc": "填写疯狂的JOY的互助码"
-        }
-      ],
-      "author": "@YamTian",
-      "repo": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode.js",
-      "icons": [
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png", 
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/JingDong.png"
-      ]
-    },
-    {
-      "id": "ShareCode2",
-      "name": "京东互助码2",
-      "keys": [
         "BeanCode1", "FruitCode1", "PetCode1", "ZuanCode1", "CarzyJoy1", "BeanCode2", "FruitCode2", "PetCode2", "ZuanCode2", "CarzyJoy2"
       ],
       "descs_html": [
-        "<h4 align=\"center\">上传京东游戏互助码(双账号版)</a></h4>"
+        "<h4 align=\"center\">上传京东游戏互助码, 按说明填写互助码后保存设置</a></h4>"
       ],
       "settings": [
         {
         "id": "BeanCode1",
-        "name": "种豆得豆",
+        "name": "账号一种豆得豆",
         "val": "sptv55gzcksfquzoq5k2ubuj4i",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -244,7 +178,7 @@
         },
         {
         "id": "FruitCode1",
-        "name": "东东农场",
+        "name": "账号一东东农场",
         "val": "73b9c21c192948c6b9202303439510d2",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -252,7 +186,7 @@
         },
         {
         "id": "PetCode1",
-        "name": "东东萌宠",
+        "name": "账号一东东萌宠",
         "val": "MTAxODc2NTEzNTAwMDAwMDAyNzQ1OTEzOQ==",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -260,7 +194,7 @@
         },
         {
         "id": "ZuanCode1",
-        "name": "京东赚赚",
+        "name": "账号一京东赚赚",
         "val": "S5KkcRh5K9VeDJR3wk6ULdA",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -268,7 +202,7 @@
         },
         {
         "id": "CarzyJoy1",
-        "name": "疯狂的JOY",
+        "name": "账号一疯狂的JOY",
         "val": "v6SnwcSXWk8K7x228LZX7Kt9zd5YaBeE",
         "type": "text",
         "placeholder": "(点击以展开说明)",
@@ -276,7 +210,7 @@
         },
         {
           "id": "BeanCode2",
-          "name": "种豆得豆",
+          "name": "账号二种豆得豆",
           "val": "iu237u55hwjiobiy5l2ouqbrmuay6e3tf5t45xq",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -284,7 +218,7 @@
           },
           {
           "id": "FruitCode2",
-          "name": "东东农场",
+          "name": "账号二东东农场",
           "val": "73b9c21c192948c6b9202303439510d2",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -292,7 +226,7 @@
           },
           {
           "id": "PetCode2",
-          "name": "东东萌宠",
+          "name": "账号二东东萌宠",
           "val": "MTE1NDQ5OTIwMDAwMDAwMzY1OTM3NzM=",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -300,7 +234,7 @@
           },
           {
           "id": "ZuanCode2",
-          "name": "京东赚赚",
+          "name": "账号二京东赚赚",
           "val": "S5KkcI0ZmnCe9Xm638bZA",
           "type": "text",
           "placeholder": "(点击以展开说明)",
@@ -308,7 +242,7 @@
           },
           {
           "id": "CarzyJoy2",
-          "name": "疯狂的JOY",
+          "name": "账号二疯狂的JOY",
           "val": "V862tzA2FtDZxcFGq0lzUw==",
           "type": "text",
           "placeholder": "(点击以展开说明)",

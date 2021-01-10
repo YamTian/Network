@@ -68,7 +68,7 @@ function all() {
             console.log(`\n========== 【第${K+1}个账号】 ==========\n`); 
             info();}               
             if (i == 1 )
-            UploadBeanCode(); // 种豆得豆            
+            UploadBeanCode(); // 种豆得豆         
             if (i == 2 )
             UploadFruitCode(); // 京东农场
             if (i == 3 )
