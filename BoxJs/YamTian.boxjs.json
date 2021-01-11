@@ -209,45 +209,45 @@
           "desc": "此处填写账号一的疯狂的JOY互助码"
         },
         {
-          "id": "BeanCode2",
+         "id": "BeanCode2",
           "name": "账号二 种豆得豆",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "此处填写账号二的种豆得豆互助码"
-          },
-          {
+        },
+        {
           "id": "FruitCode2",
           "name": "账号二 东东农场",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "此处填写账号二的东东农场互助码"
-          },
-          {
+        },
+        {
           "id": "PetCode2",
           "name": "账号二 东东萌宠",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "此处填写账号二的东东萌宠互助码"
-          },
-          {
+        },
+        {
           "id": "ZuanCode2",
           "name": "账号二 京东赚赚",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "此处填写账号二的京东赚赚互助码"
-          },
-          {
+        },
+        {
           "id": "CarzyJoy2",
           "name": "账号二 疯狂的JOY",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "此处填写账号二的疯狂的JOY互助码"
-          }
+        }
       ],
       "author": "@YamTian",
       "repo": "https://github.com/YamTian/Network/tree/master",
