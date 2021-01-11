@@ -228,9 +228,8 @@ async function getPlantBean() {
     // console.log(plantBeanIndexResult.data.taskList);
     if ($.plantBeanIndexResult.code === "0") {
       const shareUrl = $.plantBeanIndexResult.data.jwordShareInfo.shareUrl;
-      $.myPlantUuid = getParam(shareUrl, "plantUuid");
+      $.myPlantUuid = getParam(shareUrl, "plantUuid");      
       console.log(`【账号${$.index}（${$.nickName || $.UserName}）种豆得豆】${$.myPlantUuid}`);
-      
     } else {
       console.log(
         `种豆得豆-初始失败:  ${JSON.stringify($.plantBeanIndexResult)}`
@@ -247,17 +246,6 @@ async function getShareCode() {
   console.log(`======账号${$.index}结束======\n`)
 }
 
-function safeGet(data) {
-  try {
-    if (typeof JSON.parse(data) == "object") {
-      return true;
-    }
-  } catch (e) {
-    console.log(e);
-    console.log(`京东服务器访问数据为空，请检查自身设备网络情况`);
-    return false;
-  }
-}
 function TotalBean() {
   return new Promise(async resolve => {
     const options = {

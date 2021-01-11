@@ -261,7 +261,7 @@
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js"
         } ,
         {
-          "name" : "大杀器——获取并上传京东互助码",
+          "name" : "一键获取并上传京东互助码",
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js"
         }
       ],
@@ -368,6 +368,153 @@
       ]
     },
     {
+      "id": "All in One",
+      "name": "京东全系列",
+      "keys": [],
+      "settings": [],
+      "descs_html": ["仅仅是测试脚本运行情况, 不可替代为日常执行脚本"],
+      "author": "@YamTian",
+      "repo": "https://github.com/YamTian/Network/tree/master",
+      "scripts":[
+        {
+          "name" : "京东签到",
+          "script" : "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+        },
+        {
+          "name" : "取关京东店铺和商品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js"
+        },
+        {
+          "name" : "注销京东会员卡",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unbind.js"
+        },
+        {
+          "name" : "京豆变动",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bean_change.js"
+        },
+        {
+          "name" : "获取所有互助码",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_get_share_code.js"
+        },
+        {
+          "name" : "东东农场",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js"
+        },
+        {
+          "name" : "东东萌宠",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js"
+        },
+        {
+          "name" : "种豆得豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js"
+        },
+        {
+          "name" : "宠汪汪",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js"
+        },
+        {
+          "name" : "宠汪汪兑换京豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
+        },
+        {
+          "name" : "宠汪汪(仅喂食)",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js"
+        },
+        {
+          "name" : "宠汪汪偷粮",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js"
+        },
+        {
+          "name" : "东东超市",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_superMarket.js"
+        },
+        {
+          "name" : "东东超市兑换奖品",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js"
+        },
+        {
+          "name" : "京东汽车",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car.js"
+        },
+        {
+          "name" : "京东汽车兑换京豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_car_exchange.js"
+        },
+        {
+          "name" : "抽奖机",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_lotteryMachine.js"
+        },
+        {
+          "name" : "口袋书店",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_bookshop.js"
+        },
+        {
+          "name" : "摇京豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_club_lottery.js"
+        },
+        {
+          "name" : "京喜工厂",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_dreamFactory.js"
+        },
+        {
+          "name" : "东东工厂",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdfactory.js"
+        },
+        {
+          "name" : "京东赚赚",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jdzz.js"
+        },
+        {
+          "name" : "京喜农场",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_jxnc.js"
+        },
+        {
+          "name" : "京东快递",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_kd.js"
+        },
+        {
+          "name" : "京东直播",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_live.js"
+        },
+        {
+          "name" : "摇钱树",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_moneyTree.js"
+        },
+        {
+          "name" : "点点券",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_necklace.js"
+        },
+        {
+          "name" : "金融养猪",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pigPet.js"
+        },
+        {
+          "name" : "京东排行榜",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_rankingList.js"
+        },
+        {
+          "name" : "全民开红包",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_redPacket.js"
+        },
+        {
+          "name" : "进店领豆",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_shop.js"
+        },
+        {
+          "name" : "东东小窝",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_small_home.js"
+        },
+        {
+          "name" : "十元街",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png"
+      ]
+    },
+    {
       "id": "jd_fruit",
       "name": "东东农场",
       "keys": [
@@ -385,7 +532,7 @@
         "jd2_fruit4"
       ],
       "descs_html": [
-        "填写京东好友的东东农场互助码, 为您的好友助力"
+        "填写京东好友的东东农场互助码, 为您的好友助力, 同时可运行获取东东农场互助码脚本获取个人互助码, 上传互助码后使用脚本的用户随机给您助力"
       ],
       "settings": [
         {
@@ -400,7 +547,7 @@
           "name": "账号一 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号一自己的东东农场互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号一自己的东东农场互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd_fruit1",
@@ -438,11 +585,11 @@
           "desc": "京东账号二的昵称, 用于区分京东账号(非必填)"
         },
         {
-          "id": "FruitCode1",
+          "id": "FruitCode2",
           "name": "账号二 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号二自己的东东农场互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号二自己的东东农场互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd2_fruit1",
@@ -514,7 +661,7 @@
         "jd2_pet5"
       ],
       "descs_html": [
-        "填写京东好友的东东萌宠互助码, 为您的好友助力"
+        "填写京东好友的东东萌宠互助码, 为您的好友助力, 同时可运行获取东东萌宠互助码脚本获取个人互助码, 上传互助码后使用脚本的用户随机给您助力"
       ],
       "settings": [
         {
@@ -529,7 +676,7 @@
           "name": "账号一 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号一自己的东东萌宠互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号一自己的东东萌宠互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd_pet1",
@@ -578,7 +725,7 @@
           "name": "账号二 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号二自己的东东萌宠互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号二自己的东东萌宠互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd2_pet1",
@@ -653,7 +800,7 @@
         "jd2_plantBean3"
       ],
       "descs_html": [
-        "填写京东好友的种豆得豆互助码, 为您的好友助力"
+        "填写京东好友的种豆得豆互助码, 为您的好友助力, 同时可运行获取种豆得豆互助码脚本获取个人互助码, 上传互助码后使用脚本的用户随机给您助力"
       ],
       "settings": [
         {
@@ -661,14 +808,14 @@
           "name": "账号一 昵称",
           "val": "",
           "type": "text",
-          "desc": "京东账号昵称, 用于区分自己的京东账号(非必填)"
+          "desc": "京东账号一昵称, 用于区分自己的京东账号(非必填)"
         },
         {
           "id": "BeanCode1",
           "name": "账号一 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号一自己的种豆得豆互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号一自己的种豆得豆互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd_plantBean1",
@@ -703,7 +850,7 @@
           "name": "账号二 个人互助码",
           "val": "",
           "type": "text",
-          "desc": "填写账号二自己的种豆得豆互助码, 上传互助码后使用脚本的用户随机给你助力"
+          "desc": "填写账号二自己的种豆得豆互助码, 上传互助码后使用脚本的用户随机给您助力"
         },
         {
           "id": "jd2_plantBean1",
@@ -822,7 +969,7 @@
       "repo": "https://github.com/lxk0301/jd_scripts",
       "scripts":[
         {
-          "name" : "宠汪汪(日常任务)",
+          "name" : "宠汪汪",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy.js"
         },
         {
@@ -846,7 +993,7 @@
       "settings": [
         {
           "id": "jdSuperMarketUpgrade",
-          "name": "自动升级(商品/货架)",
+          "name": "自动升级货架及商品",
           "val": false,
           "type": "boolean",
           "desc": "自动升级, 顺序:解锁和升级商品、升级货架"
@@ -915,16 +1062,44 @@
         {
           "id": "jdUnsubscribePageSize",
           "name": "取消已关注商品的数量",
-          "val": 50,
-          "type": "number",
-          "desc": "运行一次脚本取消多少个已关注的商品"
+          "val": "30",
+          "type": "radios",
+          "desc": "运行一次脚本取消多少个已关注的商品",
+          "items": [
+            {
+              "key": "30",
+              "label": "30"
+            },
+            {
+              "key": "50",
+              "label": "50"
+            },
+            {
+              "key": "100",
+              "label": "100"
+            }
+          ]
         },
         {
           "id": "jdUnsubscribeShopPageSize",
           "name": "取消已关注店铺的数量",
-          "val": 50,
-          "type": "number",
-          "desc": "运行一次脚本取消多少个已关注的店铺"
+          "val": "30",
+          "type": "radios",
+          "desc": "运行一次脚本取消多少个已关注的店铺",
+          "items": [
+            {
+              "key": "30",
+              "label": "30"
+            },
+            {
+              "key": "50",
+              "label": "50"
+            },
+            {
+              "key": "100",
+              "label": "100"
+            }
+          ]
         },
         {
           "id": "jdUnsubscribeStopGoods",
@@ -956,7 +1131,7 @@
     },
     {
       "id": "JD_UA",
-      "name": "JD UserAgent",
+      "name": "京东请求头",
       "keys": [
         "JDUA"
       ],
@@ -972,8 +1147,8 @@
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
       "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Header.jpeg",
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Header.jpeg"
       ]
     },
     {
