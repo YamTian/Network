@@ -1122,7 +1122,7 @@
       ],
       "author": "@lxk0301",
       "repo": "https://github.com/lxk0301/jd_scripts",
-      "scripts":["https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js"],
+      "scripts": "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_unsubscribe.js",
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
         "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
