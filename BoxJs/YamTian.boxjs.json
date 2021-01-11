@@ -507,6 +507,14 @@
         {
           "name" : "十元街",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_syj.js"
+        },
+        {
+          "name" : "签到领现金",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js"
+        },
+        {
+          "name" : "京喜签到",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jx_sign.js"
         }
       ],
       "icons": [
