@@ -14,8 +14,8 @@
 京豆 = type=cron, cronexp="30 0 */12 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # >>> 兑换京豆系列
-# >>>>> 东东超市兑换京豆 {00:00}
-东东超市——京豆 = type=cron, cronexp="59 59 23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
+# >>>>> 东东超市兑换京豆 {00:00 00:02}
+东东超市——京豆 = type=cron, cronexp="0 0,2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_blueCoin.js
 # >>>>> 宠汪汪兑换京豆 {08:00 16:00}
 宠汪汪——京豆 = type=cron, cronexp="0 0 8,16 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js
 # >>>>> 京东汽车兑换京豆 {00:00}
