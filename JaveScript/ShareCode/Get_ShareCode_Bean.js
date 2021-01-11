@@ -230,7 +230,7 @@ async function getPlantBean() {
       const shareUrl = $.plantBeanIndexResult.data.jwordShareInfo.shareUrl;
       $.myPlantUuid = getParam(shareUrl, "plantUuid");
       console.log(`【账号${$.index}（${$.nickName || $.UserName}）种豆得豆】${$.myPlantUuid}`);
-
+      
     } else {
       console.log(
         `种豆得豆-初始失败:  ${JSON.stringify($.plantBeanIndexResult)}`
