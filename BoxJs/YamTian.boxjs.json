@@ -463,6 +463,14 @@
         {
           "name" : "东东农场",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_fruit.js"
+        },
+        {
+          "name" : "获取东东农场互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Get_ShareCode_Fruit.js"
+        },
+        {
+          "name" : "上传东东农场互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Upload_ShareCode_Fruit.js"
         }
       ],
       "icons": [
@@ -582,6 +590,14 @@
         {
           "name" : "东东萌宠",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_pet.js"
+        },
+        {
+          "name" : "获取东东萌宠互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Get_ShareCode_Pet.js"
+        },
+        {
+          "name" : "上传东东萌宠互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Upload_ShareCode_Pet.js"
         }
       ],
       "icons": [
@@ -669,6 +685,14 @@
         {
           "name" : "种豆得豆",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_plantBean.js"
+        },
+        {
+          "name" : "获取种豆得豆互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Get_ShareCode_Bean.js"
+        },
+        {
+          "name" : "上传种豆得豆互助码",
+          "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/ShareCode/Upload_ShareCode_Bean.js"
         }
       ],
       "icons": [
