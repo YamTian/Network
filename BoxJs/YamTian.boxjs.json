@@ -261,7 +261,7 @@
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Upload_ShareCode2.js"
         } ,
         {
-          "name" : "大杀器--获取并上传京东互助码",
+          "name" : "大杀器——获取并上传京东互助码",
           "script" : "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Auto_ShareCode.js"
         }
       ],
@@ -333,14 +333,14 @@
         },
         {
           "id": "jdJoyRewardNotify",
-          "name": "宠汪汪兑换京豆(建议关闭)",
+          "name": "宠汪汪兑换京豆",
           "val": false,
           "type": "boolean",
           "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
         },
         {
           "id": "jdSuperMarketRewardNotify",
-          "name": "东东超市兑换京豆(建议关闭)",
+          "name": "东东超市兑换京豆",
           "val": false,
           "type": "boolean",
           "desc": "开启后成功兑换到京豆也不发出系统弹窗通知"
@@ -381,6 +381,9 @@
         "jd2_fruit2",
         "jd2_fruit3",
         "jd2_fruit4"
+      ],
+      "descs_html": [
+        "填写京东好友的东东萌宠互助码, 为您的好友助力"
       ],
       "settings": [
         {
@@ -483,6 +486,9 @@
         "jd2_pet3",
         "jd2_pet4",
         "jd2_pet5"
+      ],
+      "descs_html": [
+        "填写京东好友的东东萌宠互助码, 为您的好友助力"
       ],
       "settings": [
         {
@@ -595,6 +601,9 @@
         "jd2_plantBean1",
         "jd2_plantBean2",
         "jd2_plantBean3"
+      ],
+      "descs_html": [
+        "填写京东好友的种豆得豆互助码, 为您的好友助力"
       ],
       "settings": [
         {
