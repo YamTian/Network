@@ -372,7 +372,7 @@
       "name": "京东全系列",
       "keys": [],
       "settings": [],
-      "descs_html": ["仅仅是测试脚本运行情况, 不可替代为日常执行脚本"],
+      "descs_html": ["仅是测试脚本运行情况, 不可替代为日常执行脚本"],
       "author": "@YamTian",
       "repo": "https://github.com/YamTian/Network/tree/master",
       "scripts":[
@@ -511,7 +511,7 @@
       ],
       "icons": [
         "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
-        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png"
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
       ]
     },
     {
