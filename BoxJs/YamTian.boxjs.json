@@ -977,6 +977,10 @@
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js"
         },
         {
+          "name" : "宠汪汪偷粮",
+          "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_steal.js"
+        },
+        {
           "name" : "宠汪汪兑换奖品",
           "script" : "https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_reward.js"
         }
