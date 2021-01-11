@@ -30,8 +30,11 @@
 宠汪汪——晚餐 = type=cron, cronexp="0 4 18 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js
 宠汪汪——宵夜 = type=cron, cronexp="0 7 21 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_joy_feedPets.js
 
-# >>> 抽奖机 {00:02:30}
-抽奖机 = type=cron, cronexp="30 2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+# >>> 抽奖机 {00:03}
+抽奖机 = type=cron, cronexp="0 3 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+
+# >>> 领现金 {00:02:30}
+签到领现金 = type=cron, cronexp="30 2 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/jd_cash.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
