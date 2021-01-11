@@ -1,5 +1,0 @@
-[Script]
-http-response ^http?:\/\/xg\.kmmu\.edu.cn\/KmmcXG\/webapi\/api\/Leave requires-body=1,script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js, tag=易班假条
-
-[MITM]
-hostname = xg.kmmu.edu.cn
