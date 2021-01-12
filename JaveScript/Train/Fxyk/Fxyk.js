@@ -37,9 +37,9 @@ function GetCookie_Fxyk() {
             if (GetCookieStr != -1) { // 
                 var cookie = $.write(GetCookieStr,"Fxyk_Cookie"); // 将 cookie 定义为写入内存 GetCookieStr 的值，命名为 Fxyk_Cookie 的键
                 $.write(GetAuthorizationStr, "Fxyk_Authorization") // 写入内存 GetAuthorizationStr 的值，命名为 Fxyk_Authorization 的键
-                if (!cookie) {
-                    $.notify(blogNmae,"","首次写入Cookie失败!!!");
-                } else {
+                if (!cookie) { // 判断到 cookie 的值为空值
+                    $.notify(blogNmae,"","首次写入Cookie失败!!!"); // 弹窗显示失败
+                } else { // 否则弹窗显示成功
                     $.notify(blogNmae,"","首次写入Cookie成功!!!");
                 }
             }
@@ -52,10 +52,10 @@ function GetCookie_Fxyk() {
 function SignIn_Fxyk() { // 定义发起签到请求的函数
     const SignInUrl = "https://w37fhy.cn/wp-json/b2/v1/userMission"; // 签到链接
     const Cookies = $.read("Fxyk_Cookie"); // 从内存读取 Fxyk_Cookie 的值
-    // const Authorizations = $.read("Fxyk_Authorization") // 从内存读取 Fxyk_Authorization 的值
+    const Authorizations = $.read("Fxyk_Authorization") // 从内存读取 Fxyk_Authorization 的值
     const Headers = {
         Cookie:Cookies, // 请求头包含 Fxyk_Cookie 的值
-        // Authorization:Authorizations // 请求头包含 Fxyk_Authorization 的值
+        Authorization:Authorizations // 请求头包含 Fxyk_Authorization 的值
     };
     const PostParam = {
         url:SignInUrl, // 发起签到请求
