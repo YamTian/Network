@@ -57,7 +57,7 @@ function SignIn_Fxyk() { // 定义发起签到请求的函数
         url:SignInUrl, // 发起签到请求
         headers:Headers // 替换请求头
     };
-    $httpClient.post(PostParam, function (_err, _res, data) {
+    $.get(PostParam, function (_err, _res, data) {
         // let SucessCode,FailedCode,ExpireCode,ReturnJsonData,StatusCode;
         let FailedCode,ReturnJsonData,StatusCode;
         // SucessCode = "0000"; // 成功状态码 (未知)
