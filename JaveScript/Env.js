@@ -7,7 +7,7 @@ const $ = Env();
         写入 $.write
         读取 $.read
         发送请求 $.get
-        端口 $.post
+        端口 $.post ???(暂时还不会)
         结束进程 $.done
 */
 

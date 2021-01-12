@@ -10,8 +10,12 @@ Regex: https:\/\/w37fhy\.cn\/mission\/today // 获取 Cookie 的链接正则表�
 
 const blogNmae = "飞享一刻";
 const $ = Env(); // 环境
-GetCookie_Fxyk(); 
-SignIn_Fxyk();
+
+if ($.isRequest) {
+  GetCookie_Fxyk();
+} else {
+  SignIn_Fxyk();
+}
 $done();
 
 // 已完成 GetCookie_Fxyk() 函数的编写
@@ -19,19 +23,19 @@ function GetCookie_Fxyk() {
     var GetCookieStr = $request.headers["Cookie"]; // 获取当前请求头里面的 Cookie 的值
     var GetAuthorizationStr = $request.headers["Authorization"]; // 获取当前请求头里面的 Authorization 的值
     if (GetCookieStr) { // 开始对 GetCookieStr 的值判断
-        if ($.read("Fxyk_Cookie") != undefined) { // 判断 Fxyk_Cookie 有没有值
+        if ($.read("Fxyk_Cookie") != undefined) { // 判断到 Fxyk_Cookie 没有值
             if ($.read("Fxyk_Cookie") != GetCookieStr) { // 判断到内存中的 Fxyk_Cookie 的值与当前请求头里面的 Cookie 的值不相等时
-                var cookie = $.write(GetCookieStr, "Fxyk_Cookie"); // 将 cookie 定义为 GetCookieStr 的值，命名为 Fxyk_Cookie 的键
+                var cookie = $.write(GetCookieStr, "Fxyk_Cookie"); // 将 cookie 定义为写入内存 GetCookieStr 的值，命名为 Fxyk_Cookie 的键
                 $.write(GetAuthorizationStr, "Fxyk_Authorization") // 写入内存 GetAuthorizationStr 的值，命名为 Fxyk_Authorization 的键
-                if (!cookie) {
-                    $.notify(blogNmae,"","更新Cookie失败!!!");
-                } else {
+                if (!cookie) { // 判断到 cookie 的值为空值
+                    $.notify(blogNmae,"","更新Cookie失败!!!"); // 弹窗显示失败
+                } else { // 否则弹窗显示成功
                     $.notify(blogNmae,"","更新Cookie成功!!!");
                 }
             }
-        } else {
-            if (GetCookieStr != -1) {
-                var cookie = $.write(GetCookieStr,"Fxyk_Cookie"); // 将 cookie 定义为 GetCookieStr 的值，命名为 Fxyk_Cookie 的键
+        } else { // 判断到 Fxyk_Cookie 有值
+            if (GetCookieStr != -1) { // 
+                var cookie = $.write(GetCookieStr,"Fxyk_Cookie"); // 将 cookie 定义为写入内存 GetCookieStr 的值，命名为 Fxyk_Cookie 的键
                 $.write(GetAuthorizationStr, "Fxyk_Authorization") // 写入内存 GetAuthorizationStr 的值，命名为 Fxyk_Authorization 的键
                 if (!cookie) {
                     $.notify(blogNmae,"","首次写入Cookie失败!!!");
@@ -110,6 +114,7 @@ function SignIn_Fxyk() { // 定义发起签到请求的函数
     })
 }
 
+// Env
 function Env() {
     const isRequest = typeof $persistentStorerequest != "undefined"
     const isSurge = typeof $persistentStorehttpClient != "undefined"
