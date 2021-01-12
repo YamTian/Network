@@ -3,16 +3,14 @@
     例如： 
         通知 $.notify("标题","副标题","弹窗内容")
         
-        写入 $.write(值,"关键字") && $.write(value,"key")  
-        读取 $.read("关键字") && $.read("key")
-          通过某些代码运行获取到fruitShareCode的内容是123456789
-            $.write(fruitShareCode,”fruitCode”)
-            前面的fruitShareCode是值 后面的fruitCode是关键字 存入内存是fruitCode= fruitShareCode =123456789
-            $.read("fruitCode") // 123456789
-            读出123456789
+        写入 $.write(值,"关键字") && $.write(value,”key”)
+        读取 $.read("关键字") && $.read(“key”)
+            
+            Example: 通过某些代码运行获取到的date为 {“fruitShareCode”:”YamTian”}  则fruitShareCode为关键字 值是YamTian (前key后value) 使用$.write(fruitShareCode,”fruitCode”)写入到内存中  前面的fruitShareCode是值 后面的fruitCode是关键字(双引号不能忘) 存入内存就是fruitCode = fruitShareCode = YamTian最后用$.read("fruitCode") 读出值为YamTian
         
         发送请求 $.get (GET请求)
         端口 $.post (POST请求)
+        
         结束进程 $.done
 */
 
