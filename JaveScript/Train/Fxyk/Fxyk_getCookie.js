@@ -14,8 +14,11 @@ $done();
 
 function GetCookie_Fxyk() {
   var CookieVal = "Fxyk_Cookie";
+  var AuthorizationVal = "Fxyk_Authorization";
   const CookieKey = $request.headers["Cookie"];
+  const AuthorizationKey = $request.headers["Authorization"];
   $.write(CookieVal,CookieKey);
+  $.write(AuthorizationVal,AuthorizationKey);
   $.notify("飞享一刻","","写入Cookie成功");
 }
 
