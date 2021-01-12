@@ -8,8 +8,8 @@
             
             Example: 通过某些代码运行获取到的date为 {“fruitShareCode”:”YamTian”}  则fruitShareCode为关键字 值是YamTian (前key后value) 使用$.write(fruitShareCode,”fruitCode”)写入到内存中  前面的fruitShareCode是值 后面的fruitCode是关键字(双引号不能忘) 存入内存就是fruitCode = fruitShareCode = YamTian最后用$.read("fruitCode") 读出值为YamTian
         
-        发送请求 $.get (GET请求)
-        端口 $.post (POST请求)
+        发送GET类型网络请求 $.get (GET请求)
+        发送POST类型网络请求 $.post (POST请求)
         
         结束进程 $.done
 */
