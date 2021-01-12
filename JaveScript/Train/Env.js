@@ -1,5 +1,3 @@
-const $ = Env();
-
 /*
 调用的时候就用 $.****
     例如： 
@@ -15,6 +13,8 @@ const $ = Env();
         端口 $.post ???(暂时还不会)
         结束进程 $.done
 */
+
+const $ = Env();
 
 function Env() {
     const isRequest = typeof $request != "undefined"
