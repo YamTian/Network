@@ -159,6 +159,38 @@
       ]
     },
     {
+      "id": "Fxyk_Test",
+      "name": "飞享一刻",
+      "keys": [
+        "Fxyk_Cookie", "Fxyk_Authorization"
+      ],
+      "descs_html": [],
+      "settings": [
+        {
+          "id": "Fxyk_Cookie",
+          "name": "飞享一刻Cookie",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        },
+        {
+          "id": "Fxyk_Authorization",
+          "name": "飞享一刻Authorization",
+          "val": "",
+          "type": "text",
+          "placeholder": "",
+          "desc": ""
+        }
+      ],
+      "author": "@YamTian",
+      "repo": "https://github.com/YamTian/Network/tree/master",
+      "icons": [
+        "", 
+        ""
+      ]
+    },
+    {
       "id": "ShareCode",
       "name": "京东互助码",
       "keys": [
