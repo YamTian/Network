@@ -4,8 +4,13 @@ const $ = Env();
 调用的时候就用 $.****
     例如： 
         通知 $.notify("标题","副标题","弹窗内容")
-        写入 $.write
-        读取 $.read
+        写入 $.write("值名","键名")  
+        读取 $.read("值名")
+          通过某些代码运行获取到fruitShareCode的内容是123456789
+            $.write("fruitCode",fruitShareCode) 
+            前面的fruitCode是自定义名 后面的fruitShareCode是通过某些代码运行获取得的 存入内存就是fruitCode=123456789
+            $.read("fruitCode")
+            读出123456789
         发送请求 $.get
         端口 $.post ???(暂时还不会)
         结束进程 $.done
