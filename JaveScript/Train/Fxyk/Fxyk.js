@@ -2,87 +2,70 @@
 Type: http-request
 Host: w37fhy.cn
 Regex: https:\/\/w37fhy\.cn\/mission\/today
+Regex: https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo
 
 ====== Surge ======
-飞享一刻获取Cookie = type=http-request, pattern=https:\/\/w37fhy\.cn\/mission, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk_getCookie.js
+飞享一刻获取Cookie = type=http-request, pattern=https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk_getCookie.js
 飞享一刻 = type=cron,cronexp="0 0 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk.js
 */
 
+const Fxyk = "https://w37fhy.cn/wp-json/b2/v1/getUserInfo";
+
 const $ = Env();
-SignIn_Fxyk();
-$done();
+!(async () => {
+  if ($.isRequest) {
+    GetCookie_Fxyk()
+  } else {
+      await SignIn_Fxyk()
+  }
+})().finally(() => $.done())
+
+function GetCookie_Fxyk() {
+  const oldCookieValue = $.read("Fxyk_Cookie");
+  const oldAuthorizationValue = $.read("Fxyk_Authorization");
+  const newCookieValue = $request.headers["Cookie"];
+  const newAuthorizationValue = $request.headers["Authorization"];
+  if (newAuthorizationValue != oldAuthorizationValue || newCookieValue != oldCookieValue) {
+    $.write(newAuthorizationValue,"Fxyk_Authorization");
+    $.write(newCookieValue,"Fxyk_Cookie");
+    $.notify("飞享一刻","","更新Cookie成功")
+  }
+  if (oldAuthorizationValue.length || oldAuthorizationValue.length < 1) {
+    $.write(newAuthorizationValue,"Fxyk_Authorization");
+    $.write(newCookieValue,"Fxyk_Cookie");
+    $.notify("飞享一刻","","首次写入Cookie成功")
+  }
+}
 
 function SignIn_Fxyk() {
-    // 未完成
-  }
-
-function Env() {
-    const isRequest = typeof $request != "undefined"
-    const isSurge = typeof $httpClient != "undefined"
-    const isQuanX = typeof $task != "undefined"
-    const notify = (title, subtitle, message) => {
-      if (isQuanX) $notify(title, subtitle, message)
-      if (isSurge) $notification.post(title, subtitle, message)
-    }
-    const write = (value, key) => {
-      if (isQuanX) return $prefs.setValueForKey(value, key)
-      if (isSurge) return $persistentStore.write(value, key)
-    }
-    const read = (key) => {
-      if (isQuanX) return $prefs.valueForKey(key)
-      if (isSurge) return $persistentStore.read(key)
-    }
-    const adapterStatus = (response) => {
-      if (response) {
-        if (response.status) {
-          response["statusCode"] = response.status
-        } else if (response.statusCode) {
-          response["status"] = response.statusCode
-        }
-      }
-      return response
-    }
-    const get = (options, callback) => {
-      if (isQuanX) {
-        if (typeof options == "string") options = {
-          url: options
-        }
-        options["method"] = "GET"
-        $task.fetch(options).then(response => {
-          callback(null, adapterStatus(response), response.body)
-        }, reason => callback(reason.error, null, null))
-      }
-      if (isSurge) $httpClient.get(options, (error, response, body) => {
-        callback(error, adapterStatus(response), body)
-      })
-    }
-    const post = (options, callback) => {
-      if (isQuanX) {
-        if (typeof options == "string") options = {
-          url: options
-        }
-        options["method"] = "POST"
-        $task.fetch(options).then(response => {
-          callback(null, adapterStatus(response), response.body)
-        }, reason => callback(reason.error, null, null))
-      }
-      if (isSurge) {
-        $httpClient.post(options, (error, response, body) => {
-          callback(error, adapterStatus(response), body)
-        })
-      }
-    }
-    const done = (value = {}) => {
-      if (isQuanX) return $done(value)
-      if (isSurge) isRequest ? $done(value) : $done()
-    }
-    return {
-      isRequest,
-      notify,
-      write,
-      read,
-      get,
-      post,
-      done
-    }
+  return new Promise((resolve, reject) => {
+  const Fxyk = {
+      url: CheckinURL,
+      headers: {
+          "Cookie": $.read("Fxyk_Cookie"),
+          "Authorization": $.read("Fxyk_Authorization")
+      },
+      body: '{"appid":"' + appid + '"}'
   };
+  $.post(Fxyk, function(_error, _response, _data) {
+      const result = JSON.parse(data)
+      if (!error) {
+          if (result.code == 150200) {
+              $.notify(TokenName, "", "签到成功！🎉")
+          } else if (result.code == 150201) {
+              $.notify(TokenName, "",  "重复签到！😊")
+          } else if (result.code == 9001 || result.code ==58000) {
+              $.notify(TokenName, "", "Token 失效❗ 请重新获取。️")
+          } else {
+              console.log("Naixue failed response : \n" + data)
+              $.notify(TokenName, "签到失败‼️ 详情请见日志。", data)
+          }
+      } else {
+          $.notify(TokenName,  "签到接口请求失败，详情请见日志。", error)
+      }
+      resolve()
+  })
+})
+}
+
+function Env(){const e="undefined"!=typeof $request,t="undefined"!=typeof $httpClient,r="undefined"!=typeof $task,n="undefined"!=typeof $app&&"undefined"!=typeof $http,o="function"==typeof require&&!n,s=(()=>{if(o){const e=require("request");return{request:e}}return null})(),i=(e,s,i)=>{r&&$notify(e,s,i),t&&$notification.post(e,s,i),o&&a(e+s+i),n&&$push.schedule({title:e,body:s?s+"\n"+i:i})},u=(e,n)=>r?$prefs.setValueForKey(e,n):t?$persistentStore.write(e,n):void 0,d=e=>r?$prefs.valueForKey(e):t?$persistentStore.read(e):void 0,l=e=>(e&&(e.status?e.statusCode=e.status:e.statusCode&&(e.status=e.statusCode)),e),f=(e,i)=>{r&&("string"==typeof e&&(e={url:e}),e.method="GET",$task.fetch(e).then(e=>{i(null,l(e),e.body)},e=>i(e.error,null,null))),t&&$httpClient.get(e,(e,t,r)=>{i(e,l(t),r)}),o&&s.request(e,(e,t,r)=>{i(e,l(t),r)}),n&&("string"==typeof e&&(e={url:e}),e.header=e.headers,e.handler=function(e){let t=e.error;t&&(t=JSON.stringify(e.error));let r=e.data;"object"==typeof r&&(r=JSON.stringify(e.data)),i(t,l(e.response),r)},$http.get(e))},p=(e,i)=>{r&&("string"==typeof e&&(e={url:e}),e.method="POST",$task.fetch(e).then(e=>{i(null,l(e),e.body)},e=>i(e.error,null,null))),t&&$httpClient.post(e,(e,t,r)=>{i(e,l(t),r)}),o&&s.request.post(e,(e,t,r)=>{i(e,l(t),r)}),n&&("string"==typeof e&&(e={url:e}),e.header=e.headers,e.handler=function(e){let t=e.error;t&&(t=JSON.stringify(e.error));let r=e.data;"object"==typeof r&&(r=JSON.stringify(e.data)),i(t,l(e.response),r)},$http.post(e))},a=e=>console.log(e),y=(t={})=>{e?$done(t):$done()};return{isQuanX:r,isSurge:t,isJSBox:n,isRequest:e,notify:i,write:u,read:d,get:f,post:p,log:a,done:y}}
