@@ -9,8 +9,7 @@ Regex: https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo
 飞享一刻 = type=cron,cronexp="0 0 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk.js
 */
 
-const Fxyk = "https://w37fhy.cn/wp-json/b2/v1/getUserInfo";
-
+const BlogName = "飞享一刻";
 const $ = Env();
 !(async () => {
   if ($.isRequest) {
@@ -19,6 +18,7 @@ const $ = Env();
       await SignIn_Fxyk()
   }
 })().finally(() => $.done())
+
 
 function GetCookie_Fxyk() {
   const oldCookieValue = $.read("Fxyk_Cookie");
@@ -29,39 +29,64 @@ function GetCookie_Fxyk() {
     $.write(newAuthorizationValue,"Fxyk_Authorization");
     $.write(newCookieValue,"Fxyk_Cookie");
     $.notify("飞享一刻","","更新Cookie成功")
-  }
-  if (oldAuthorizationValue.length || oldAuthorizationValue.length < 1) {
+  } else if (oldAuthorizationValue.length || oldAuthorizationValue.length < 1) {
     $.write(newAuthorizationValue,"Fxyk_Authorization");
     $.write(newCookieValue,"Fxyk_Cookie");
     $.notify("飞享一刻","","首次写入Cookie成功")
   }
 }
 
+/*
+function GetCookie_Fxyk() {
+  if ($request.headers['Authorization']) {
+      var AuthorizationValue = $request.headers['Authorization']
+      if ($.read("Fxyk_Authorization") != (undefined || null)) {
+          if ($.read("Fxyk_Authorization") != AuthorizationValue) {
+              var Authorization = $.write(AuthorizationValue, "Fxyk_Authorization")
+              if (!Authorization) {
+                  $.notify("更新" + BlogName + " Cookie 失败!!", "", "")
+              } else {
+                  $.notify("更新" + BlogName + " Cookie 成功!!", "", "")
+              }
+          }
+      } else {
+          var Authorization = $.write(AuthorizationValue, "Fxyk_Authorization");
+          if (!Authorization) {
+              $.notify("首次写入" + BlogName + " Cookie 失败!!", "", "")
+          } else {
+              $.notify("首次写入" + BlogName + " Cookie 成功!!", "", "")
+          }
+      }
+  } else {
+      $.notify("写入" + BlogName + "Cookie 失败!!", "", "配置错误, 无法读取请求头, ")
+  }
+}
+*/
 function SignIn_Fxyk() {
   return new Promise((resolve, reject) => {
-  const Fxyk = {
-      url: CheckinURL,
+  const Fxyk_SignIn = {
+      url: "https://w37fhy.cn/wp-json/b2/v1/getUserInfo",
       headers: {
           "Cookie": $.read("Fxyk_Cookie"),
           "Authorization": $.read("Fxyk_Authorization")
       },
-      body: '{"appid":"' + appid + '"}'
+      //body: '{"appid":"' + appid + '"}'
   };
-  $.post(Fxyk, function(_error, _response, _data) {
+  $.post(Fxyk_SignIn, function(_error, _response, _data) {
       const result = JSON.parse(data)
       if (!error) {
           if (result.code == 150200) {
-              $.notify(TokenName, "", "签到成功！🎉")
+              $.notify(BlogName, "", "签到成功！🎉")
           } else if (result.code == 150201) {
-              $.notify(TokenName, "",  "重复签到！😊")
+              $.notify(BlogName, "",  "重复签到！😊")
           } else if (result.code == 9001 || result.code ==58000) {
-              $.notify(TokenName, "", "Token 失效❗ 请重新获取。️")
+              $.notify(BlogName, "", "Token 失效❗ 请重新获取。️")
           } else {
               console.log("Naixue failed response : \n" + data)
-              $.notify(TokenName, "签到失败‼️ 详情请见日志。", data)
+              $.notify(BlogName, "签到失败!! 详情请见日志。", data)
           }
       } else {
-          $.notify(TokenName,  "签到接口请求失败，详情请见日志。", error)
+          $.notify(BlogName,  "签到接口请求失败，详情请见日志。", error)
       }
       resolve()
   })
