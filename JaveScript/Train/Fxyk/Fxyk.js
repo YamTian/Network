@@ -1,7 +1,9 @@
 /*
 Type: http-request
 Host: w37fhy.cn
+// 签到页面
 Regex: https:\/\/w37fhy\.cn\/mission\/today
+// 签到链接
 Regex: https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo
 
 ====== Surge ======
@@ -19,7 +21,7 @@ const $ = Env();
   }
 })().finally(() => $.done())
 
-
+/*
 function GetCookie_Fxyk() {
   const oldCookieValue = $.read("Fxyk_Cookie");
   const oldAuthorizationValue = $.read("Fxyk_Authorization");
@@ -35,33 +37,28 @@ function GetCookie_Fxyk() {
     $.notify("飞享一刻","","首次写入Cookie成功")
   }
 }
+*/
 
-/*
 function GetCookie_Fxyk() {
-  if ($request.headers['Authorization']) {
-      var AuthorizationValue = $request.headers['Authorization']
-      if ($.read("Fxyk_Authorization") != (undefined || null)) {
-          if ($.read("Fxyk_Authorization") != AuthorizationValue) {
-              var Authorization = $.write(AuthorizationValue, "Fxyk_Authorization")
-              if (!Authorization) {
-                  $.notify("更新" + BlogName + " Cookie 失败!!", "", "")
-              } else {
-                  $.notify("更新" + BlogName + " Cookie 成功!!", "", "")
-              }
-          }
-      } else {
-          var Authorization = $.write(AuthorizationValue, "Fxyk_Authorization");
-          if (!Authorization) {
-              $.notify("首次写入" + BlogName + " Cookie 失败!!", "", "")
-          } else {
-              $.notify("首次写入" + BlogName + " Cookie 成功!!", "", "")
-          }
+  var newAuthorizationValue = $request.headers['Authorization'];
+  var oldAuthorizationValue = $.read("Fxyk_Authorization")
+  if (oldAuthorizationValue != (undefined || null)) {
+      if (oldAuthorizationValue != newAuthorizationValue) {
+        $.write(newAuthorizationValue, "Fxyk_Authorization")
+        $.notify("更新" + BlogName + " Cookie 成功!!", "", "")
+      } else if (oldAuthorizationValue == newAuthorizationValue) {
+          $.notify("飞享一刻","","Cookie 没有发生变化!!" )
       }
   } else {
-      $.notify("写入" + BlogName + "Cookie 失败!!", "", "配置错误, 无法读取请求头, ")
+    $.write(AuthorizationValue, "Fxyk_Authorization");
+    $.notify("首次写入" + BlogName + " Cookie 成功!!", "", "")
   }
 }
-*/
+ //else {
+      //$.notify("写入" + BlogName + "Cookie 失败!!", "", "配置错误, 无法读取请求头, ")
+  //}
+
+
 function SignIn_Fxyk() {
   return new Promise((resolve, reject) => {
   const Fxyk_SignIn = {
