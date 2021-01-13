@@ -2,9 +2,10 @@
 Type: http-request
 Host: w37fhy.cn
 Regex: https:\/\/w37fhy\.cn\/mission\/today
+Regex: https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo
 
 ====== Surge ======
-飞享一刻获取Cookie = type=http-request, pattern=https:\/\/w37fhy\.cn\/mission, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk_getCookie.js
+飞享一刻获取Cookie = type=http-request, pattern=https:\/\/w37fhy\.cn\/wp\-json\/b2\/v1\/getUserInfo, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk_getCookie.js
 飞享一刻 = type=cron,cronexp="0 0 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Train/Fxyk/Fxyk.js
 */
 
@@ -13,16 +14,16 @@ GetCookie_Fxyk();
 $done();
 
 function GetCookie_Fxyk() {
-  //const oldCookieValue = $.read("Fxyk_Cookie");
+  const oldCookieValue = $.read("Fxyk_Cookie");
   const oldAuthorizationValue = $.read("Fxyk_Authorization");
   const newCookieValue = $request.headers["Cookie"];
   const newAuthorizationValue = $request.headers["Authorization"];
-  if (newAuthorizationValue != oldAuthorizationValue) {
+  if (newAuthorizationValue != oldAuthorizationValue && newCookieValue != oldCookieValue) {
     $.write(newAuthorizationValue,"Fxyk_Authorization");
     $.write(newCookieValue,"Fxyk_Cookie");
     $.notify("飞享一刻","","更新Cookie成功")
   }
-  if (newAuthorizationValue.length = 0) {
+  if (newAuthorizationValue.length && newAuthorizationValue.length < 1) {
     $.write(newAuthorizationValue,"Fxyk_Authorization");
     $.write(newCookieValue,"Fxyk_Cookie");
     $.notify("飞享一刻","","首次写入Cookie成功")
