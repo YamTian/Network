@@ -13,13 +13,20 @@ GetCookie_Fxyk();
 $done();
 
 function GetCookie_Fxyk() {
-  var CookieKey = "Fxyk_Cookie";
-  var AuthorizationKey = "Fxyk_Authorization";
-  const CookieVal = $request.headers["Cookie"];
-  const AuthorizationVal = $request.headers["Authorization"];
-  $.write(CookieVal,CookieKey);
-  $.write(AuthorizationVal,AuthorizationKey);
-  $.notify("飞享一刻","","写入Cookie成功");
+  //const oldCookieValue = $.read("Fxyk_Cookie");
+  const oldAuthorizationValue = $.read("Fxyk_Authorization");
+  const newCookieValue = $request.headers["Cookie"];
+  const newAuthorizationValue = $request.headers["Authorization"];
+  if (newAuthorizationValue != oldAuthorizationValue) {
+    $.write(newAuthorizationValue,"Fxyk_Authorization");
+    $.write(newCookieValue,"Fxyk_Cookie");
+    $.notify("飞享一刻","","更新Cookie成功")
+  }
+  if (newAuthorizationValue.length = 0) {
+    $.write(newAuthorizationValue,"Fxyk_Authorization");
+    $.write(newCookieValue,"Fxyk_Cookie");
+    $.notify("飞享一刻","","首次写入Cookie成功")
+  }
 }
 
 function Env() {
