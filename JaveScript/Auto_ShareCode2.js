@@ -13,7 +13,7 @@ if ($.isNode()) {
     if (process.env.JD_DEBUG && process.env.JD_DEBUG === "false") console.log = () => {};
 } else {
     let cookiesData = $.getdata("CookiesJD") || "[]";
-    cookiesData = jsonParse(cookiesData);
+    cookiesData = JSON.stringify(cookiesData); // 此处报错
     cookiesArr = cookiesData.map((item) => item.cookie);
     cookiesArr.reverse();
     cookiesArr.push(...[$.getdata("CookieJD2"), $.getdata("CookieJD")]);
@@ -35,23 +35,17 @@ if ($.isNode()) {
             $.index = i + 1;
             $.shareCode = {
                 pet: {
-                    //日志中直接搜索下面内容即可快速找到互助码信息
-                    //【您的东东萌宠互助码shareCode】
                     name: "京东萌宠",
                     base: "http://api.turinglabs.net/api/v1/jd/pet/create/",
                     code: "",
                 },
                 bean: {
-                    //日志中直接搜索下面内容即可快速找到互助码信息
-                    //【您的京东种豆得豆互助码】
                     name: "种豆得豆",
                     base: "http://api.turinglabs.net/api/v1/jd/bean/create/",
                     code: "", //此处放入互助码,支持数组或字符串类型
                     err: "",
                 },
                 farm: {
-                    //日志中直接搜索下面内容即可快速找到互助码信息
-                    //【您的东东农场互助码shareCode】
                     name: "京东农场",
                     base: "http://api.turinglabs.net/api/v1/jd/farm/create/",
                     code: "",
