@@ -19,7 +19,7 @@
 # > 奈雪的茶
 奈雪的茶 = type=cron, cronexp="15 2 0 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js
 # > 小米运动
-小米运动 = type=cron,cronexp="0 50 22 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/lxk0301/jd_scripts/master/backUp/xmSports.js
+小米运动 = type=cron,cronexp="0 50 22 * * *", wake-system=1, timeout=180, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
 # > 支付宝
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
 # > 京东互助码
