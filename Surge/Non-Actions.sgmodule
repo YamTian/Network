@@ -1,4 +1,4 @@
-#!name=JD Bean Tasks (Non-Actions)
+#!name=JD Bean Tasks (No-Docker)
 #!desc=This is a Surge module used to collect JaveScripts on JD which is not uploaded to the script in Tencent Cloud Functions.
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
 
