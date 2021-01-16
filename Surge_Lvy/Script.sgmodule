@@ -22,6 +22,11 @@ Switch Bilibili Region = type=http-response,pattern=https:\/\/api\.bilibili\.com
 # 微信公众号底部广告 (mp.weixin.qq.com)
 微信去公众号底部广告 = type=http-request, pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js
 
+[URL Rewrite]
+^https://boxjs.net http://boxjs.net 302
+^http://ww1.boxjs.net http://boxjs.net 302
+^http://ww6.boxjs.net http://boxjs.net 302
+
 [MITM]
-hostname = %APPEND% sub.store, boxjs.net, api.bilibili.com, biz.caiyunapp.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com
+hostname = %APPEND% sub.store, boxjs.net, api.bilibili.com, biz.caiyunapp.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, mp.weixin.qq.com, boxjs.net
 
