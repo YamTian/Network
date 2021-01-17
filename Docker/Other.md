@@ -4,7 +4,7 @@
 
 ### 添加除 lxk 以外的脚本
 
-*以下代码中 Docker 安装位置为 /usr/docker/*
+**以下代码中 Docker 安装位置为 /usr/docker/**
 
 如果脚本可以在 node.js 上执行, 将此脚本(.js)放在 /usr/docker/jd/scripts 下即可. 
 
