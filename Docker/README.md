@@ -14,6 +14,6 @@
 
 [Other.md](https://github.com/YamTian/Network/blob/master/Docker/Other.md)
 
-### 添加其它支持node.js的京东脚本
+### 添加 shylocks 京东脚本
 
 [Diy.sh.md](https://github.com/YamTian/Network/blob/master/Docker/Diy.sh.md)
