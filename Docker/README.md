@@ -6,11 +6,11 @@
 
 3. 系统配置: CPU 1核 内存 2G SSD 40GB 流量 1T/月
 
-2. 镜像系统: CentOS 7.6
+4. 镜像系统: CentOS 7.6
 
-3. SSH 工具: [FinalShell](http://www.hostbuf.com/t/988.html)
+5. SSH 工具: [FinalShell](http://www.hostbuf.com/t/988.html)
 
-4. 部署时间: 2021-02-17 21:30
+6. 部署时间: 2021-02-17 21:30
 
 ### 基础部署
 
