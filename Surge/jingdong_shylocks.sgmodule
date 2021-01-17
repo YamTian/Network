@@ -1,0 +1,25 @@
+#!name=JD Bean Tasks (shylocks)
+#!desc=This is a Surge module used to collect JaveScripts on JD which is not uploaded to the script in Tencent Cloud Functions.
+#!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
+
+[Script]
+# > 获取京东粉丝专享Cookie
+获取京东粉丝专享Cookie = type=http-request, pattern=https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+
+# > 宝洁美发屋
+宝洁美发屋 = type=cron, cronexp="1 8,9 14-31/1 1 *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_bj.js
+
+# > 工业品爱消除
+工业品爱消除 = type=cron, cronexp="30 */2 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_gyec.js
+
+# > 盲盒抽京豆
+盲盒抽京豆 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
+
+# > 京东秒秒币
+京东秒秒币 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
+
+# > 京东粉丝专享
+京东粉丝专享 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+
+[Mitm]
+hostname = %APPEND% api.m.jd.com, wq.jd.com
