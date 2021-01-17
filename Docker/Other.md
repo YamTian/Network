@@ -25,6 +25,20 @@
 
 `docker cp /usr/docker/test.js jd:/jd/scripts`
 
+### 进入容器并查看挂机日志
+
+先
+
+`docker exec -it jd /bin/bash`
+
+后
+
+`pm2 monit`
+
+退出
+
+`exit`
+
 ### 手动 git pull 更新脚本
 
 `docker exec -it jd bash git_pull`
