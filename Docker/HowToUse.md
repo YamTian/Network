@@ -43,13 +43,17 @@ docker run -dit \
 evinedeng/jd:github
 ```
 
-## 第三步: 查看创建日志
+## 第三步: 启动 Docker 服务
+
+`service docker start`
+
+## 第四步: 查看创建日志
 
 `docker logs -f jd`
 
 > 直到出现容器启动成功...字样才代表启动成功, 按 Ctrl+C 退出查看日志
 
-## 第四步: 编辑文件
+## 第五步: 编辑文件
 
 ```
 cd /usr/docker/jd/config
