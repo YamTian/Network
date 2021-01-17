@@ -1,6 +1,6 @@
 ## Docker 部署笔记
 
-使用的 SHH 工具为 [FinalShell](http://www.hostbuf.com/t/988.html)
+下载安装并使用[FinalShell SSH 工具](http://www.hostbuf.com/t/988.html)
 
 ### 基础部署
 
