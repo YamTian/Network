@@ -23,7 +23,7 @@ sudo yum makecache fast
 sudo yum install docker-ce
 ```
 
-6. 顺带
+6. 顺带(防后面报错)
 
 `npm install got`
 
