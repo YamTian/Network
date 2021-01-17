@@ -1,6 +1,6 @@
 ## Docker 部署笔记
 
-1. 服务器: AliCloud 轻量应用服务器
+1. 服务器: [AliCloud 轻量应用服务器](https://www.aliyun.com/product/swas)
 
 2. 镜像系统: CentOS 7.6
 
