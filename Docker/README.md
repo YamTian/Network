@@ -6,6 +6,8 @@
 
 3. SSH 工具: [FinalShell](http://www.hostbuf.com/t/988.html)
 
+4. 部署时间: 2021-02-17 21:30
+
 ### 基础部署
 
 [HowToUse.md](https://github.com/YamTian/Network/blob/master/Docker/HowToUse.md)
@@ -17,7 +19,3 @@
 ### 添加 shylocks 京东脚本
 
 [Diy.sh.md](https://github.com/YamTian/Network/blob/master/Docker/Diy.sh.md)
-
-#### 最后一次部署时间
-
-2021-02-17 21:30
