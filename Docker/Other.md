@@ -58,6 +58,9 @@
 以执行名为 jd_fruit.js 的文件为例 
 
 `docker exec -it jd bash jd.sh jd_fruit now`
+
+其中 `exec` 后面的 `jd` 为容器名, `bash` 后面的 `jd` 为命令名, `xxx` 为 `lxk` 的脚本名
+
 > 报错的话可能需要用到这段代码
 >> `docker exec -it jd bash git_pull`
 >> `npm install got`
