@@ -1,6 +1,10 @@
 ## Docker 部署笔记
 
-下载安装并使用[FinalShell SSH 工具](http://www.hostbuf.com/t/988.html)
+1. 服务器: AliCloud 轻量应用服务器
+
+2. 镜像系统: CentOS 7.6
+
+3. SSH 工具: [FinalShell](http://www.hostbuf.com/t/988.html)
 
 ### 基础部署
 
