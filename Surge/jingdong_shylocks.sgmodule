@@ -16,10 +16,10 @@
 盲盒抽京豆 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_mh.js
 
 # > 京东秒秒币
-京东秒秒币 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
+京东秒秒币 = type=cron, cronexp="3 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_ms.js
 
 # > 京东粉丝专享
-京东粉丝专享 = type=cron, cronexp="1 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
+京东粉丝专享 = type=cron, cronexp="5 7 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js
 
 [Mitm]
 hostname = %APPEND% api.m.jd.com, wq.jd.com
