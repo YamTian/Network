@@ -2,7 +2,7 @@
 
 1. 服务器: [AliCloud 轻量应用服务器](https://www.aliyun.com/product/swas)
 
-2. 用户类型: 开发者成长计划(学生)
+2. 用户类型: 开发者成长计划 9元/月
 
 3. 系统配置: CPU 1核 内存 2G SSD 40GB 流量 1T/月
 
