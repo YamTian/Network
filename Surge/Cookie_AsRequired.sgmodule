@@ -3,6 +3,8 @@
 #!tag = type=http-request, pattern=https, script-path=javescript
 
 [Script]
+# > 京东粉丝专享 (wq.jd.com)
+获取京东微信Cookie = type=http-request,pattern=^https:\/\/wq\.jd\.com\/bases\/jssdk\/GetWxJsApiSign, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/shylocks/Loon/main/jd_wechat_sign.js, script-update-interval=0
 # > 百度贴吧 (tieba.baidu.com)
 百度贴吧 = type=http-request, pattern=^https?:\/\/tieba\.baidu\.com\/?.?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
 # > 滴滴出行 (as.xiaojukeji.com)
@@ -11,4 +13,4 @@
 奈雪的茶 = type=http-request, pattern=^https:\/\/webapi\.qmai\.cn\/web\/cy\/v\d\/store\/template-scene, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js
 
 [MITM]
-hostname = %APPEND% tieba.baidu.com, as.xiaojukeji.com, webapi.qmai.cn
+hostname = %APPEND% wq.jd.com, tieba.baidu.com, as.xiaojukeji.com, webapi.qmai.cn
