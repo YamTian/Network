@@ -48,7 +48,7 @@ evinedeng/jd:github
 ## 第四步: 编辑文件
 
 ```
-cd /你想存放的路径/jd/config
+cd /usr/docker/jd/config
 ```
 
 `vim auth.json`
