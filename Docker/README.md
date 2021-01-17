@@ -2,9 +2,9 @@
 
 1. 服务器: [AliCloud 轻量应用服务器](https://www.aliyun.com/product/swas)
 
-2. 用户类型: 开发者成长计划 9元/月
+2. 用户类型: 开发者成长计划
 
-3. 系统配置: 1核/2G/40GSSD/5Mbps/1T流量/杭州
+3. 系统配置: 1核/2G/40G/5Mbps/1000GB/杭州
 
 4. 镜像系统: CentOS 7.6
 
