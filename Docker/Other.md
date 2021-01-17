@@ -27,15 +27,15 @@
 
 ### 进入容器并查看挂机日志
 
-先
+先进容器
 
 `docker exec -it jd /bin/bash`
 
-后
+后看日志
 
 `pm2 monit`
 
-退出
+最后退出
 
 `exit`
 
@@ -61,6 +61,6 @@
 
 其中 `exec` 后面的 `jd` 为容器名, `bash` 后面的 `jd` 为命令名, `xxx` 为 `lxk` 的脚本名
 
-> 报错的话可能需要用到这段代码
+> 报错的话可能需要用到这两段代码
 >> `docker exec -it jd bash git_pull`
 >> `npm install got`
