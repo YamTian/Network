@@ -4,9 +4,6 @@
   Author: YamTian
 </h1>
 
-|:---|:---|
-|服务器|豆得豆|
-
 1. 服务器: [AliCloud 轻量应用服务器](https://www.aliyun.com/product/swas)
 
 2. 用户类型: 开发者成长计划
