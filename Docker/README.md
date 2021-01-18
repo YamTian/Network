@@ -26,4 +26,4 @@
 
 - [x] [添加 shylocks 京东脚本](https://github.com/YamTian/Network/blob/master/Docker/Diy.sh.md)
 
-- [ ] 多容器并发
+- [ ] 多容器并发(不想写了)
