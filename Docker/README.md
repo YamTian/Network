@@ -16,14 +16,14 @@
 
 6. 部署时间: 2021-02-17 21:30
 
-### 基本部署并执行
+### 笔记
 
-[HowToUse.md](https://github.com/YamTian/Network/blob/master/Docker/HowToUse.md)
+- [x] [基本部署并执行](https://github.com/YamTian/Network/blob/master/Docker/HowToUse.md)
 
-### 其它问题
+- [x] [其它问题](https://github.com/YamTian/Network/blob/master/Docker/Other.md)
 
-[Other.md](https://github.com/YamTian/Network/blob/master/Docker/Other.md)
+- [x] [添加 shylocks 京东脚本](https://github.com/YamTian/Network/blob/master/Docker/Diy.sh.md)
 
-### 添加 shylocks 京东脚本
+- [ ] 基本命令查阅
 
-[Diy.sh.md](https://github.com/YamTian/Network/blob/master/Docker/Diy.sh.md)
+- [ ] 多容器并发
