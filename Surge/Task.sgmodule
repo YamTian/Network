@@ -23,4 +23,4 @@
 # > 小米运动
 小米运动 = type=cron,cronexp="0 50 22 * * *", wake-system=1, timeout=180, script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/backUp/xmSports.js
 # > 支付宝
-支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.j
+支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
