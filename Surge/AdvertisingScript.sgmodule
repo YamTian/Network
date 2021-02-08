@@ -1,5 +1,5 @@
-#!name=AdvertisingScript
-#!desc=Use scripts to remove advertisements and solve all kinds of troubles with advertisements.
+#!name=AdvertisingScript by JacaScripts
+#!desc=Use JacaScripts to remove advertisements and solve all kinds of troubles with advertisements.
 
 [Rule]
 DOMAIN,118.89.204.198,REJECT
