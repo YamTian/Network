@@ -16,11 +16,11 @@
 # > 掌上飞车
 掌上飞车 = type=cron, cronexp="10 2 0 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/QQspeed.js
 # > 滴滴出行
-滴滴出行——每日签到 = type=cron, cronexp="0 30 8 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
-滴滴出行——晚八点 = type=cron, cronexp="0 0 20 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行——每日签到 = type=cron, cronexp="0 30 8 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
+滴滴出行——晚八点 = type=cron, cronexp="0 0 20 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/DiDi/DiDi_new.js
 # > 奈雪的茶
 奈雪的茶 = type=cron, cronexp="15 2 0 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js
 # > 小米运动
-小米运动 = type=cron,cronexp="0 50 22 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/xmSport.js
+小米运动 = type=cron,cronexp="0 20 22 * * *", wake-system=1, timeout=180, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/xmSport.js
 # > 支付宝
 支付宝 = type=cron,cronexp="0 30 7 * * *", wake-system=1, timeout=180, script-path= https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/AliPay.js
