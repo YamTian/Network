@@ -9,7 +9,6 @@
       "id": "Leave",
       "name": "学工假条",
       "keys": [
-        "BeginDay", "EndDay", "LeaveType", "LeaveThing", "OutAddress", "StudentTel", "ParentName", "Relation", "ParentTel", "WithNumNo", "Vehicle"
       ],
       "descs_html": [
         "<h4 align=\"center\">请按说明修改信息</a></h4>"
