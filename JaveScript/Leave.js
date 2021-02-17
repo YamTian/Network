@@ -42,7 +42,7 @@ else { // 响应体 Url 包含 Edit
     "OutAddress": $persistentStore.read('OutAddress') || '', // 外出地点
     // 外出联系人信息(实际为本人信息)
     "OutName": $persistentStore.read('StudentName') || '', // 姓名
-    "OutMoveTel": $persistentStore.read('SutdentTel') || '', // 移动电话
+    "OutMoveTel": $persistentStore.read('StudentTel') || '', // 移动电话
     "OutTel": "", // 固定电话
     "Relation": "本人", // 与本人关系
     // 本人信息
