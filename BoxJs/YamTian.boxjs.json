@@ -85,7 +85,7 @@
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
-          "desc": "您个人的手机号码"
+          "desc": "您的手机号码"
         },
         {
           "id": "ParentName",
