@@ -75,7 +75,7 @@ else { // 响应体 Url 包含 Edit
     "studentId": "202020020", // 学生学号
     "XYThing": null,
     "OverStatus": 1,
-    "ID": 1, // 随便4位数以获取别人的请假信息
+    "ID": 9999, // 随便4位数以获取别人的请假信息
     "DisLeaveMen": null,
 
     // 以下数据不必修改
