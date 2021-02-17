@@ -22,7 +22,7 @@
         "type": "text",
         "placeholder": "(点击以展开说明)",
         "desc": "请假起始日期,例如1号可以填写1或者01"
-        }, 
+        },
         {
           "id": "EndDay",
           "name": "请假结束日期",
@@ -319,40 +319,6 @@
           "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg", 
           "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg"
         ]
-      },
-      {
-          "id": "QQspeed",
-          "name": "掌上飞车",
-          "key": [
-            "CookieKeyFC",
-            "UrlValueFC "
-          ],
-          "descs_html": [
-          ],
-          "settings": [
-            {
-              "id": "CookieKeyFC",
-              "name": "掌上飞车",
-              "val": "",
-              "type": "text",
-              "placeholder": "(点击以展开说明)",
-              "desc": "掌上飞车Cookie"
-            },
-            {
-              "id": "UrlValueFC",
-              "name": "掌上飞车",
-              "val": "",
-              "type": "text",
-              "placeholder": "(点击以展开说明)",
-              "desc": "掌上飞车Cookie"
-            }
-          ],
-          "author": "@YamTian",
-          "repo": "https://github.com/YamTian/Network/tree/master",
-          "icons": [
-            "https://raw.githubusercontent.com/Orz-3/mini/master/Color/zsfc.png", 
-            "https://raw.githubusercontent.com/Orz-3/mini/master/Color/zsfc.png"
-          ]
-        }
+      }
   ]
 }
