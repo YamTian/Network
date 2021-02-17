@@ -37,7 +37,7 @@ else { // 响应体 Url 包含 Edit
   Body= {
     // 请假内容
     "LeaveType": $persistentStore.read('LeaveType') || '事假', // 请假类型
-    "LeaveThing": $persistentStore.read('LeaveThing') || '', // 请假事由
+    "LeaveThing": $persistentStore.read('LeaveThing') || '有事外出', // 请假事由
     "OutAddress": $persistentStore.read('OutAddress') || '', // 外出地点
     // 外出联系人信息
     "OutName": $persistentStore.read('ParentName') || '', // 姓名
