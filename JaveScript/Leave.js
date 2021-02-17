@@ -40,11 +40,11 @@ else { // 响应体 Url 包含 Edit
     "LeaveType": $persistentStore.read('LeaveType') || '事假', // 请假类型
     "LeaveThing": $persistentStore.read('LeaveThing') || '有事外出', // 请假事由
     "OutAddress": $persistentStore.read('OutAddress') || '', // 外出地点
-    // 外出联系人信息
-    "OutName": $persistentStore.read('ParentName') || '', // 姓名
-    "OutMoveTel": $persistentStore.read('ParentTel') || '', // 移动电话
+    // 外出联系人信息(实际为本人信息)
+    "OutName": $persistentStore.read('StudentName') || '', // 姓名
+    "OutMoveTel": $persistentStore.read('SutdentTel') || '', // 移动电话
     "OutTel": "", // 固定电话
-    "Relation": $persistentStore.read('Relation') || '', // 与本人关系
+    "Relation": "本人", // 与本人关系
     // 本人信息
     "StuMoveTel": $persistentStore.read('StudentTel') || '', // 联系电话
     "StuOtherTel": "", // 其他联系方式
@@ -71,7 +71,7 @@ else { // 响应体 Url 包含 Edit
     "SpStatus": null,
     "Status": "5",
     "GoOutConfirm": null,
-    "StuName": null, // 学生姓名
+    "StuName": $persistentStore.read('StudentName') || '', // 学生姓名
     "studentId": "202020020", // 学生学号
     "XYThing": null,
     "OverStatus": 1,
