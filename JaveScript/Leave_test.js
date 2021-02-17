@@ -1,5 +1,5 @@
 // const beginDay = $persistentStore.read('BeginDay') || ''; // 从 BoxJs 里面获取请假起始日期
-// const endDay = $persistentStore.read('EndDay') || ''; // 从 BoxJs 里面获取请假结束日期
+const endDay = $persistentStore.read('EndDay') || ''; // 从 BoxJs 里面获取请假结束日期
 
 var nowTime = new Date(); // 获取当前日期
 var Month = nowTime.getMonth() + 1; // 用myDate.getMonth()获取的1月份输出是0
