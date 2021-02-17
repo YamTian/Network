@@ -72,6 +72,14 @@
           "desc": "您请假外出的地点"
         }, 
         {
+          "id": "StudentName",
+          "name": "学生姓名",
+          "val": "",
+          "type": "text",
+          "placeholder": "(点击以展开说明)",
+          "desc": "您的姓名"
+        },
+        {
           "id": "StudentTel",
           "name": "学生手机号码",
           "val": "",
@@ -86,15 +94,7 @@
           "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "您家长的姓名"
-        }, 
-        {
-          "id": "Relation",
-          "name": "与家长的法律关系",
-          "val": "",
-          "type": "text",
-          "placeholder": "(点击以展开说明)",
-          "desc": "例如父子,母女,姐姐,哥哥等"
-        }, 
+        },
         {
           "id": "ParentTel",
           "name": "家长手机号码",
