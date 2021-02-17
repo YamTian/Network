@@ -324,13 +324,22 @@
           "id": "QQspeed",
           "name": "掌上飞车",
           "key": [
-            "CookieKeyFC"
+            "CookieKeyFC",
+            "UrlValueFC "
           ],
           "descs_html": [
           ],
           "settings": [
             {
               "id": "CookieKeyFC",
+              "name": "掌上飞车",
+              "val": "",
+              "type": "text",
+              "placeholder": "(点击以展开说明)",
+              "desc": "掌上飞车Cookie"
+            },
+            {
+              "id": "UrlValueFC",
               "name": "掌上飞车",
               "val": "",
               "type": "text",
