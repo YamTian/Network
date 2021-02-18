@@ -21,9 +21,16 @@ var EndDate = ('0' + end_date).slice(-2); // 请假结束日期补零
 var BeginTime = ('0' + begin_hours).slice(-2); // 请假开始小时数补零
 
 // 组合请假时间
-var LeaveBeginDate = Year + "-" + current_month + "-" + BeginDate; // 请假起始日期
-var LeaveEndDate = Year + "-" + current_month + "-" + EndDate; // 请假结束日期
-var LeaveNumNo = (EndDate-BeginDate+current_hours/24-BeginTime/24).toFixed(2); // 计算请假总时长并保留两位小数
+var BeginDate = Year + "-" + current_month + "-" + BeginDate; // 请假起始日期
+var EndDate = Year + "-" + current_month + "-" + EndDate; // 请假结束日期
+
+// 重新定义各个值(方便查看)
+var LeaveBeginDate = BeginDate; // 请假起始日期
+var LeaveBeginTime = BeginTime; // 请假起始小时数
+var LeaveEndDate = EndDate; // 请假结束日期
+var LeaveEndTime = current_hours; // 请假结束小时数
+
+var LeaveNumNo = (LeaveEndDate-LeaveBeginDate+LeaveEndTime/24-LeaveBeginTime/24).toFixed(2); // 计算请假总时长并保留两位小数
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
@@ -39,9 +46,9 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
         "LeaveBeginDate": LeaveBeginDate, // 去-日期
-        "LeaveBeginTime": BeginTime, // 去-整时
+        "LeaveBeginTime": LeaveBeginTime, // 去-整时
         "LeaveEndDate": LeaveEndDate, // 返-日期
-        "LeaveEndTime": current_hours, // 返-整时
+        "LeaveEndTime": LeaveEndTime, // 返-整时
         "LeaveNumNo": LeaveNumNo, // 离校总时长
       }
     ],
@@ -69,13 +76,13 @@ else { // 响应体 Url 包含 Edit
     "LeaveBeginDate": LeaveBeginDate, // 去-日期
     "Inputdate": LeaveBeginDate, // 去-日期
     "GoDate": LeaveBeginDate, // 去-日期
-    "LeaveEndDate": EndDate, // 返-日期
-    "BackDate": EndDate, // 返-日期
+    "LeaveEndDate": LeaveEndDate, // 返-日期
+    "BackDate": LeaveEndDate, // 返-日期
     // 往返时间
-    "LeaveBeginTime": BeginTime, // 去-整时
-    "GoTime": BeginTime, // 去-整时
-    "LeaveEndTime": current_hours, // 返-整时
-    "BackTime": current_hours, // 返-整时
+    "LeaveBeginTime": LeaveBeginTime, // 去-整时
+    "GoTime": LeaveBeginTime, // 去-整时
+    "LeaveEndTime": LeaveEndTime, // 返-整时
+    "BackTime": LeaveEndTime, // 返-整时
     // 往返交通工具
     "GoVehicle": $persistentStore.read('Vehicle') || '汽车', // 去-交通工具
     "BackVehicle": $persistentStore.read('Vehicle') || '汽车', // 返-交通工具
