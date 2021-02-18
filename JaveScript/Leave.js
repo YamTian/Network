@@ -15,6 +15,8 @@ const begin_date = $persistentStore.read('begin_date') || current_date; // 从 B
 const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
 const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假开始小时数
 
+var LeaveNumNo = (end_date-begin_date+current_hours/24-begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
+
 // 为月日小时数补零
 var BeginDate = ('0' + begin_date).slice(-2); // 请假起始日期补零
 var EndDate = ('0' + end_date).slice(-2); // 请假结束日期补零
@@ -23,9 +25,6 @@ var BeginTime = ('0' + begin_hours).slice(-2); // 请假开始小时数补零
 // 组合请假时间
 var BeginDate = Year + "-" + current_month + "-" + BeginDate; // 请假起始日期
 var EndDate = Year + "-" + current_month + "-" + EndDate; // 请假结束日期
-
-// 计算请假总时长并保留两位小数
-var LeaveNumNo = (EndDate-BeginDate+current_hours/24-BeginTime/24).toFixed(2);
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
