@@ -51,7 +51,6 @@
           "name": "请假类型",
           "val": "事假",
           "type": "radios",
-          "desc": "默认选项为事假",
           "items": [
             {
               "key": "事假",
@@ -75,7 +74,7 @@
           "id": "LeaveThing",
           "name": "请假事由",
           "val": "外出吃饭",
-          "type": "textarea",
+          "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "您请假的事由"
         }, 
@@ -83,7 +82,7 @@
           "id": "OutAddress",
           "name": "外出地点",
           "val": "",
-          "type": "textarea",
+          "type": "text",
           "placeholder": "(点击以展开说明)",
           "desc": "您请假外出的地点"
         }, 
