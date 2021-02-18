@@ -5,9 +5,9 @@ var Month = newDate.getMonth() + 1; // 获取当前月份
 var Day = newDate.getDate(); // 获取当前日期
 var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
 
-// if (Hours == 0){
-//   Day += 1
-// }
+if (Hours == 0 || 1 || 2){
+  Day += 1
+};
 
 // 为当前月日小时数补零
 var current_month = ('0' + Month).slice(-2); // 月份补零
