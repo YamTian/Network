@@ -10,7 +10,7 @@ var current_month = ('0' + Month).slice(-2); // 月份补零
 var current_date = ('0' + Day).slice(-2); // 日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 if (current_hours <= 8) {
-    current_hours = 22
+    current_hours += 8
 };
 
 // 从 BoxJs 内获取数据
