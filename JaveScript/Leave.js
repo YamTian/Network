@@ -66,9 +66,9 @@ else { // 响应体 Url 包含 Edit
     "ParentContacts": $persistentStore.read('ParentName') || '', // 家长联系人
     "ParentTel": $persistentStore.read('ParentTel') || '', // 家长联系方式
     // 往返时间
-    "LeaveBeginDate": BeginDate, // 去-日期
-    "Inputdate": BeginDate, // 去-日期
-    "GoDate": BeginDate, // 去-日期
+    "LeaveBeginDate": LeaveBeginDate, // 去-日期
+    "Inputdate": LeaveBeginDate, // 去-日期
+    "GoDate": LeaveBeginDate, // 去-日期
     "LeaveEndDate": EndDate, // 返-日期
     "BackDate": EndDate, // 返-日期
     // 往返时间
