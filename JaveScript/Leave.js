@@ -4,14 +4,14 @@ var Year = newDate.getFullYear(); // 获取当前年份
 var Month = newDate.getMonth() + 1; // 获取当前月份
 var Day = newDate.getDate(); // 获取当前日期
 var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
+if (Hours <= 8) {
+    Hours += 8
+};
 
 // 为当前月日小时数补零
 var current_month = ('0' + Month).slice(-2); // 月份补零
 var current_date = ('0' + Day).slice(-2); // 日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
-if (current_hours <= 8) {
-    current_hours += 8
-};
 
 // 从 BoxJs 内获取数据
 const begin_date = $persistentStore.read('begin_date') || current_date; // 从 BoxJs 里面获取请假起始日期
