@@ -16,14 +16,14 @@ const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs
 const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假开始小时数
 
 // 为月日小时数补零
-var begin_date = ('0' + begin_date).slice(-2); // 请假起始日期补零
-var end_date = ('0' + end_date).slice(-2); // 请假结束日期补零
-var begin_hours = ('0' + begin_hours).slice(-2); // 请假开始小时数补零
+var BeginDate = ('0' + begin_date).slice(-2); // 请假起始日期补零
+var EndDate = ('0' + end_date).slice(-2); // 请假结束日期补零
+var BeginTime = ('0' + begin_hours).slice(-2); // 请假开始小时数补零
 
 // 组合请假时间
-var LeaveBeginDate = Year + "-" + current_month + "-" + begin_date; // 请假起始日期
-var LeaveEndDate = Year + "-" + current_month + "-" + end_date; // 请假结束日期
-var LeaveNumNo = (end_date-begin_date+current_hours/24-begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
+var LeaveBeginDate = Year + "-" + current_month + "-" + BeginDate; // 请假起始日期
+var LeaveEndDate = Year + "-" + current_month + "-" + EndDate; // 请假结束日期
+var LeaveNumNo = (EndDate-BeginDate+current_hours/24-BeginTime/24).toFixed(2); // 计算请假总时长并保留两位小数
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
@@ -39,7 +39,7 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
         "LeaveBeginDate": LeaveBeginDate, // 去-日期
-        "LeaveBeginTime": begin_hours, // 去-整时
+        "LeaveBeginTime": BeginTime, // 去-整时
         "LeaveEndDate": LeaveEndDate, // 返-日期
         "LeaveEndTime": current_hours, // 返-整时
         "LeaveNumNo": LeaveNumNo, // 离校总时长
@@ -72,8 +72,8 @@ else { // 响应体 Url 包含 Edit
     "LeaveEndDate": EndDate, // 返-日期
     "BackDate": EndDate, // 返-日期
     // 往返时间
-    "LeaveBeginTime": begin_hours, // 去-整时
-    "GoTime": begin_hours, // 去-整时
+    "LeaveBeginTime": BeginTime, // 去-整时
+    "GoTime": BeginTime, // 去-整时
     "LeaveEndTime": current_hours, // 返-整时
     "BackTime": current_hours, // 返-整时
     // 往返交通工具
