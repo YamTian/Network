@@ -83,7 +83,7 @@
           "id": "OutAddress",
           "name": "外出地点",
           "val": "",
-          "type": "text",
+          "type": "textarea",
           "placeholder": "(点击以展开说明)",
           "desc": "您请假外出的地点"
         }, 
@@ -99,7 +99,7 @@
           "id": "StudentTel",
           "name": "学生手机号码",
           "val": "",
-          "type": "text",
+          "type": "number",
           "placeholder": "(点击以展开说明)",
           "desc": "您的手机号码"
         },
@@ -115,7 +115,7 @@
           "id": "ParentTel",
           "name": "家长手机号码",
           "val": "",
-          "type": "text",
+          "type": "number",
           "placeholder": "(点击以展开说明)",
           "desc": "您家长的手机号码"
         }, 
