@@ -18,7 +18,7 @@
         "id": "begin_date",
         "name": "请假起始日期",
         "val": "",
-        "type": "text",
+        "type": "number",
         "placeholder": "(点击以展开说明)",
         "desc": "请假起始日期,例如1号可以填写1或者01,不填写则默认当天"
         },
@@ -26,17 +26,17 @@
           "id": "end_date",
           "name": "请假结束日期",
           "val": "",
-          "type": "text",
+          "type": "number",
           "placeholder": "(点击以展开说明)",
           "desc": "请假结束日期,例如1号可以填写1或者01,不填写则默认当天"
         }, 
         {
           "id": "begin_hours",
-          "name": "请假开始小时数",
+          "name": "请假起始小时",
           "val": "",
-          "type": "text",
+          "type": "number",
           "placeholder": "(点击以展开说明)",
-          "desc": "请假开始小时数,例如8时可以填写8或者08,不填写则默认08时"
+          "desc": "请假起始小时,例如8时可以填写8或者08,不填写则默认08时"
         },
         {
           "id": "LeaveType",
