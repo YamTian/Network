@@ -30,7 +30,10 @@ var LeaveBeginTime = BeginTime; // 请假起始小时数
 var LeaveEndDate = EndDate; // 请假结束日期
 var LeaveEndTime = current_hours; // 请假结束小时数
 
-var LeaveNumNo = (LeaveEndDate-LeaveBeginDate+LeaveEndTime/24-LeaveBeginTime/24).toFixed(2); // 计算请假总时长并保留两位小数
+// 计算请假总时长并保留两位小数
+var interval_day = LeaveEndDate-LeaveBeginDate;
+var interval_hours = (LeaveEndTime-LeaveBeginTime)/24;
+var LeaveNumNo = (interval_day+interval_hours).toFixed(2);
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
