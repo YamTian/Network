@@ -32,7 +32,7 @@ var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
 if (begin_date < end_date) {
   var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); 
 } else {
-  var D = new Date(Year, Month, 0);
+  var D = new Date(Year, Month + 1, 0);
   var d = D.getDate();
   var LeaveNumNo = (end_date - begin_date + d + end_hours/24 - begin_hours/24).toFixed(2); 
 }
