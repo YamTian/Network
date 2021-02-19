@@ -25,19 +25,19 @@ var preset_end_date = ('0' + end_date_q).slice(-2); // 结束日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取各个数据
-const begin_date = $persistentStore.read('begin_date') || preset_begin_date; // 从 BoxJs 里面获取请假起始日期
-const end_date = $persistentStore.read('end_date') || preset_end_date; // 从 BoxJs 里面获取请假结束日期
-const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
-const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
-const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 从 BoxJs 里面获取请假类型
-const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 从 BoxJs 里面获取请假事由
-const WithNumNo = $persistentStore.read('WithNumNo') || '0'; // 从 BoxJs 里面获取同行人数
-const OutAddress = $persistentStore.read('OutAddress') || ''; // 从 BoxJs 里面获取外出地点
-const StudentName = $persistentStore.read('StudentName') || ''; // 从 BoxJs 里面获取姓名
-const StudentTel = $persistentStore.read('StudentTel') || ''; // 从 BoxJs 里面获取移动电话
-const ParentName = $persistentStore.read('ParentName') || ''; // 从 BoxJs 里面获取家长联系人
-const ParentTel = $persistentStore.read('ParentTel') || ''; // 从 BoxJs 里面获取家长联系方式
-const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 从 BoxJs 里面获取交通工具
+const begin_date = $persistentStore.read('begin_date') || preset_begin_date; // 请假起始日期
+const end_date = $persistentStore.read('end_date') || preset_end_date; // 请假结束日期
+const begin_hours = $persistentStore.read('begin_hours') || '08'; // 请假起始小时数
+const end_hours = $persistentStore.read('end_hours') || current_hours; // 请假结束小时数
+const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 请假类型
+const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 请假事由
+const WithNumNo = $persistentStore.read('WithNumNo') || '0'; // 同行人数
+const OutAddress = $persistentStore.read('OutAddress') || ''; // 外出地点
+const StudentName = $persistentStore.read('StudentName') || ''; // 姓名
+const StudentTel = $persistentStore.read('StudentTel') || ''; // 移动电话
+const ParentName = $persistentStore.read('ParentName') || ''; // 家长联系人
+const ParentTel = $persistentStore.read('ParentTel') || ''; // 家长联系方式
+const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 交通工具
 
 // 判断起始日期是否大于结束日期
 if (begin_date <= end_date) { // 否
