@@ -21,8 +21,8 @@ const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 Bo
 
 // 判断起始日期是否大于结束日期
 if (begin_date > end_date) {
-  begin_month = Month + 1;
-  end_month = Month + 2
+  begin_month = Month;
+  end_month = Month + 1
 };
 
 var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
