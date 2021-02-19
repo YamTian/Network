@@ -20,7 +20,7 @@ const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs �
 const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
 
 // 计算请假总时长并保留两位小数
-var LeaveNumNo = (end_date-begin_date+end_hours/24-begin_hours/24).toFixed(2); 
+var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); 
 
 // 为请假月日小时数补零
 var BeginDate = ('0' + begin_date).slice(-2); // 请假起始日期补零
