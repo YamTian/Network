@@ -13,14 +13,20 @@ var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
 // 判断当前时间是否为凌晨时段
 if (Hours <= 8) { // 是
   Hours = 9
+  preset_begin_date = Day;
+  preset_end_date = Day + 1
+} else { // 否
+  preset_begin_date = Day;
+  preset_end_date = Day
 };
 
-var current_date = ('0' + Day).slice(-2); // 日期补零
+var preset_begin_date = ('0' + Day).slice(-2); // 起始日期补零
+var preset_end_date = ('0' + Day).slice(-2); // 结束日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取各个数据
-const begin_date = $persistentStore.read('begin_date') || current_date; // 从 BoxJs 里面获取请假起始日期
-const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
+const begin_date = $persistentStore.read('begin_date') || preset_begin_date; // 从 BoxJs 里面获取请假起始日期
+const end_date = $persistentStore.read('end_date') || preset_end_date; // 从 BoxJs 里面获取请假结束日期
 const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
 const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
 const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 从 BoxJs 里面获取请假类型
@@ -55,18 +61,18 @@ var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
 var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
 var BeginDate = ('0' + begin_date).slice(-2); // 起始日期补零
 var EndDate = ('0' + end_date).slice(-2); // 结束日期补零
-var BeginTime = ('0' + begin_hours).slice(-2); // 起始小时数补零
-var EndTime = ('0' + end_hours).slice(-2); // 结束小时数补零
+var LeaveBeginTime = ('0' + begin_hours).slice(-2); // 起始小时数补零
+var LeaveEndTime = ('0' + end_hours).slice(-2); // 结束小时数补零
 
 // 组合请假时间
-var BeginDate = Year + "-" + BeginMonth + "-" + BeginDate; // 请假起始日期
-var EndDate = Year + "-" + EndMonth + "-" + EndDate; // 请假结束日期
+var LeaveBeginDate = Year + "-" + BeginMonth + "-" + BeginDate; // 请假起始日期
+var LeaveEndDate = Year + "-" + EndMonth + "-" + EndDate; // 请假结束日期
 
 // 重新定义各个值
-var LeaveBeginDate = BeginDate;
-var LeaveBeginTime = BeginTime;
-var LeaveEndDate = EndDate;
-var LeaveEndTime = EndTime;
+// var LeaveBeginDate = BeginDate;
+// var LeaveBeginTime = BeginTime;
+// var LeaveEndDate = EndDate;
+// var LeaveEndTime = EndTime;
 
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
