@@ -40,7 +40,7 @@ const ParentTel = $persistentStore.read('ParentTel') || ''; // 从 BoxJs 里面�
 const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 从 BoxJs 里面获取交通工具
 
 // 判断起始日期是否大于结束日期
-if (begin_date < end_date) { // 否
+if (begin_date <= end_date) { // 否
   begin_month = Month;
   end_month = Month
 } else { // 是
