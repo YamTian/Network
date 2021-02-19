@@ -49,7 +49,7 @@ if (begin_date <= end_date) { // 否
 };
 
 // 判断起始日期和结束日期是否跨月份
-if (begin_date < end_date) { // 否
+if (begin_date <= end_date) { // 否
   var LeaveNumNo = (end_date_q - begin_date_q + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
 } else { // 是
   var D = new Date(Year, Month, 0);
