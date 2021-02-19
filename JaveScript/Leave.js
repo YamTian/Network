@@ -4,11 +4,12 @@ var Year = newDate.getFullYear(); // 获取当前年份
 var Month = newDate.getMonth() + 1; // 获取当前月份
 var Day = newDate.getDate(); // 获取当前日期
 var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
-if (Hours <= 8) {Hours = 9};
-
-// 为当前月日小时数补零
-var current_month = ('0' + Month).slice(-2); // 月份补零
 var current_date = ('0' + Day).slice(-2); // 日期补零
+
+// 判断当前时间是否为凌晨时段
+if (Hours <= 8) {
+  Hours = 9
+};
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取数据
@@ -16,6 +17,15 @@ const begin_date = $persistentStore.read('begin_date') || current_date; // 从 B
 const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
 const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
 const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
+
+// 判断起始日期是否大于结束日期
+if (begin_date > end_date) {
+  begin_month = Month + 1;
+  end_month = Month + 2
+};
+
+var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
+var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
 
 // 计算请假总时长并保留两位小数
 var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); 
@@ -27,8 +37,8 @@ var BeginTime = ('0' + begin_hours).slice(-2); // 请假起始小时数补零
 var EndTime = ('0' + end_hours).slice(-2); // 请假结束小时数补零
 
 // 组合请假时间
-var BeginDate = Year + "-" + current_month + "-" + BeginDate; // 请假起始日期
-var EndDate = Year + "-" + current_month + "-" + EndDate; // 请假结束日期
+var BeginDate = Year + "-" + BeginMonth + "-" + BeginDate; // 请假起始日期
+var EndDate = Year + "-" + EndMonth + "-" + EndDate; // 请假结束日期
 
 // 重新定义各个值
 var LeaveBeginDate = BeginDate;
