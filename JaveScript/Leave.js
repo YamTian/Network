@@ -13,15 +13,15 @@ var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
 // 判断当前时间是否为凌晨时段
 if (Hours <= 8) { // 是
   Hours = 9
-  preset_begin_date = Day;
-  preset_end_date = Day + 1
+  begin_date_q = Day;
+  end_date_q = Day + 1
 } else { // 否
-  preset_begin_date = Day;
-  preset_end_date = Day
+  begin_date_q = Day;
+  end_date_q = Day
 };
 
-var preset_begin_date = ('0' + Day).slice(-2); // 起始日期补零
-var preset_end_date = ('0' + Day).slice(-2); // 结束日期补零
+var preset_begin_date = ('0' + begin_date_q).slice(-2); // 起始日期补零
+var preset_end_date = ('0' + end_date_q).slice(-2); // 结束日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取各个数据
