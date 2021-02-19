@@ -68,12 +68,7 @@ var LeaveEndTime = ('0' + end_hours).slice(-2); // 结束小时数补零
 var LeaveBeginDate = Year + "-" + BeginMonth + "-" + BeginDate; // 请假起始日期
 var LeaveEndDate = Year + "-" + EndMonth + "-" + EndDate; // 请假结束日期
 
-// 重新定义各个值
-// var LeaveBeginDate = BeginDate;
-// var LeaveBeginTime = BeginTime;
-// var LeaveEndDate = EndDate;
-// var LeaveEndTime = EndTime;
-
+// 开始修改假条页面
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
 
