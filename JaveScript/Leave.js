@@ -11,7 +11,6 @@ var Day = newDate.getDate(); // 获取当前日期
 var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
 var current_date = ('0' + Day).slice(-2); // 日期补零
 
-
 // 判断当前时间是否为凌晨时段
 if (Hours <= 8) {
   Hours = 9
