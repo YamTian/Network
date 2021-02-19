@@ -6,6 +6,7 @@ var Day = newDate.getDate(); // 获取当前日期
 var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
 var current_date = ('0' + Day).slice(-2); // 日期补零
 
+
 // 判断当前时间是否为凌晨时段
 if (Hours <= 8) {
   Hours = 9
@@ -28,7 +29,13 @@ var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
 var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
 
 // 计算请假总时长并保留两位小数
-var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); 
+if (begin_date < end_date) {
+  var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); 
+} else {
+  var D = new Date(Year, Month, 0);
+  var d = D.getDate();
+  var LeaveNumNo = (end_date - begin_date + d + end_hours/24 - begin_hours/24).toFixed(2); 
+}
 
 // 为请假月日小时数补零
 var BeginDate = ('0' + begin_date).slice(-2); // 请假起始日期补零
