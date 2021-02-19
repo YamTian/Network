@@ -75,18 +75,64 @@ var Body = JSON.parse($response.body);
 if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
   Body= {
     "AllLeaveManages": [
+      // {
+      //   "LeaveType": LeaveType, // 请假类型
+      //   "WithNumNo": WithNumNo, // 同行人数
+      //   "OutAddress": OutAddress,  // 外出地点
+      //   "FDYThing": "同意", // 同意请假
+      //   "Status": "假期中", // 假期中、审批中
+      //   "ID": 1, // 随便4位数以获取别人的请假信息
+      //   "LeaveBeginDate": LeaveBeginDate, // 请假起始日期
+      //   "LeaveBeginTime": LeaveBeginTime, // 请假起始小时数
+      //   "LeaveEndDate": LeaveEndDate, // 请假结束日期
+      //   "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
+      //   "LeaveNumNo": LeaveNumNo, // 离校总时长
+      // }
       {
         "LeaveType": LeaveType, // 请假类型
-        "WithNumNo": WithNumNo, // 同行人数
-        "OutAddress": OutAddress,  // 外出地点
-        "FDYThing": "同意", // 同意请假
-        "Status": "假期中", // 假期中、审批中
-        "ID": 1, // 随便4位数以获取别人的请假信息
+        "LeaveThing": LeaveThing, // 请假事由
+        "OutAddress": OutAddress, // 外出地点
+        // 外出联系人信息(实际为本人信息)
+        "OutName": StudentName, // 姓名
+        "OutMoveTel": StudentTel, // 移动电话
+        "OutTel": "", // 固定电话
+        "Relation": "本人", // 与本人关系
+        // 本人信息
+        "StuMoveTel": StudentTel, // 联系电话
+        "StuOtherTel": "", // 其他联系方式
+        // 家长信息
+        "ParentContacts": ParentName, // 家长联系人
+        "ParentTel": ParentTel, // 家长联系方式
+        // 往返时间
         "LeaveBeginDate": LeaveBeginDate, // 请假起始日期
-        "LeaveBeginTime": LeaveBeginTime, // 请假起始小时数
+        "Inputdate": LeaveBeginDate, // 请假起始日期
+        "GoDate": LeaveBeginDate, // 请假起始日期
         "LeaveEndDate": LeaveEndDate, // 请假结束日期
+        "BackDate": LeaveEndDate, // 请假结束日期
+        // 往返时间
+        "LeaveBeginTime": LeaveBeginTime, // 请假起始小时数
+        "GoTime": LeaveBeginTime, // 请假起始小时数
         "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
+        "BackTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
+        // 往返交通工具
+        "GoVehicle": Vehicle, // 去-交通工具
+        "BackVehicle": Vehicle, // 返-交通工具
+        // 以下数据不可修改
+        "StuName": StudentName, // 学生姓名
+        "WithNumNo": WithNumNo, // 同行人数
         "LeaveNumNo": LeaveNumNo, // 离校总时长
+        "GoOut": "1", // 是否外出离校
+        "studentId": "202020020", // 学生学号
+        "ID": 1, // 随便4位数以获取别人的请假信息
+        "DisLeaveDate": null,
+        "FDYStatus": "2",
+        "FDYThing": "同意",
+        "SpStatus": null,
+        "Status": "5",
+        "GoOutConfirm": null,
+        "XYThing": null,
+        "OverStatus": 1,
+        "DisLeaveMen": null,
       }
     ],
     "IsLeave": 1 // 是否在请假状态
