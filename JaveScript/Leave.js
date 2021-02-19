@@ -1,3 +1,5 @@
+var $ = env()
+
 // 获取当前年月日
 var newDate = new Date(); // 定义 newDate 
 var Year = newDate.getFullYear(); // 获取当前年份
@@ -14,19 +16,19 @@ if (Hours <= 8) {
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取数据
-const begin_date = $persistentStore.read('begin_date') || current_date; // 从 BoxJs 里面获取请假起始日期
-const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
-const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
-const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
-const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 请假类型
-const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 请假事由
-const WithNumNo = $persistentStore.read('WithNumNo') || '0'; // 同行人数
-const OutAddress = $persistentStore.read('OutAddress') || ''; // 外出地点
-const StudentName = $persistentStore.read('StudentName') || ''; // 姓名
-const StudentTel = $persistentStore.read('StudentTel') || ''; // 移动电话
-const ParentName = $persistentStore.read('ParentName') || ''; // 家长联系人
-const ParentTel = $persistentStore.read('ParentTel') || ''; // 家长联系方式
-const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 交通工具
+const begin_date = $.read('begin_date') || current_date; // 从 BoxJs 里面获取请假起始日期
+const end_date = $.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
+const begin_hours = $.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
+const end_hours = $.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
+const LeaveType = $.read('LeaveType') || '事假'; // 从 BoxJs 里面获取请假类型
+const LeaveThing = $.read('LeaveThing') || '有事外出'; // 从 BoxJs 里面获取请假事由
+const WithNumNo = $.read('WithNumNo') || '0'; // 从 BoxJs 里面获取同行人数
+const OutAddress = $.read('OutAddress') || ''; // 从 BoxJs 里面获取外出地点
+const StudentName = $.read('StudentName') || ''; // 从 BoxJs 里面获取姓名
+const StudentTel = $.read('StudentTel') || ''; // 从 BoxJs 里面获取移动电话
+const ParentName = $.read('ParentName') || ''; // 从 BoxJs 里面获取家长联系人
+const ParentTel = $.read('ParentTel') || ''; // 从 BoxJs 里面获取家长联系方式
+const Vehicle = $.read('Vehicle') || '汽车'; // 从 BoxJs 里面获取交通工具
 
 // 判断起始日期是否大于结束日期
 if (begin_date < end_date) { // 否
@@ -139,3 +141,56 @@ else { // 响应体 Url 包含 Edit
 }
 
 $done({body: JSON.stringify(Body)});
+
+function env() {
+  isSurge = () => {
+    return undefined === this.$httpClient ? false : true
+  }
+  isQuanX = () => {
+    return undefined === this.$task ? false : true
+  }
+  getdata = (key) => {
+    if (isSurge()) return $.read(key)
+    if (isQuanX()) return $prefs.valueForKey(key)
+  }
+  setdata = (key, val) => {
+    if (isSurge()) return $.write(key, val)
+    if (isQuanX()) return $prefs.setValueForKey(key, val)
+  }
+  msg = (title, subtitle, body) => {
+    if (isSurge()) $notification.post(title, subtitle, body)
+    if (isQuanX()) $notify(title, subtitle, body)
+  }
+  log = (message) => console.log(message)
+  get = (url, cb) => {
+    if (isSurge()) {
+      $httpClient.get(url, cb)
+    }
+    if (isQuanX()) {
+      url.method = 'GET'
+      $task.fetch(url).then((resp) => cb(null, {}, resp.body))
+    }
+  }
+  post = (url, cb) => {
+    if (isSurge()) {
+      $httpClient.post(url, cb)
+    }
+    if (isQuanX()) {
+      url.method = 'POST'
+      $task.fetch(url).then((resp) => cb(null, {}, resp.body))
+    }
+  }
+  put = (url, cb) => {
+    if (isSurge()) {
+      $httpClient.put(url, cb)
+    }
+    if (isQuanX()) {
+      url.method = 'PUT'
+      $task.fetch(url).then((resp) => cb(null, {}, resp.body))
+    }
+  }
+  done = (value = {}) => {
+    $done(value)
+  }
+  return { isSurge, isQuanX, msg, log, getdata, setdata, get, post, put, done }
+}
