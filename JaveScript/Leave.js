@@ -18,6 +18,15 @@ const begin_date = $persistentStore.read('begin_date') || current_date; // 从 B
 const end_date = $persistentStore.read('end_date') || current_date; // 从 BoxJs 里面获取请假结束日期
 const begin_hours = $persistentStore.read('begin_hours') || '08'; // 从 BoxJs 里面获取请假起始小时数
 const end_hours = $persistentStore.read('end_hours') || current_hours; // 从 BoxJs 里面获取请假结束小时数
+const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 请假类型
+const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 请假事由
+const WithNumNo = $persistentStore.read('WithNumNo') || '0'; // 同行人数
+const OutAddress = $persistentStore.read('OutAddress') || ''; // 外出地点
+const StudentName = $persistentStore.read('StudentName') || '', // 姓名
+const StudentTel = $persistentStore.read('StudentTel') || '', // 移动电话
+const ParentName = $persistentStore.read('ParentName') || '', // 家长联系人
+const ParentTel = $persistentStore.read('ParentTel') || '', // 家长联系方式
+const Vehicle = $persistentStore.read('Vehicle') || '汽车', // 交通工具
 
 // 判断起始日期是否大于结束日期
 if (begin_date < end_date) { // 否
@@ -63,9 +72,9 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
   Body= {
     "AllLeaveManages": [
       {
-        "LeaveType": $persistentStore.read('LeaveType') || '事假', // 请假类型
-        "WithNumNo": $persistentStore.read('WithNumNo') || '0', // 同行人数
-        "OutAddress": $persistentStore.read('OutAddress') || '',  // 外出地点
+        "LeaveType": LeaveType, // 请假类型
+        "WithNumNo": WithNumNo, // 同行人数
+        "OutAddress": OutAddress,  // 外出地点
         "FDYThing": "同意", // 同意请假
         "Status": "假期中", // 假期中、审批中
         "ID": 1, // 随便4位数以获取别人的请假信息
@@ -82,20 +91,20 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
 else { // 响应体 Url 包含 Edit
   Body= {
     // 请假内容
-    "LeaveType": $persistentStore.read('LeaveType') || '事假', // 请假类型
-    "LeaveThing": $persistentStore.read('LeaveThing') || '有事外出', // 请假事由
-    "OutAddress": $persistentStore.read('OutAddress') || '', // 外出地点
+    "LeaveType": LeaveType, // 请假类型
+    "LeaveThing": LeaveThing, // 请假事由
+    "OutAddress": OutAddress, // 外出地点
     // 外出联系人信息(实际为本人信息)
-    "OutName": $persistentStore.read('StudentName') || '', // 姓名
-    "OutMoveTel": $persistentStore.read('StudentTel') || '', // 移动电话
+    "OutName": StudentName, // 姓名
+    "OutMoveTel": StudentTel, // 移动电话
     "OutTel": "", // 固定电话
     "Relation": "本人", // 与本人关系
     // 本人信息
-    "StuMoveTel": $persistentStore.read('StudentTel') || '', // 联系电话
+    "StuMoveTel": StudentTel, // 联系电话
     "StuOtherTel": "", // 其他联系方式
     // 家长信息
-    "ParentContacts": $persistentStore.read('ParentName') || '', // 家长联系人
-    "ParentTel": $persistentStore.read('ParentTel') || '', // 家长联系方式
+    "ParentContacts": ParentName, // 家长联系人
+    "ParentTel": ParentTel, // 家长联系方式
     // 往返时间
     "LeaveBeginDate": LeaveBeginDate, // 请假起始日期
     "Inputdate": LeaveBeginDate, // 请假起始日期
@@ -108,11 +117,11 @@ else { // 响应体 Url 包含 Edit
     "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
     "BackTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
     // 往返交通工具
-    "GoVehicle": $persistentStore.read('Vehicle') || '汽车', // 去-交通工具
-    "BackVehicle": $persistentStore.read('Vehicle') || '汽车', // 返-交通工具
+    "GoVehicle": Vehicle, // 去-交通工具
+    "BackVehicle": Vehicle, // 返-交通工具
     // 以下数据不可修改
-    "StuName": $persistentStore.read('StudentName') || '', // 学生姓名
-    "WithNumNo": $persistentStore.read('WithNumNo') || '0', // 同行人数
+    "StuName": StudentName, // 学生姓名
+    "WithNumNo": WithNumNo, // 同行人数
     "LeaveNumNo": LeaveNumNo, // 离校总时长
     "GoOut": "1", // 是否外出离校
     "studentId": "202020020", // 学生学号
