@@ -1,3 +1,8 @@
+/*
+git:https://github.com/YamTian/Network/blob/master/JaveScript/Leave.js
+raw:https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js
+*/
+
 const $ = new Env()
 
 // 获取当前年月日
