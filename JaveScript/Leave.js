@@ -22,11 +22,11 @@ const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 请假类�
 const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 请假事由
 const WithNumNo = $persistentStore.read('WithNumNo') || '0'; // 同行人数
 const OutAddress = $persistentStore.read('OutAddress') || ''; // 外出地点
-const StudentName = $persistentStore.read('StudentName') || '', // 姓名
-const StudentTel = $persistentStore.read('StudentTel') || '', // 移动电话
-const ParentName = $persistentStore.read('ParentName') || '', // 家长联系人
-const ParentTel = $persistentStore.read('ParentTel') || '', // 家长联系方式
-const Vehicle = $persistentStore.read('Vehicle') || '汽车', // 交通工具
+const StudentName = $persistentStore.read('StudentName') || ''; // 姓名
+const StudentTel = $persistentStore.read('StudentTel') || ''; // 移动电话
+const ParentName = $persistentStore.read('ParentName') || ''; // 家长联系人
+const ParentTel = $persistentStore.read('ParentTel') || ''; // 家长联系方式
+const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 交通工具
 
 // 判断起始日期是否大于结束日期
 if (begin_date < end_date) { // 否
