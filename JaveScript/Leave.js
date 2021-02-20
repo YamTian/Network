@@ -87,19 +87,6 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
         "LeaveEndDate": LeaveEndDate, // 请假结束日期
         "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
         "LeaveNumNo": LeaveNumNo, // 离校总时长
-      },
-      {
-        "LeaveType": '事假', // 请假类型
-        "WithNumNo": '0', // 同行人数
-        "OutAddress": '仕林街',  // 外出地点
-        "FDYThing": "同意", // 同意请假
-        "Status": "已销假", // 假期中、审批中
-        "ID": 2, // 随便4位数以获取别人的请假信息
-        "LeaveBeginDate": '2020-10-05', // 请假起始日期
-        "LeaveBeginTime": '08', // 请假起始小时数
-        "LeaveEndDate": '2020-10-05', // 请假结束日期
-        "LeaveEndTime": '20', // 请假结束小时数(即当前小时数)
-        "LeaveNumNo": '0.50', // 离校总时长
       }
     ],
     "IsLeave": 1 // 是否在请假状态
@@ -152,7 +139,7 @@ else { // 响应体 Url 包含 Edit
     "XYThing": null,
     "OverStatus": 1,
     "DisLeaveMen": null,
-  };
+  }
 }
 
 $done({body: JSON.stringify(Body)});
