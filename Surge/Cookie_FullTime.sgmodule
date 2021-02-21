@@ -4,11 +4,11 @@
 
 [Script]
 # > 掌上飞车(mwegame.qq.com)
-掌上飞车 = type=http-request, pattern=^https:\/\/mwegame\.qq\.com\/ams\/sign\/doSign\/month, script-path=https://raw.githubusercontent.com/chiupam/Proxy/individual/Scripts/QQspeed.js
+掌上飞车 = type=http-request, pattern=^https:\/\/mwegame\.qq\.com\/ams\/sign\/doSign\/month, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/QQspeed.js
 # > 网易云音乐(music.163.com)
 网易云音乐 = type=http-request, pattern=^https:\/\/music.163.com\/weapi\/user\/level, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
 # > 小米运动(account.huami.com)
-小米运动 = type=http-response, pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/chiupam/Proxy/individual/Scripts/xmSport.js
+小米运动 = type=http-response, pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/xmSport.js
 
 [MITM]
 hostname = %APPEND% mwegame.qq.com, music.163.com, account.huami.com
