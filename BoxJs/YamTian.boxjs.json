@@ -339,7 +339,9 @@
         "@GitHub.username",
         "@GitHub.token"
       ],
-      "descs": "Github > Menu > Settings > Developer settings > Personal access tokens >Generate new token > Note > ☑️repo > Generate token。",
+      "descs_html": [
+        "<h4 align=\"center\">Github > Menu > Settings > Developer settings > Personal access tokens >Generate new token > Note > ☑️repo > Generate token。</a></h4>"
+      ],
       "settings": [
         {
           "id": "@GitHub.username",
@@ -351,7 +353,7 @@
         },
         {
           "id": "@GitHub.token",
-          "name": "Github仓库的Token",
+          "name": "Personal Access Tokens",
           "val": "",
           "type": "text",
           "placeholder": "(点击以展开说明)",
