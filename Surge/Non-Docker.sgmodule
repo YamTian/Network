@@ -3,34 +3,20 @@
 #!tag = type=cron, cronexp="cronexample", wake-system=1, timeout=600, script-path=javescript
 
 # > 京东京豆系列
-# >>> 取消关注 {23:59}
-#!取消关注 = type=cron, cronexp="30 59 23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_unsubscribe.js
 # >>> 京东京豆 {00:00 12:00}
 #!京豆 = type=cron, cronexp="30 0 */12 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-
-# >>> 宠汪汪 早餐{06:00-10:30} 午餐{11:30-15:00} 晚餐{19:00-21:00}
-#!宠汪汪——首次 = type=cron, cronexp="0 30 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy.js
-#!宠汪汪——起床 = type=cron, cronexp="0 51 5 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-#!宠汪汪——早餐 = type=cron, cronexp="0 54 8 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy.js
-#!宠汪汪——午餐 = type=cron, cronexp="0 57 11 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-#!宠汪汪——零食 = type=cron, cronexp="0 1 15 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-#!宠汪汪——晚餐 = type=cron, cronexp="0 4 18 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-#!宠汪汪——宵夜 = type=cron, cronexp="0 7 21 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_joy_feedPets.js
-
-# >>> 抽奖机 {00:03}
-#!抽奖机 = type=cron, cronexp="0 3 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/LXK9301/jd_scripts/master/jd_lotteryMachine.js
 
 [Script]
 # > 获取京东Cookie
 获取京东Cookie = type=http-request, pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # >>> 兑换京豆系列
+# >>>>> 宠汪汪兑换京豆 {00:00 08:00 16:00}
+宠汪汪——京豆 = type=cron, cronexp="0 0,8,16 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/main/jd_joy_reward.js
 # >>>>> 东东超市兑换京豆 {00:00 00:02}
-东东超市——京豆 = type=cron, cronexp="0 0,2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/jd_scripts/jd_blueCoin.js
-# >>>>> 宠汪汪兑换京豆 {08:00 16:00}
-宠汪汪——京豆 = type=cron, cronexp="0 0 16 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/jd_scripts/jd_blueCoin.js
+东东超市——京豆 = type=cron, cronexp="0 0,2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/main/jd_blueCoin.js
 # >>>>> 京东汽车兑换京豆 {00:00}
-京东汽车——京豆 = type=cron, cronexp="59 59 23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/jd_scripts/jd_blueCoin.js
+京东汽车——京豆 = type=cron, cronexp="59 59 23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/main/jd_car_exchange.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
