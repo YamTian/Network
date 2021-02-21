@@ -340,7 +340,7 @@
         "@GitHub.token"
       ],
       "descs_html": [
-        "<h4 align=\"center\">Github > Menu > Settings > Developer settings > Personal access tokens >Generate new token > Note > ☑️repo > Generate token。</a></h4>"
+        "<h4 align=\"center\">Github > Menu > Settings > Developer settings > Personal access tokens > Generate new token > Note > ☑️repo > Generate token。</a></h4>"
       ],
       "settings": [
         {
