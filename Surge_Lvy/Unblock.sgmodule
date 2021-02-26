@@ -10,8 +10,6 @@
 WPS SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/UnBlock/WPS_SVIP.js
 # Mubu SVIP (api2.mubu.com)
 幕布 SVIP = type=http-response, pattern=^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/UnBlock/Mubu_SVIP.js
-# Xmind SVIP (www.xmind.cn)
-X-Mind SVIP = type=http-response, pattern=https:\/\/www\.xmind\.cn\/_res\/devices, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/X-Mind_SVIP.js
 
 [MITM]
-hostname = %APPEND% biz.caiyunapp.com, account.wps.cn, api2.mubu.com, pan.baidu.com, api.bilibili.com, www.xmind.cn
+hostname = %APPEND% biz.caiyunapp.com, account.wps.cn, api2.mubu.com
