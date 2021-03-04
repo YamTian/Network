@@ -1,6 +1,6 @@
 /*
 [Script]
-WPS SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path=https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/WPS_SVIP.js
+WPS SVIP = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/users, requires-body=1, max-size=-1, script-path= https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/UnBlock/WPS_SVIP.js
 
 [MITM]
 hostname = account.wps.cn
