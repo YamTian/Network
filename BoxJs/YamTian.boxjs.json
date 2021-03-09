@@ -213,6 +213,10 @@
           "desc": "选择需要修改最大的运动步数",
           "items": [
             {
+              "key": "22000",
+              "label": "22000步"
+            },
+            {
               "key": "32000",
               "label": "32000步"
             },
@@ -330,6 +334,63 @@
       "icons": [
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotifyjpeg", 
         "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg"
+      ]
+    },
+    {
+      "id": "exchange",
+      "name": "京东兑换设置",
+      "descs_html": [
+        "<h4 align=\"center\">京东各个游戏兑换奖品的设置</a></h4>"
+      ],
+      "keys": [
+        ""
+      ],
+      "settings": [
+        {
+          "id": "coinToBeans",
+          "name": "东东超市兑换奖品",
+          "val": "20",
+          "type": "num",
+          "desc": ""
+        },
+        {
+          "id": "joyRewardName",
+          "name": "宠汪汪兑换京豆",
+          "val": "500",
+          "type": "radios",
+          "desc": "",
+          "items": [
+            {
+              "key": "0",
+              "label": "不兑换京豆"
+            },
+            {
+              "key": "20",
+              "label": "兑换 20 京豆"
+            },
+            {
+              "key": "500",
+              "label": "兑换 500 京豆"
+            },
+            {
+              "key": "1000",
+              "label": "兑换 1000 京豆"
+            }
+          ]
+        },
+        {
+          "id": "jdJxdExchange",
+          "name": "京小兑抽奖卷兑换为兑币",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认自动开启"
+        }
+      ],
+      "author": "@YamTian",
+      "repo": "https://github.com/YamTian/Network",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/me.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/me.png"
       ]
     },
     {
