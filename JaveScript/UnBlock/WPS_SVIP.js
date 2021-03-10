@@ -14,12 +14,12 @@ obj = {
   exp: 0,
   level: 3,
   privilege: [
-    { spid: "data_recover", times: 0, expire_time: 1672502399 },
-    { spid: "ocr", times: 0, expire_time: 1672502399 },
-    { spid: "pdf2doc", times: 0, expire_time: 1672502399 },
-    { spid: "pdf_merge", times: 0, expire_time: 1672502399 },
-    { spid: "pdf_sign", times: 0, expire_time: 1672502399 },
-    { spid: "pdf_split", times: 0, expire_time: 1672502399 }
+    { spid: "data_recover", times: 0, expire_time: 2524579199 },
+    { spid: "ocr", times: 0, expire_time: 2524579199 },
+    { spid: "pdf2doc", times: 0, expire_time: 2524579199 },
+    { spid: "pdf_merge", times: 0, expire_time: 2524579199 },
+    { spid: "pdf_sign", times: 0, expire_time: 2524579199 },
+    { spid: "pdf_split", times: 0, expire_time: 2524579199 }
   ],
   result: "ok",
   total_buy: 0,
