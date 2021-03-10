@@ -241,7 +241,7 @@
     },
     {
       "id": "Notify",
-      "name": "静默运行",
+      "name": "京东静默运行",
       "key": [
         "jdFruitNotify",
         "jdPetNotify",
@@ -337,10 +337,10 @@
       ]
     },
     {
-      "id": "exchange",
+      "id": "Exchange",
       "name": "京东兑换设置",
       "descs_html": [
-        "<h4 align=\"center\">京东各个游戏兑换奖品的设置</a></h4>"
+        "<h4 align=\"center\">京东游戏脚本兑换奖品的设置</a></h4>"
       ],
       "keys": [
       ],
@@ -388,8 +388,8 @@
       "author": "@YamTian",
       "repo": "https://github.com/YamTian/Network",
       "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/setting.jpg",
-        "https://raw.githubusercontent.com/58xinian/icon/master/setting.jpg"
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/setting.jpg",
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/setting.jpg"
       ]
     },
     {
