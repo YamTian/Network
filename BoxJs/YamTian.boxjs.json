@@ -332,8 +332,8 @@
       "author": "@YamTian",
       "repo": "https://github.com/YamTian/Network/tree/master",
       "icons": [
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotifyjpeg", 
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/NoNotify.jpeg"
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Notify.jpg", 
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Notify.jpg"
       ]
     },
     {
@@ -388,8 +388,8 @@
       "author": "@YamTian",
       "repo": "https://github.com/YamTian/Network",
       "icons": [
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/setting.jpg",
-        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/setting.jpg"
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Exchange.jpg",
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/Exchange.jpg"
       ]
     },
     {
