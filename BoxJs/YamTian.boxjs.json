@@ -422,8 +422,8 @@
       "repo": "https://github.com/YamTian/Network",
       "script": "https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/GitHubjs",
       "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/Github_mini.png",
-        "https://raw.githubusercontent.com/58xinian/icon/master/Github.png"
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/GitHub.jpg",
+        "https://raw.githubusercontent.com/YamTian/Network/master/BoxJs/AppIcon/GitHub.jpg"
       ]
     }
   ]
