@@ -1,4 +1,3 @@
-let obj = JSON.parse($response.body);
 obj = {
     "product_infos": [{
         "product_id": "5310897792128633390",
