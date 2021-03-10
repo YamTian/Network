@@ -29,15 +29,15 @@ obj = {
     name: "超级会员",
     has_ad: 0,
     memberid: 40,
-    expire_time: 1672502399,
+    expire_time: 2524579199,
     enabled: [
-      { memberid: 40, name: "超级会员", expire_time: 1672502399 },
-      { memberid: 20, name: "WPS会员", expire_time: 1672502399 },
-      { memberid: 12, name: "稻壳会员", expire_time: 1672502399 }
+      { memberid: 40, name: "超级会员", expire_time: 2524579199 },
+      { memberid: 20, name: "WPS会员", expire_time: 2524579199 },
+      { memberid: 12, name: "稻壳会员", expire_time: 2524579199 }
     ]
   },
   wealth: 0,
-  expire_time: 1672502399
+  expire_time: 2524579199
 };
 
 obj.userid = id;
