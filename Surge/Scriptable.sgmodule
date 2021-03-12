@@ -1,7 +1,7 @@
 #!name=Scriptable Software
 #!desc=This is a Surge module used to collect JaveScripts on Scriptable App.
-#!name = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
-#!name = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
+# > name = type=http-request, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
+# > name = type=http-response, pattern=https, requires-body=1, max-size=1, script-path=javescript, script-update-interval=0
 
 [Script]
 # > 中国联通获取Cookie (act.10010.com, m.client.10010.com)
