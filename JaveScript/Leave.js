@@ -8,15 +8,19 @@ var newDate = new Date(); // 定义 newDate
 var Year = newDate.getFullYear(); // 获取当前年份
 var Month = newDate.getMonth() + 1; // 获取当前月份
 var Day = newDate.getDate(); // 获取当前日期
-var Hours = newDate.getHours() + 1; // 获取当前小时数+1的值
+var Hour = newDate.getHours(); // 获取当前小时数的值
+
+Hours = Hour + 1; // 定义 Hours 为当前小时数+1的值
 
 // 判断当前时间是否为凌晨时段
-if (Hours <= 8) { // 是
-  Hours = 9
-  begin_date_q = Day;
+if (Hours < 10) { // 是
+  Hours = 8;
   end_date_q = Day + 1
 } else { // 否
-  begin_date_q = Day;
+  if (Hours >= 11) {
+    auto_begin_hours = Hour - 3; // 自动计算请假起始小时数
+    var auto_begin_hours = ('0' + auto_begin_hours).slice(-2); // 自动请假起始小时数补零
+  };
   end_date_q = Day
 };
 
@@ -27,7 +31,7 @@ var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 // 从 BoxJs 内获取各个数据
 const begin_date = $persistentStore.read('begin_date') || preset_begin_date; // 请假起始日期
 const end_date = $persistentStore.read('end_date') || preset_end_date; // 请假结束日期
-const begin_hours = $persistentStore.read('begin_hours') || '08'; // 请假起始小时数
+const begin_hours = $persistentStore.read('begin_hours') || auto_begin_hours || '08'; // 请假起始小时数
 const end_hours = $persistentStore.read('end_hours') || current_hours; // 请假结束小时数
 const LeaveType = $persistentStore.read('LeaveType') || '事假'; // 请假类型
 const LeaveThing = $persistentStore.read('LeaveThing') || '有事外出'; // 请假事由
