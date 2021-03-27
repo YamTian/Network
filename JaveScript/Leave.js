@@ -24,7 +24,7 @@ if (Hours < 10) { // 是
   end_date_q = Day
 };
 
-var preset_begin_date = ('0' + begin_date_q).slice(-2); // 起始日期补零
+var preset_begin_date = ('0' + Day).slice(-2); // 起始日期补零
 var preset_end_date = ('0' + end_date_q).slice(-2); // 结束日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
