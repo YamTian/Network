@@ -15,6 +15,13 @@
       ],
       "settings": [
         {
+          "id": "isLeave",
+          "name": "请假总开关",
+          "val": true,
+          "type": "boolean",
+          "desc": "开启则表示修改假条,默认开启,关闭则以下设置都不生效"
+        },
+        {
         "id": "begin_date",
         "name": "请假起始日期",
         "val": "",
