@@ -1,6 +1,8 @@
 /*
 git:https://github.com/YamTian/Network/blob/master/JaveScript/Leave.js
 raw:https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js
+plugin:https://raw.githubusercontent.com/YamTian/Network/master/Loon/As_For_Leave.plugin
+sgmoudule:https://raw.githubusercontent.com/YamTian/Network/master/Surge/Ask_For_Leave.sgmodule
 */
 
 // 获取当前年月日
@@ -29,6 +31,7 @@ var preset_end_date = ('0' + end_date_q).slice(-2); // 结束日期补零
 var current_hours =  ('0' + Hours).slice(-2); // 小时数补零
 
 // 从 BoxJs 内获取各个数据
+const isLeave = $persistentStore.read('isLeave') || 'true'; // 是否开启请假模式
 const begin_date = $persistentStore.read('begin_date') || preset_begin_date; // 请假起始日期
 const end_date = $persistentStore.read('end_date') || preset_end_date; // 请假结束日期
 const begin_hours = $persistentStore.read('begin_hours') || auto_begin_hours || '08'; // 请假起始小时数
@@ -61,6 +64,11 @@ if (begin_date <= end_date) { // 否
   var LeaveNumNo = (end_date - begin_date + month_total_days + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
 };
 
+// 确定销假日期
+// var Leave_off_date = end_date + 1;
+// var LeaveOffDate = ('0' + Leave_off_date).slice(-2); // 销假日期补零
+// var DisLeaveDate = Year + "-" + EndMonth + "-" + LeaveOffDate; // 销假日期
+
 var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
 var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
 var BeginDate = ('0' + begin_date).slice(-2); // 起始日期补零
@@ -76,6 +84,10 @@ var LeaveEndDate = Year + "-" + EndMonth + "-" + EndDate; // 请假结束日期
 var Url = $request.url; // 定义响应体 Url
 var Body = JSON.parse($response.body);
 
+// 个人设置
+var OverStatus = 1; // 设置假条数量
+var ID = 20000; // 随便4位数以获取别人的请假信息
+
 if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
   Body= {
     "AllLeaveManages": [
@@ -85,11 +97,12 @@ if (Url.indexOf('Edit') == -1) { // 响应体 Url 不包含 Edit
         "OutAddress": OutAddress,  // 外出地点
         "FDYThing": "同意", // 同意请假
         "Status": "假期中", // 假期中、审批中
-        "ID": 1, // 随便4位数以获取别人的请假信息
+        "StatusName": "辅导员审核通过", // 辅导员审核通过
+        "ID": ID, // 随便4位数以获取别人的请假信息
         "LeaveBeginDate": LeaveBeginDate, // 请假起始日期
         "LeaveBeginTime": LeaveBeginTime, // 请假起始小时数
         "LeaveEndDate": LeaveEndDate, // 请假结束日期
-        "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
+        "LeaveEndTime": LeaveEndTime, // 请假结束小时数
         "LeaveNumNo": LeaveNumNo, // 离校总时长
       }
     ],
@@ -122,28 +135,35 @@ else { // 响应体 Url 包含 Edit
     // 往返时间
     "LeaveBeginTime": LeaveBeginTime, // 请假起始小时数
     "GoTime": LeaveBeginTime, // 请假起始小时数
-    "LeaveEndTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
-    "BackTime": LeaveEndTime, // 请假结束小时数(即当前小时数)
+    "LeaveEndTime": LeaveEndTime, // 请假结束小时数
+    "BackTime": LeaveEndTime, // 请假结束小时数
     // 往返交通工具
     "GoVehicle": Vehicle, // 去-交通工具
     "BackVehicle": Vehicle, // 返-交通工具
-    // 以下数据不可修改
+    // 其他设置
     "StuName": StudentName, // 学生姓名
     "WithNumNo": WithNumNo, // 同行人数
+    // 以下数据不可修改
     "LeaveNumNo": LeaveNumNo, // 离校总时长
     "GoOut": "1", // 是否外出离校
     "studentId": "202020020", // 学生学号
-    "ID": 1, // 随便4位数以获取别人的请假信息
-    "DisLeaveDate": null,
-    "FDYStatus": "2",
-    "FDYThing": "同意",
+    "ID": ID, // 随便4位数以获取别人的请假信息
+    "DisLeaveDate": null, // 销假时间
     "SpStatus": null,
-    "Status": "5",
     "GoOutConfirm": null,
     "XYThing": null,
-    "OverStatus": 1,
     "DisLeaveMen": null,
+    "OverStatus": 1,
+    "FDYStatus": "2",
+    "Status": "假期中",
+    "FDYThing": "同意",
   }
 }
 
-$done({body: JSON.stringify(Body)});
+// 不修改假条页面
+if (isLeave == 'false') {
+  Body = {"AllLeaveManages": [],"IsLeave": 0}
+}
+
+// 执行程序
+$done({body: JSON.stringify(Body)})
