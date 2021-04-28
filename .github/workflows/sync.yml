@@ -3,7 +3,7 @@ name: Sync To Gitee
 on: 
   workflow_dispatch:
   push:
-    branches: master
+    branches: main
 
 jobs:
   sync:
