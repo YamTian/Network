@@ -47,31 +47,17 @@ const ParentTel = $persistentStore.read('ParentTel') || ''; // 家长联系方�
 const Vehicle = $persistentStore.read('Vehicle') || '汽车'; // 交通工具
 
 // 判断起始日期和结束日期是否跨月份
-if (begin_date <= end_date) { // 否
+if (parseInt(begin_date) <= parseInt(end_date)) { // 否
   begin_month = Month;
   end_month = Month;
-  var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
+  var LeaveNumNo = (parseInt(end_date) - parseInt(begin_date) + parseInt(end_hours)/24 - parseInt(begin_hours)/24).toFixed(2); // 计算请假总时长并保留两位小数
 } else { // 是
   begin_month = Month;
   end_month = Month + 1;
   var D = new Date(Year, Month, 0);
   var month_total_days = D.getDate(); // 获取当前月份总天数
-  var LeaveNumNo = (end_date - begin_date + month_total_days + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
+  var LeaveNumNo = (parseInt(month_total_days) + parseInt(end_date) - parseInt(begin_date) + parseInt(end_hours)/24 - parseInt(begin_hours)/24).toFixed(2); // 计算请假总时长并保留两位小数
 };
-
-// 判断起始日期和结束日期是否跨月份
-// if (begin_date <= end_date) { // 否
-//   var LeaveNumNo = (end_date - begin_date + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
-// } else { // 是
-//   var D = new Date(Year, Month, 0);
-//   var month_total_days = D.getDate(); // 获取当前月份总天数
-//   var LeaveNumNo = (end_date - begin_date + month_total_days + end_hours/24 - begin_hours/24).toFixed(2); // 计算请假总时长并保留两位小数
-// };
-
-// 确定销假日期
-// var Leave_off_date = end_date + 1;
-// var LeaveOffDate = ('0' + Leave_off_date).slice(-2); // 销假日期补零
-// var DisLeaveDate = Year + "-" + EndMonth + "-" + LeaveOffDate; // 销假日期
 
 var BeginMonth = ('0' + begin_month).slice(-2); // 起始月份补零
 var EndMonth = ('0' + end_month).slice(-2); // 结束月份补零
