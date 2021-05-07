@@ -1,8 +1,8 @@
 /*
-git:https://github.com/YamTian/Network/blob/master/JaveScript/Leave.js
-raw:https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js
-plugin:https://raw.githubusercontent.com/YamTian/Network/master/Loon/As_For_Leave.plugin
-sgmoudule:https://raw.githubusercontent.com/YamTian/Network/master/Surge/Ask_For_Leave.sgmodule
+git: https://github.com/YamTian/Network/blob/master/JaveScript/Leave.js
+raw: https://raw.githubusercontent.com/YamTian/Network/master/JaveScript/Leave.js
+plugin: https://raw.githubusercontent.com/YamTian/Network/master/Loon/As_For_Leave.plugin
+sgmoudule: https://raw.githubusercontent.com/YamTian/Network/master/Surge/Ask_For_Leave.sgmodule
 */
 
 // 获取当前年月日
