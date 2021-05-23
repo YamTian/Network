@@ -1,0 +1,22 @@
+version: "2.0"
+services:
+  jd:
+    image: nevinee/jd:v4-bot
+    container_name: jd
+    restart: always
+    tty: true
+    network_mode: bridge
+    hostname: jd
+    volumes:
+      - /docker/jd/config:/jd/config
+      - /docker/jd/log:/jd/log
+      - /docker/jd/own:/jd/own
+      - /docker/jd/scripts:/jd/scripts
+      - /docker/jd/jbot/diy:/jd/jbot/diy
+    ports:
+      - 2019:5678
+    environment: 
+      - ENABLE_HANGUP=true          # 是否启用挂机
+      - ENABLE_TG_BOT=true          # 是否启用TG BOT
+      - ENABLE_WEB_PANEL=true       # 是否启用控制面板  重启容器后执行jup命令启动面板
+      - ENABLE_TTYD=true            # 是否启用网页终端
