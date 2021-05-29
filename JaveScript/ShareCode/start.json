@@ -1,6 +1,6 @@
   
 {
-    "sumbit.py": false,
-    "sumbit_temporary.py": false,
+    "sumbit.py": true,
+    "sumbit_temporary.py": true,
     "redrain.py": true
 }
