@@ -15,13 +15,13 @@
 
 # >>> 兑换京豆系列
 # >>>>> 宠汪汪兑换京豆 {00:00 08:00 16:00}
-宠汪汪——京豆 = type=cron, cronexp="58,59 59 7,15,23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/master/jd_joy_reward.js
+宠汪汪——京豆 = type=cron, cronexp="58,59 59 7,15,23 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_study/jd_scripts/jd_joy_reward.js
 # >>>>> 东东超市兑换京豆 {00:00 00:02}
-东东超市——京豆 = type=cron, cronexp="0 0,2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/master/jd_blueCoin.js
+东东超市——京豆 = type=cron, cronexp="0 0,2 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_study/jd_scripts/jd_blueCoin.js
 # >>>>> 京东汽车兑换京豆 {00:00}
-京东汽车——京豆 = type=cron, cronexp="*/4 1 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/master/jd_car_exchange.js
+京东汽车——京豆 = type=cron, cronexp="*/4 1 0 * * *", wake-system=1, timeout=600, script-path=https://raw.githubusercontent.com/YamTian/jd_study/jd_scripts/jd_car_exchange.js
 # >>>>> 京小兑兑换券 {08:45}
-京小兑——券 = type=cron, cronexp="0 45 8 * * *", wake-system=1, timeout=3600, script-path=https://raw.githubusercontent.com/YamTian/jd_scripts/master/jd_jxd.js
+京小兑——券 = type=cron, cronexp="0 45 8 * * *", wake-system=1, timeout=3600, script-path=https://raw.githubusercontent.com/YamTian/jd_study/jd_scripts/jd_jxd.js
 
 [MITM]
 hostname = %APPEND% api.m.jd.com
